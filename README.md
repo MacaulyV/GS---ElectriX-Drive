@@ -16,69 +16,52 @@ O aplicativo ElectriX Drive foi desenvolvido como um protótipo usando Kotlin, c
 
 ---
 
-<details>
-  <summary align="center"><h3>🚀 Tela de Introdução</h3></summary>
-  <p>
-  A primeira tela do aplicativo é a **Tela de Introdução**, que convida os usuários a explorar a plataforma. Ela apresenta o nome da aplicação **ElectriX Drive**, com um design limpo e atrativo ✨. A tela possui um botão "**Continuar**" ➡️ que leva o usuário para o próximo passo no processo de cadastro ou login. Esta tela também destaca o objetivo do aplicativo: **Comparar a Eficiência do seu Veículo** ⚖️, incentivando os usuários a fazer escolhas mais sustentáveis.
-  </p>
-</details>
+## 📱 Telas do Aplicativo
+
+### 1. Tela de Introdução 🚀
+![Tela de Introdução](link_para_imagem)
+
+A primeira tela do aplicativo é a **Tela de Introdução**, que convida os usuários a explorar a plataforma. Ela apresenta o nome da aplicação **ElectriX Drive**, com um design limpo e atrativo ✨. A tela possui um botão "**Continuar**" ➡️ que leva o usuário para o próximo passo no processo de cadastro ou login. Esta tela também destaca o objetivo do aplicativo: **Comparar a Eficiência do seu Veículo** ⚖️, incentivando os usuários a fazer escolhas mais sustentáveis.
+
+### 2. Tela de Login 🔑
+![Tela de Login](link_para_imagem)
+
+A **Tela de Login** permite que os usuários acessem sua conta inserindo seu e-mail 📧 e senha 🔒. Além disso, há opções para **Cadastrar-se** com o Google 🌐 e uma opção para redefinir a senha 🔄 caso o usuário a tenha esquecido. A interface apresenta um design acolhedor, com elementos visuais que lembram a natureza e sustentabilidade 🌲, ajudando a criar uma experiência tranquila para o usuário.
+
+### 3. Tela de Redefinição de Senha 🔄
+![Tela de Redefinição de Senha](link_para_imagem)
+
+Caso o usuário tenha esquecido sua senha, ele será direcionado para a **Tela de Redefinição de Senha**, onde deve inserir seu e-mail ✉️ e a nova senha desejada 🔑, confirmando-a em seguida. Após o preenchimento dos campos, o usuário pode clicar em "**Confirmar**" ✅ para concluir o processo. A tela possui um design simples e intuitivo, garantindo que o processo de redefinição seja rápido e eficiente ⚡.
+
+### 4. Tela do Menu Principal 🏠
+![Tela do Menu Principal](link_para_imagem)
+
+A **Tela do Menu Principal** é onde o usuário tem acesso às principais funcionalidades da plataforma. Aqui, o usuário pode **Comparar a Eficiência** de seu veículo com um carro elétrico ⚙️ ou **Visualizar a Lista de Carros** cadastrados 🚘. Há também a opção de **Deslogar** 🔓, facilitando o controle de acesso à conta. A interface foi projetada para ser clara e de fácil navegação 🧭.
+
+### 5. Tela de Fornecimento de Dados do Veículo Atual 📋
+![Tela de Fornecimento de Dados do Veículo Atual](link_para_imagem)
+
+Para ajudar o usuário a encontrar o carro elétrico ideal, a **Tela de Fornecimento de Dados do Veículo Atual** permite que ele insira informações do seu carro, como o **Modelo do Carro** 🚗, **Ano** 📅, e **Tipo de Combustível** ⛽. Com base nesses dados, a plataforma sugere um carro elétrico equivalente, destacando eficiência, custo e impacto ambiental 🌍. O botão **Sugerir Carro** 🔍 conduz o usuário ao próximo passo.
+
+### 6. Tela de Sugestão e Comparação de Carros ⚖️
+![Tela de Sugestão e Comparação de Carros](link_para_imagem)
+
+Após fornecer os dados, o usuário é levado à **Tela de Sugestão e Comparação de Carros**, que exibe o **Veículo Atual** 🚙 e o carro elétrico sugerido pela plataforma 🚘⚡. A tela apresenta uma comparação de economia 💸 em relação ao consumo de combustível, custos de manutenção 🔧, e emissão de gases poluentes 🌱. Tudo isso ajuda o usuário a entender os benefícios e as economias que poderia fazer ao mudar para um carro elétrico. Um botão **Confirmar** ✅ é exibido para que o usuário finalize a análise.
+
+### 7. Tela de Listagem de Veículos Cadastrados 📋
+![Tela de Listagem de Veículos Cadastrados](link_para_imagem)
+
+Por fim, a **Tela de Listagem de Veículos Cadastrados** permite que o usuário visualize todos os carros que ele cadastrou na plataforma para comparação 📊. A lista inclui veículos como **Chevrolet S10 2.8 Turbo 2023** 🚚, **Tesla Model 3 2019** 🚗, entre outros. Cada item da lista possui um botão de seleção 🔘 para facilitar a exclusão de algum carro cadastrado, utilizando o botão **Excluir** 🗑️ na parte inferior da tela.
 
 ---
 
-<details>
-  <summary align="center"><h3>🔑 Tela de Login</h3></summary>
-  <p>
-  A **Tela de Login** permite que os usuários acessem sua conta inserindo seu e-mail 📧 e senha 🔒. Além disso, há opções para **Cadastrar-se** com o Google 🌐 e uma opção para redefinir a senha 🔄 caso o usuário a tenha esquecido. A interface apresenta um design acolhedor, com elementos visuais que lembram a natureza e sustentabilidade 🌲, ajudando a criar uma experiência tranquila para o usuário.
-  </p>
-</details>
-
----
-
-<details>
-  <summary align="center"><h3>🔄 Tela de Redefinição de Senha</h3></summary>
-  <p>
-  Caso o usuário tenha esquecido sua senha, ele será direcionado para a **Tela de Redefinição de Senha**, onde deve inserir seu e-mail ✉️ e a nova senha desejada 🔑, confirmando-a em seguida. Após o preenchimento dos campos, o usuário pode clicar em "**Confirmar**" ✅ para concluir o processo. A tela possui um design simples e intuitivo, garantindo que o processo de redefinição seja rápido e eficiente ⚡.
-  </p>
-</details>
-
----
-
-<details>
-  <summary align="center"><h3>🏠 Tela do Menu Principal</h3></summary>
-  <p>
-  A **Tela do Menu Principal** é onde o usuário tem acesso às principais funcionalidades da plataforma. Aqui, o usuário pode **Comparar a Eficiência** de seu veículo com um carro elétrico ⚙️ ou **Visualizar a Lista de Carros** cadastrados 🚘. Há também a opção de **Deslogar** 🔓, facilitando o controle de acesso à conta. A interface foi projetada para ser clara e de fácil navegação 🧭.
-  </p>
-</details>
-
----
-
-<details>
-  <summary align="center"><h3>📋 Tela de Fornecimento de Dados do Veículo Atual</h3></summary>
-  <p>
-  Para ajudar o usuário a encontrar o carro elétrico ideal, a **Tela de Fornecimento de Dados do Veículo Atual** permite que ele insira informações do seu carro, como o **Modelo do Carro** 🚗, **Ano** 📅, e **Tipo de Combustível** ⛽. Com base nesses dados, a plataforma sugere um carro elétrico equivalente, destacando eficiência, custo e impacto ambiental 🌍. O botão **Sugerir Carro** 🔍 conduz o usuário ao próximo passo.
-  </p>
-</details>
-
----
-
-<details>
-  <summary align="center"><h3>⚖️ Tela de Sugestão e Comparação de Carros</h3></summary>
-  <p>
-  Após fornecer os dados, o usuário é levado à **Tela de Sugestão e Comparação de Carros**, que exibe o **Veículo Atual** 🚙 e o carro elétrico sugerido pela plataforma 🚘⚡. A tela apresenta uma comparação de economia 💸 em relação ao consumo de combustível, custos de manutenção 🔧, e emissão de gases poluentes 🌱. Tudo isso ajuda o usuário a entender os benefícios e as economias que poderia fazer ao mudar para um carro elétrico. Um botão **Confirmar** ✅ é exibido para que o usuário finalize a análise.
-  </p>
-</details>
-
----
-
-<details>
-  <summary align="center"><h3>📋 Tela de Listagem de Veículos Cadastrados</h3></summary>
-  <p>
-  Por fim, a **Tela de Listagem de Veículos Cadastrados** permite que o usuário visualize todos os carros que ele cadastrou na plataforma para comparação 📊. A lista inclui veículos como **Chevrolet S10 2.8 Turbo 2023** 🚚, **Tesla Model 3 2019** 🚗, entre outros. Cada item da lista possui um botão de seleção 🔘 para facilitar a exclusão de algum carro cadastrado, utilizando o botão **Excluir** 🗑️ na parte inferior da tela.
-  </p>
-</details>
-
----
-  
+## Considerações Finais 🌱
 Essas telas e funcionalidades foram desenvolvidas visando uma experiência amigável 😊, educativa 📖 e motivadora 🚀 para ajudar os usuários a considerar uma transição para uma opção de mobilidade mais limpa e eficiente 🌿. O foco está na usabilidade e na clareza das informações apresentadas, com o objetivo de simplificar a tomada de decisões para um futuro mais sustentável 🌍.
-  
+
+---
+
+## Tecnologias Utilizadas ⚙️
+- **Kotlin** para desenvolvimento do aplicativo móvel 📱.
+- **Figma**: para desenvolver o protótipo do App para demonstrar a viabilidade da solução.
+
 ---
