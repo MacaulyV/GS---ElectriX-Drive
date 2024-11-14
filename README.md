@@ -6,15 +6,15 @@
 
 A plataforma ElectriX Drive é uma solução desenvolvida para fornecer aos usuários informações claras e detalhadas sobre os benefícios financeiros e ambientais da adoção de carros elétricos e painéis solares ⚡. Utilizando uma combinação de tecnologias modernas e acessíveis 💻, buscamos promover escolhas mais sustentáveis de forma prática e intuitiva 🌱. Seja por meio de uma interface web completa ou de um aplicativo mobile 📱, a solução foi pensada para tornar a experiência do usuário enriquecedora, educativa e, sobretudo, útil para decisões mais conscientes sobre mobilidade e sustentabilidade.
 
-## ✨ **Descrição do Projeto**
+## ✨ Descrição do Projeto
 
 A solução possui duas partes principais: a API e a Aplicação Web. A API gerencia os dados dos usuários e dos veículos, além de realizar comparações entre veículos de combustão e elétricos. A Aplicação Web permitirá que os usuários acessem todos os serviços oferecidos pela API de forma intuitiva e prática. Assim, a solução completa visa oferecer uma experiência integrada para a gestão de veículos e análise de eficiência, ajudando os usuários a entender a viabilidade da transição para veículos elétricos.
 
-## GestaoVeiculosApi
+### GestaoVeiculosApi
 
 A API ajuda a gerenciar usuários e seus veículos, permitindo comparar a eficiência entre diferentes tipos de veículos. Isso oferece uma visão clara das vantagens de cada tipo de veículo. A solução foi criada para fornecer insights práticos que facilitam a transição para veículos elétricos e tornam a gestão dos dados mais eficiente.
 
-## 🚀 Funcionamento da API
+### 🚀 Funcionamento da API
 
 A API Gestão de Veículos foi construída utilizando a plataforma ASP.NET Core e Entity Framework Core para manipulação de dados. Ela fornece funcionalidades como:
 
