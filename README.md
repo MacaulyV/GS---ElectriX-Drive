@@ -39,6 +39,8 @@ A API Gestão de Veículos foi construída utilizando a plataforma ASP.NET Core 
 - Cadastrar e atualizar veículos de combustão e veículos elétricos. 🔄
 - Realizar comparações de eficiência entre veículos, retornando insights claros sobre qual deles é mais vantajoso em termos de consumo, ajudando os usuários na tomada de decisão sobre a transição para veículos elétricos. ⚡🔋
 
+---
+
 ## 📑 Estrutura Geral das Camadas
 
 A API foi dividida de forma modular, com responsabilidades claramente separadas para garantir escalabilidade e fácil manutenção. Abaixo está uma breve descrição de cada parte do projeto:
