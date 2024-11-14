@@ -46,14 +46,13 @@ Este vídeo demonstra as funcionalidades do aplicativo, explicando sua usabilida
 
 A primeira tela do aplicativo é a **Tela de Introdução**, que convida os usuários a explorar ao App. Ela apresenta o nome da aplicação **ElectriX Drive**, com um design limpo e atrativo ✨. A tela possui um botão "**Continuar**" ➡️ que leva o usuário para o próximo passo no processo de cadastro ou login. Esta tela também destaca o objetivo do aplicativo: **Comparar a Eficiência do seu Veículo** ⚖️, incentivando os usuários a fazer escolhas mais sustentáveis.
 
-<p align="center">
+<p align="left">
 <details>
   <summary><h3>Ver Imagem da Tela de Introdução</h3></summary>
   <p align="center">
     
-![Tela de Introdução](https://github.com/user-attachments/assets/71d5db2c-48dc-4dd0-ab46-8e64956598a9)
-  
-  </p>
+![Tela de Introdução](https://github.com/user-attachments/assets/ed7b50e3-177b-4a05-b6d9-71a586255b61)
+</p>
 </details>
 </p>
 
@@ -65,7 +64,8 @@ A **Tela de Login** permite que os usuários acessem sua conta inserindo seu e-m
 <details>
   <summary><h3>Ver Imagem da Tela de Login</h3></summary>
   <p align="center">
-    ![Tela de Login](link_para_imagem)
+    
+  ![Tela de Login](link_para_imagem)
   </p>
 </details>
 </p>
@@ -78,7 +78,8 @@ Caso o usuário tenha esquecido sua senha, ele será direcionado para a **Tela d
 <details>
   <summary><h3>Ver Imagem da Tela de Redefinição de Senha</h3></summary>
   <p align="center">
-    ![Tela de Redefinição de Senha](link_para_imagem)
+    
+  ![Tela de Redefinição de Senha](link_para_imagem)
   </p>
 </details>
 </p>
@@ -91,7 +92,8 @@ A **Tela do Menu Principal** é onde o usuário tem acesso às principais funcio
 <details>
   <summary><h3>Ver Imagem da Tela do Menu Principal</h3></summary>
   <p align="center">
-    ![Tela do Menu Principal](link_para_imagem)
+    
+  ![Tela do Menu Principal](link_para_imagem)
   </p>
 </details>
 </p>
@@ -104,7 +106,8 @@ Para ajudar o usuário a encontrar o carro elétrico ideal, a **Tela de Fornecim
 <details>
   <summary><h3>Ver Imagem da Tela de Fornecimento de Dados do Veículo Atual</h3></summary>
   <p align="center">
-    ![Tela de Fornecimento de Dados do Veículo Atual](link_para_imagem)
+    
+  ![Tela de Fornecimento de Dados do Veículo Atual](link_para_imagem)
   </p>
 </details>
 </p>
@@ -117,7 +120,8 @@ Após fornecer os dados, o usuário é levado à **Tela de Sugestão e Comparaç
 <details>
   <summary><h3>Ver Imagem da Tela de Sugestão e Comparação de Carros</h3></summary>
   <p align="center">
-    ![Tela de Sugestão e Comparação de Carros](link_para_imagem)
+    
+  ![Tela de Sugestão e Comparação de Carros](link_para_imagem)
   </p>
 </details>
 </p>
@@ -130,7 +134,8 @@ Por fim, a **Tela de Listagem de Veículos Cadastrados** permite que o usuário 
 <details>
   <summary><h3>Ver Imagem da Tela de Listagem de Veículos Cadastrados</h3></summary>
   <p align="center">
-    ![Tela de Listagem de Veículos Cadastrados](link_para_imagem)
+    
+  ![Tela de Listagem de Veículos Cadastrados](link_para_imagem)
   </p>
 </details>
 </p>
