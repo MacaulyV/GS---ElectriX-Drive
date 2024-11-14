@@ -31,14 +31,6 @@ Assim, a solução completa visa oferecer uma experiência integrada para a gest
 
 ---
 
-## 🎥 Vídeo do Projeto
-
-Para assistir ao vídeo de apresentação do **Projeto**, clique no link abaixo:
-
-[🔗 Assista ao Vídeo do Projeto](URL_DO_VIDEO_AQUI)
-
----
-
  <details>
   <summary align="center"><h3>📋 GestaoVeiculosAPI</h3></summary>
   <p>
@@ -163,5 +155,13 @@ Além disso, a documentação bem estruturada facilita o uso, a integração e o
 Em Andamento
     </p>
 </details>
+
+---
+
+## 🎥 Vídeo do Projeto
+
+Para assistir ao vídeo de apresentação do **Projeto**, clique no link abaixo:
+
+[🔗 Assista ao Vídeo do Projeto](URL_DO_VIDEO_AQUI)
 
 ---
