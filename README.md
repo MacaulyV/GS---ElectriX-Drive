@@ -89,6 +89,8 @@ Define as operações de acesso ao banco de dados para as entidades 👤 **Usuar
 
 - ⚡ **VeiculoService.cs**: Implementa lógicas mais complexas envolvendo veículos, como validação de modelo e cálculo de eficiência.
 
+---
+
 ## 📈 Estrutura de Dados
 
 A API utiliza o banco de dados Oracle para armazenar informações sobre 👤 **usuários** e 🚗 **veículos**. Abaixo estão descritas as tabelas principais e seus atributos:
