@@ -2,8 +2,6 @@
 
 # **ElectriX Drive Plataforma de Comparação <br> de Eficiência com Veículos Elétricos** 🚗💡
 
----
-
 ## 👥 Colaboradores do Projeto
 
 - ### **Daniel Bezerra da Silva Melo** - **RM:** [553792](#)
