@@ -2,6 +2,12 @@
 
 # **ElectriX Drive Plataforma de Comparação <br> de Eficiência com Veículos Elétricos** 🚗💡
 
+## 👥 Colaboradores do Projeto
+
+- **Daniel Bezerra da Silva Melo** - [RM: 553792](#)
+- **Gustavo Rocha Caxias** - [RM: 553310](#)
+- **Macauly Vivaldo da Silva** - [RM: 553350](#)
+
 ---
 
 ## **Introdução 🌿**
@@ -147,12 +153,5 @@ Siga os passos abaixo para clonar, e rodar o aplicativo **ElectriX Drive** em se
    
    ```sh
    git clone -b ElectriX-Drive-App https://github.com/MacaulyV/GS-ElectriX-Drive.git
----
-
-## 👥 Colaboradores do Projeto
-
-- **Daniel Bezerra da Silva Melo** - [RM: 553792](#)
-- **Gustavo Rocha Caxias** - [RM: 553310](#)
-- **Macauly Vivaldo da Silva** - [RM: 553350](#)
-
+   
 ---
