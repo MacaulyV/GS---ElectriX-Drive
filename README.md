@@ -14,8 +14,6 @@ A plataforma ElectriX Drive é uma solução desenvolvida para fornecer aos usu�
 
 A solução é dividida em duas partes principais: a **API** e a **Aplicação Web**.
 
----
-
 ### API 📊
 - Gerencia os dados dos usuários e dos veículos 🚗.
 - Realiza comparações entre veículos de combustão ⛽ e elétricos ⚡.
