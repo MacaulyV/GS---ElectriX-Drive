@@ -1,4 +1,4 @@
-![Descrição banner](https://github.com/user-attachments/assets/37f29a38-e0ca-4de9-ac32-3954d4658277)
+![Descrição banner](https://github.com/user-attachments/assets/fd23aae5-3758-4cd8-9b38-4abbf9e8b845)
 
 # **ElectriX Drive Plataforma de Comparação <br> de Eficiência com Veículos Elétricos** 🚗💡
 
