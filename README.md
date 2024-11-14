@@ -32,6 +32,6 @@ Para assistir ao vídeo do pitch sobre o **ElectriX Drive Platform**, clique no 
 
 [🔗 Assista ao Vídeo do Pitch](URL_DO_VIDEO_AQUI)
 
-Este vídeo apresenta o projeto de forma envolvente e ressalta as vantagens exclusivas da Plataforma, mostrando por que ela se destaca
+Este vídeo apresenta o projeto de forma envolvente e ressalta as vantagens exclusivas da Plataforma, mostrando o por que ela se destaca.
 
 ---
