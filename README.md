@@ -6,7 +6,7 @@
 
 ## 📄 **Introdução**
 
-A plataforma ElectriX Drive é uma solução desenvolvida para fornecer aos usuários informações claras e detalhadas sobre os benefícios financeiros e ambientais da adoção de carros elétricos e painéis solares ⚡. Utilizando uma combinação de tecnologias modernas e acessíveis 💻, buscamos promover escolhas mais sustentáveis de forma prática e intuitiva 🌱. Seja por meio de uma interface web completa ou de um aplicativo mobile 📱, a solução foi pensada para tornar a experiência do usuário enriquecedora, educativa e, sobretudo, útil para decisões mais conscientes sobre mobilidade e sustentabilidade.
+A plataforma ElectriX Drive é uma solução desenvolvida para fornecer aos usuários informações claras e detalhadas sobre os benefícios financeiros e ambientais da adoção de carros elétricos e painéis solares 🌞. Utilizando uma combinação de tecnologias modernas e acessíveis 💻, buscamos promover escolhas mais sustentáveis de forma prática e intuitiva. Seja por meio de uma interface web completa 🌐 ou de um aplicativo móvel 📱, a solução foi pensada para tornar a experiência do usuário enriquecedora, educativa e útil para decisões mais conscientes sobre mobilidade e sustentabilidade 🌱.
 
 ---
 
