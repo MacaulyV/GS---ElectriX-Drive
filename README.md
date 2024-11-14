@@ -16,6 +16,14 @@ A plataforma ElectriX Drive é uma solução desenvolvida para fornecer aos usu�
 
 ---
 
+## 🎥 Vídeo do Projeto
+
+Para assistir ao vídeo de apresentação do **Projeto**, clique no link abaixo:
+
+[🔗 Assista ao Vídeo do Projeto](URL_DO_VIDEO_AQUI)
+
+---
+
 ## ✨ **Descrição do Projeto**
 
 A solução é dividida em duas partes principais: a **API** e a **Aplicação Web**.
@@ -155,13 +163,5 @@ Além disso, a documentação bem estruturada facilita o uso, a integração e o
 Em Andamento
     </p>
 </details>
-
----
-
-## 🎥 Vídeo do Projeto
-
-Para assistir ao vídeo de apresentação do **Projeto**, clique no link abaixo:
-
-[🔗 Assista ao Vídeo do Projeto](URL_DO_VIDEO_AQUI)
 
 ---
