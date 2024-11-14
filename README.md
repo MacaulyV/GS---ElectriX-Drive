@@ -139,3 +139,15 @@ Além disso, a documentação bem estruturada facilita o uso, a integração e o
 
   </p>
 </details>
+
+---
+
+ <details>
+  <summary align="center"><h3>📋 GestaoVeiculosAPI</h3></summary>
+  <p>
+
+Em Andamento
+    </p>
+</details>
+
+---
