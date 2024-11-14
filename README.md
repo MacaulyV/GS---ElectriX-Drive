@@ -29,7 +29,9 @@ A solução é dividida em duas partes principais: a **API** e a **Aplicação W
 
 Assim, a solução completa visa oferecer uma experiência integrada para a gestão de veículos e análise de eficiência, ajudando os usuários a entender a viabilidade da transição para veículos elétricos. 🚗💡
 
-### 🎥 Vídeo do Projeto
+---
+
+## 🎥 Vídeo do Projeto
 
 Para assistir ao vídeo de apresentação do **Projeto**, clique no link abaixo:
 
