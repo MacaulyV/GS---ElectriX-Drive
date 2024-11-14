@@ -46,6 +46,8 @@ Este vídeo demonstra as funcionalidades do aplicativo, explicando sua usabilida
 
 A primeira tela do aplicativo é a **Tela de Introdução**, que convida os usuários a explorar ao App. Ela apresenta o nome da aplicação **ElectriX Drive**, com um design limpo e atrativo ✨. A tela possui um botão "**Continuar**" ➡️ que leva o usuário para o próximo passo no processo de cadastro ou login. Esta tela também destaca o objetivo do aplicativo: **Comparar a Eficiência do seu Veículo** ⚖️, incentivando os usuários a fazer escolhas mais sustentáveis.
 
+---
+
 <p align="left">
 <details>
   <summary><h3>Ver Imagem da Tela de Introdução</h3></summary>
@@ -55,6 +57,8 @@ A primeira tela do aplicativo é a **Tela de Introdução**, que convida os usu�
 </p>
 </details>
 </p>
+
+---
 
 ### 2. Tela de Login 🔑
 
