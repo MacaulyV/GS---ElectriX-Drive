@@ -107,7 +107,7 @@ Para ajudar o usuário a encontrar o carro elétrico ideal, a **Tela de Fornecim
   <summary><h3>Ver Imagem da Tela de Fornecimento de Dados do Veículo Atual</h3></summary>
   <p align="center">
     
-  ![Tela de Fornecimento de Dados do Veículo Atual](link_para_imagem)
+  ![Tela de Fornecimento de Dados do Veículo Atual](https://github.com/user-attachments/assets/83b7c9ca-b0c3-4cfb-aac6-2b452ebeab83)
   </p>
 </details>
 </p>
@@ -121,7 +121,7 @@ Após fornecer os dados, o usuário é levado à **Tela de Sugestão e Comparaç
   <summary><h3>Ver Imagem da Tela de Sugestão e Comparação de Carros</h3></summary>
   <p align="center">
     
-  ![Tela de Sugestão e Comparação de Carros](link_para_imagem)
+  ![Tela de Sugestão e Comparação de Carros](https://github.com/user-attachments/assets/2f9ef2c8-a8cb-41e5-b303-fdc96b4de3fa)
   </p>
 </details>
 </p>
@@ -135,7 +135,7 @@ Por fim, a **Tela de Listagem de Veículos Cadastrados** permite que o usuário 
   <summary><h3>Ver Imagem da Tela de Listagem de Veículos Cadastrados</h3></summary>
   <p align="center">
     
-  ![Tela de Listagem de Veículos Cadastrados](link_para_imagem)
+  ![Tela de Listagem de Veículos Cadastrados](https://github.com/user-attachments/assets/780f0b73-b492-4b63-8c94-12fc65f7c3f3)
   </p>
 </details>
 </p>
