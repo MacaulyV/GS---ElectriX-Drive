@@ -25,6 +25,10 @@ Assim, a solução completa visa oferecer uma experiência integrada para a gest
 
 ---
 
+ <details>
+  <summary align="center"><h3>📋 GestaoVeiculosAPI</h3></summary>
+  <p>
+
 ### 📋 GestaoVeiculosAPI
 
 A API ajuda a gerenciar usuários e seus veículos, permitindo comparar a eficiência entre diferentes tipos de veículos. Isso oferece uma visão clara das vantagens de cada tipo de veículo. A solução foi criada para fornecer insights práticos que facilitam a transição para veículos elétricos e tornam a gestão dos dados mais eficiente.
@@ -130,3 +134,6 @@ A API de Gestão de Veículos foi desenvolvida com um design modular, extensíve
 Além disso, a documentação bem estruturada facilita o uso, a integração e o desenvolvimento de interfaces que utilizam essa API, proporcionando um processo mais simples e eficiente para todos os usuários.
 
 ---
+
+  </p>
+</details>
