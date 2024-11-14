@@ -121,8 +121,12 @@ A API utiliza o banco de dados Oracle para armazenar informações sobre 👤 **
 - 🔋 **Consumo_Medio**: Consumo médio em kWh/100km.
 - 🔋 **Autonomia**: Autonomia em km por carga.
 
+---
+
 ## 📏 Conclusão
 
 A API de Gestão de Veículos foi desenvolvida com um design modular, extensível e é totalmente documentada com Swagger. Isso garante fácil manutenção e uma integração intuitiva. A separação clara entre as camadas torna o sistema fácil de entender e evoluir, seja com novas funcionalidades ou integrações.
 
 Além disso, a documentação bem estruturada facilita o uso, a integração e o desenvolvimento de interfaces que utilizam essa API, proporcionando um processo mais simples e eficiente para todos os usuários.
+
+---
