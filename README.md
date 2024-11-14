@@ -44,13 +44,13 @@ Este vídeo demonstra as funcionalidades do aplicativo, explicando sua usabilida
 
 ### 1. Tela de Introdução 🚀
 
-A primeira tela do aplicativo é a **Tela de Introdução**, que convida os usuários a explorar a plataforma. Ela apresenta o nome da aplicação **ElectriX Drive**, com um design limpo e atrativo ✨. A tela possui um botão "**Continuar**" ➡️ que leva o usuário para o próximo passo no processo de cadastro ou login. Esta tela também destaca o objetivo do aplicativo: **Comparar a Eficiência do seu Veículo** ⚖️, incentivando os usuários a fazer escolhas mais sustentáveis.
+A primeira tela do aplicativo é a **Tela de Introdução**, que convida os usuários a explorar ao App. Ela apresenta o nome da aplicação **ElectriX Drive**, com um design limpo e atrativo ✨. A tela possui um botão "**Continuar**" ➡️ que leva o usuário para o próximo passo no processo de cadastro ou login. Esta tela também destaca o objetivo do aplicativo: **Comparar a Eficiência do seu Veículo** ⚖️, incentivando os usuários a fazer escolhas mais sustentáveis.
 
 <p align="left">
 <details>
   <summary><h3>Ver Imagem da Tela de Introdução</h3></summary>
   <p align="center">
-    ![Tela de Introdução](link_para_imagem)
+    ![Tela de Introdução](https://github.com/user-attachments/assets/71d5db2c-48dc-4dd0-ab46-8e64956598a9)
   </p>
 </details>
 </p>
@@ -83,7 +83,7 @@ Caso o usuário tenha esquecido sua senha, ele será direcionado para a **Tela d
 
 ### 4. Tela do Menu Principal 🏠
 
-A **Tela do Menu Principal** é onde o usuário tem acesso às principais funcionalidades da plataforma. Aqui, o usuário pode **Comparar a Eficiência** de seu veículo com um carro elétrico ⚙️ ou **Visualizar a Lista de Carros** cadastrados 🚘. Há também a opção de **Deslogar** 🔓, facilitando o controle de acesso à conta. A interface foi projetada para ser clara e de fácil navegação 🧭.
+A **Tela do Menu Principal** é onde o usuário tem acesso às principais funcionalidades dao App. Aqui, o usuário pode **Comparar a Eficiência** de seu veículo com um carro elétrico ⚙️ ou **Visualizar a Lista de Carros** cadastrados 🚘. Há também a opção de **Deslogar** 🔓, facilitando o controle de acesso à conta. A interface foi projetada para ser clara e de fácil navegação 🧭.
 
 <p align="left">
 <details>
@@ -109,7 +109,7 @@ Para ajudar o usuário a encontrar o carro elétrico ideal, a **Tela de Fornecim
 
 ### 6. Tela de Sugestão e Comparação de Carros ⚖️
 
-Após fornecer os dados, o usuário é levado à **Tela de Sugestão e Comparação de Carros**, que exibe o **Veículo Atual** 🚙 e o carro elétrico sugerido pela plataforma 🚘⚡. A tela apresenta uma comparação de economia 💸 em relação ao consumo de combustível, custos de manutenção 🔧, e emissão de gases poluentes 🌱. Tudo isso ajuda o usuário a entender os benefícios e as economias que poderia fazer ao mudar para um carro elétrico. Um botão **Confirmar** ✅ é exibido para que o usuário finalize a análise.
+Após fornecer os dados, o usuário é levado à **Tela de Sugestão e Comparação de Carros**, que exibe o **Veículo Atual** 🚙 e o carro elétrico sugerido pelo App 🚘⚡. A tela apresenta uma comparação de economia 💸 em relação ao consumo de combustível, custos de manutenção 🔧, e emissão de gases poluentes 🌱. Tudo isso ajuda o usuário a entender os benefícios e as economias que poderia fazer ao mudar para um carro elétrico. Um botão **Confirmar** ✅ é exibido para que o usuário finalize a análise.
 
 <p align="left">
 <details>
@@ -122,7 +122,7 @@ Após fornecer os dados, o usuário é levado à **Tela de Sugestão e Comparaç
 
 ### 7. Tela de Listagem de Veículos Cadastrados 📋
 
-Por fim, a **Tela de Listagem de Veículos Cadastrados** permite que o usuário visualize todos os carros que ele cadastrou na plataforma para comparação 📊. A lista inclui veículos como **Chevrolet S10 2.8 Turbo 2023** 🚚, **Tesla Model 3 2019** 🚗, entre outros. Cada item da lista possui um botão de seleção 🔘 para facilitar a exclusão de algum carro cadastrado, utilizando o botão **Excluir** 🗑️ na parte inferior da tela.
+Por fim, a **Tela de Listagem de Veículos Cadastrados** permite que o usuário visualize todos os carros que ele cadastrou no App para receber uma recomendação e comparação 📊. A lista inclui todos os veículos salvos, Cada um possui um botão de seleção 🔘 para facilitar a exclusão de algum carro cadastrado, utilizando o botão **Excluir** 🗑️ na parte inferior da tela.
 
 <p align="left">
 <details>
