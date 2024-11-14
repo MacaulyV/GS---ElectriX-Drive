@@ -32,6 +32,14 @@ Este protótipo contém todas as telas desenvolvidas para o app, apresentando as
 
 ---
 
+## 🎥 Vídeo do Projeto
+
+Para assistir ao vídeo de apresentação do **GS-ElectriX-Drive**, clique no link abaixo:
+
+[🔗 Assista ao Vídeo do Projeto](URL_DO_VIDEO_AQUI)
+
+Este vídeo demonstra as funcionalidades do aplicativo, explicando sua usabilidade.
+
 ## 📱 Telas do Aplicativo
 
 ### 1. Tela de Introdução 🚀
