@@ -68,7 +68,7 @@ A **Tela de Login** permite que os usuários acessem sua conta inserindo seu e-m
 
 <p align="left">
 <details>
-  <summary><h3>Ver Imagem da Tela de Login</h3></summary>
+  <summary><h4>Ver Imagem da Tela de Login</h4></summary>
   <p align="center">
     
   ![Tela de Login](https://github.com/user-attachments/assets/3531a568-db5c-44cb-b27a-d91e719a6db4)
@@ -86,7 +86,7 @@ Caso o usuário tenha esquecido sua senha, ele será direcionado para a **Tela d
 
 <p align="left">
 <details>
-  <summary><h3>Ver Imagem da Tela de Redefinição de Senha</h3></summary>
+  <summary><h4>Ver Imagem da Tela de Redefinição de Senha</h4></summary>
   <p align="center">
     
   ![Tela de Redefinição de Senha](https://github.com/user-attachments/assets/68d64e7e-fa93-4b53-8ca5-db224e1e96a6)
@@ -104,7 +104,7 @@ A **Tela do Menu Principal** é onde o usuário tem acesso às principais funcio
 
 <p align="left">
 <details>
-  <summary><h3>Ver Imagem da Tela do Menu Principal</h3></summary>
+  <summary><h4>Ver Imagem da Tela do Menu Principal</h4></summary>
   <p align="center">
 
   ![Tela do Menu Principal](https://github.com/user-attachments/assets/4f6cde87-bc4c-483d-8584-cb6bedf2f24c)
@@ -122,7 +122,7 @@ Para ajudar o usuário a encontrar o carro elétrico ideal, a **Tela de Fornecim
 
 <p align="left">
 <details>
-  <summary><h3>Ver Imagem da Tela de Fornecimento de Dados do Veículo Atual</h3></summary>
+  <summary><h4>Ver Imagem da Tela de Fornecimento de Dados do Veículo Atual</h4></summary>
   <p align="center">
     
   ![Tela de Fornecimento de Dados do Veículo Atual](https://github.com/user-attachments/assets/83b7c9ca-b0c3-4cfb-aac6-2b452ebeab83)
@@ -140,7 +140,7 @@ Após fornecer os dados, o usuário é levado à **Tela de Sugestão e Comparaç
 
 <p align="left">
 <details>
-  <summary><h3>Ver Imagem da Tela de Sugestão e Comparação de Carros</h3></summary>
+  <summary><h4>Ver Imagem da Tela de Sugestão e Comparação de Carros</h4></summary>
   <p align="center">
     
   ![Tela de Sugestão e Comparação de Carros](https://github.com/user-attachments/assets/2f9ef2c8-a8cb-41e5-b303-fdc96b4de3fa)
@@ -158,7 +158,7 @@ Por fim, a **Tela de Listagem de Veículos Cadastrados** permite que o usuário 
 
 <p align="left">
 <details>
-  <summary><h3>Ver Imagem da Tela de Listagem de Veículos Cadastrados</h3></summary>
+  <summary><h4>Ver Imagem da Tela de Listagem de Veículos Cadastrados</h4></summary>
   <p align="center">
     
   ![Tela de Listagem de Veículos Cadastrados](https://github.com/user-attachments/assets/780f0b73-b492-4b63-8c94-12fc65f7c3f3)
