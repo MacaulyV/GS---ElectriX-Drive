@@ -78,6 +78,7 @@ Siga os passos abaixo para clonar, e rodar o aplicativo **ElectriX Drive** em se
 
 1. **Clone o Repositório**:
    Abra seu terminal e clone a branch específica do repositório usando o comando abaixo:
+   
    ```sh
    git clone -b ElectriX-Drive-App https://github.com/MacaulyV/GS-ElectriX-Drive.git
 ---
