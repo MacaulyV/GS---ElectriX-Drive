@@ -1,6 +1,6 @@
 ![Descrição banner](https://github.com/user-attachments/assets/fd23aae5-3758-4cd8-9b38-4abbf9e8b845)
 
-# **ElectriX Drive Plataforma de Comparação <br> de Eficiência com Veículos Elétricos** 🚗💡
+# **ElectriX Drive Platform** 🚗💡
 
 ## 👥 Colaboradores do Projeto
 
