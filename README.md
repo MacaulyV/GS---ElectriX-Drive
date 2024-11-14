@@ -64,6 +64,8 @@ A primeira tela do aplicativo é a **Tela de Introdução**, que convida os usu�
 
 A **Tela de Login** permite que os usuários acessem sua conta inserindo seu e-mail 📧 e senha 🔒. Além disso, há opções para **Cadastrar-se** com o Google 🌐 e uma opção para redefinir a senha 🔄 caso o usuário a tenha esquecido. A interface apresenta um design acolhedor, com elementos visuais que lembram a natureza e sustentabilidade 🌲, ajudando a criar uma experiência tranquila para o usuário.
 
+---
+
 <p align="left">
 <details>
   <summary><h3>Ver Imagem da Tela de Login</h3></summary>
@@ -74,9 +76,13 @@ A **Tela de Login** permite que os usuários acessem sua conta inserindo seu e-m
 </details>
 </p>
 
+---
+
 ### 3. Tela de Redefinição de Senha 🔄
 
 Caso o usuário tenha esquecido sua senha, ele será direcionado para a **Tela de Redefinição de Senha**, onde deve inserir seu e-mail ✉️ e a nova senha desejada 🔑, confirmando-a em seguida. Após o preenchimento dos campos, o usuário pode clicar em "**Confirmar**" ✅ para concluir o processo. A tela possui um design simples e intuitivo, garantindo que o processo de redefinição seja rápido e eficiente ⚡.
+
+---
 
 <p align="left">
 <details>
@@ -88,9 +94,13 @@ Caso o usuário tenha esquecido sua senha, ele será direcionado para a **Tela d
 </details>
 </p>
 
+---
+
 ### 4. Tela do Menu Principal 🏠
 
 A **Tela do Menu Principal** é onde o usuário tem acesso às principais funcionalidades dao App. Aqui, o usuário pode **Comparar a Eficiência** de seu veículo com um carro elétrico ⚙️ ou **Visualizar a Lista de Carros** cadastrados 🚘. Há também a opção de **Deslogar** 🔓, facilitando o controle de acesso à conta. A interface foi projetada para ser clara e de fácil navegação 🧭.
+
+---
 
 <p align="left">
 <details>
@@ -102,9 +112,13 @@ A **Tela do Menu Principal** é onde o usuário tem acesso às principais funcio
 </details>
 </p>
 
+---
+
 ### 5. Tela de Fornecimento de Dados do Veículo Atual 📋
 
 Para ajudar o usuário a encontrar o carro elétrico ideal, a **Tela de Fornecimento de Dados do Veículo Atual** permite que ele insira informações do seu carro, como o **Modelo do Carro** 🚗, **Ano** 📅, e **Tipo de Combustível** ⛽. Com base nesses dados, a plataforma sugere um carro elétrico equivalente, destacando eficiência, custo e impacto ambiental 🌍. O botão **Sugerir Carro** 🔍 conduz o usuário ao próximo passo.
+
+---
 
 <p align="left">
 <details>
@@ -116,9 +130,13 @@ Para ajudar o usuário a encontrar o carro elétrico ideal, a **Tela de Fornecim
 </details>
 </p>
 
+---
+
 ### 6. Tela de Sugestão e Comparação de Carros ⚖️
 
 Após fornecer os dados, o usuário é levado à **Tela de Sugestão e Comparação de Carros**, que exibe o **Veículo Atual** 🚙 e o carro elétrico sugerido pelo App 🚘⚡. A tela apresenta uma comparação de economia 💸 em relação ao consumo de combustível, custos de manutenção 🔧, e emissão de gases poluentes 🌱. Tudo isso ajuda o usuário a entender os benefícios e as economias que poderia fazer ao mudar para um carro elétrico. Um botão **Confirmar** ✅ é exibido para que o usuário finalize a análise.
+
+---
 
 <p align="left">
 <details>
@@ -130,9 +148,13 @@ Após fornecer os dados, o usuário é levado à **Tela de Sugestão e Comparaç
 </details>
 </p>
 
+---
+
 ### 7. Tela de Listagem de Veículos Cadastrados 📋
 
 Por fim, a **Tela de Listagem de Veículos Cadastrados** permite que o usuário visualize todos os carros que ele cadastrou no App para receber uma recomendação e comparação 📊. A lista inclui todos os veículos salvos, Cada um possui um botão de seleção 🔘 para facilitar a exclusão de algum carro cadastrado, utilizando o botão **Excluir** 🗑️ na parte inferior da tela.
+
+---
 
 <p align="left">
 <details>
