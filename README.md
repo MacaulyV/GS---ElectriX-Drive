@@ -16,6 +16,16 @@ O aplicativo ElectriX Drive foi desenvolvido como um protótipo usando Kotlin, c
 
 ---
 
+## 🎨 Ver Protótipo do App no Figma
+
+Se você quiser explorar o protótipo completo do **ElectriX Drive App** desenvolvido no Figma, clique no link abaixo:
+
+[🔗 Ver Protótipo no Figma](https://www.figma.com/proto/WBaYttbp8VgbIU5q7EYkpG/ElectriX-Drive-App?node-id=2-2&node-type=canvas&t=HIp80Hcc3CdUiEPL-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=2%3A2&share=1)
+
+Este protótipo contém todas as telas desenvolvidas para o app, apresentando as interações e fluxos de navegação de maneira visual e intuitiva.
+
+---
+
 ## 📱 Telas do Aplicativo
 
 ### 1. Tela de Introdução 🚀
