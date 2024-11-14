@@ -65,3 +65,19 @@ Essas telas e funcionalidades foram desenvolvidas visando uma experiência amig�
 - **Figma**: para desenvolver o protótipo do App para demonstrar a viabilidade da solução.
 
 ---
+
+## 🚀 Instruções para Rodar o App no Android Studio
+
+Siga os passos abaixo para clonar, e rodar o aplicativo **ElectriX Drive** em seu ambiente de desenvolvimento:
+
+### 📋 Pré-requisitos
+- **Android Studio** instalado.
+- **Java JDK** 8 ou superior.
+
+### 📦 Passo a Passo
+
+1. **Clone o Repositório**:
+   Abra seu terminal e clone a branch específica do repositório usando o comando abaixo:
+   ```sh
+   git clone -b ElectriX-Drive-App https://github.com/MacaulyV/GS-ElectriX-Drive.git
+---
