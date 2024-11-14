@@ -50,7 +50,7 @@ A primeira tela do aplicativo é a **Tela de Introdução**, que convida os usu�
 
 <p align="left">
 <details>
-  <summary><h3>Ver Imagem da Tela de Introdução</h3></summary>
+  <summary><h4>Ver Imagem da Tela de Introdução</h4></summary>
   <p align="center">
     
 ![Tela de Introdução](https://github.com/user-attachments/assets/ed7b50e3-177b-4a05-b6d9-71a586255b61)
