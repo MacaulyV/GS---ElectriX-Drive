@@ -65,7 +65,7 @@ A **Tela de Login** permite que os usuários acessem sua conta inserindo seu e-m
   <summary><h3>Ver Imagem da Tela de Login</h3></summary>
   <p align="center">
     
-  ![Tela de Login](link_para_imagem)
+  ![Tela de Login](https://github.com/user-attachments/assets/3531a568-db5c-44cb-b27a-d91e719a6db4)
   </p>
 </details>
 </p>
@@ -79,7 +79,7 @@ Caso o usuário tenha esquecido sua senha, ele será direcionado para a **Tela d
   <summary><h3>Ver Imagem da Tela de Redefinição de Senha</h3></summary>
   <p align="center">
     
-  ![Tela de Redefinição de Senha](link_para_imagem)
+  ![Tela de Redefinição de Senha](https://github.com/user-attachments/assets/68d64e7e-fa93-4b53-8ca5-db224e1e96a6)
   </p>
 </details>
 </p>
@@ -92,8 +92,8 @@ A **Tela do Menu Principal** é onde o usuário tem acesso às principais funcio
 <details>
   <summary><h3>Ver Imagem da Tela do Menu Principal</h3></summary>
   <p align="center">
-    
-  ![Tela do Menu Principal](link_para_imagem)
+
+  ![Tela do Menu Principal](https://github.com/user-attachments/assets/4f6cde87-bc4c-483d-8584-cb6bedf2f24c)
   </p>
 </details>
 </p>
