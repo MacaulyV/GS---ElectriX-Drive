@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#90C0FF"
+    tools:context=".VisualizeEditeDadosActivity">
+
+    <TextView
+        android:id="@+id/btnVoltar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="‹ Voltar"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="380dp"
+        android:layout_height="91dp"
+        android:layout_marginTop="16dp"
+        android:text="Veja nossa sugestão de carro elétrico para você:"
+        android:textColor="#003366"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnVoltar" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardDadosComparacao"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="24dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleText">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tvVeiculoAtualLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="Veículo Atual:"
+                android:textColor="#003366"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etVeiculoModeloAno"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="2dp"
+                android:hint="Modelo e Ano"
+                android:padding="12dp"
+                android:textColor="#005BB5"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/etVeiculoCombustivel"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="16dp"
+                android:hint="Combustível"
+                android:padding="12dp"
+                android:textColor="#003366"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvCarroEletricoLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="Carro Elétrico:"
+                android:textColor="#003366"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etModeloCarroEletrico"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="2dp"
+                android:hint="Modelo do Carro Elétrico"
+                android:padding="12dp"
+                android:textColor="#005BB5"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/etEconomiaCarroEletrico"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginBottom="2dp"
+                android:hint="Economia"
+                android:maxLines="3"
+                android:padding="12dp"
+                android:scrollHorizontally="false"
+                android:textColor="#003366"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/etBeneficiosCarroEletrico"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginBottom="2dp"
+                android:hint="Benefícios"
+                android:maxLines="3"
+                android:padding="12dp"
+                android:scrollHorizontally="false"
+                android:textColor="#003366"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/etImpactoAmbiental"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="16dp"
+                android:hint="Impacto Ambiental"
+                android:padding="12dp"
+                android:textColor="#003366"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btnConfirmar"
+        android:layout_width="148dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#005BB5"
+        android:text="Confirmar"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardDadosComparacao" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

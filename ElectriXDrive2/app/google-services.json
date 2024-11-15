@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "546051466262",
+    "project_id": "electrixdrive-4785f",
+    "storage_bucket": "electrixdrive-4785f.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:546051466262:android:3cb95226e9bca215958137",
+        "android_client_info": {
+          "package_name": "com.daniel.electrixdrive"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA4jda5PZ9gDCGyreryhCNR5XrvFbe4LYI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

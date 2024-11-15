@@ -1,0 +1,124 @@
+{
+  "carros": [
+    {
+      "modelo": "Chevrolet S10",
+      "ano": 2020,
+      "eletrico_equivalente": "Chevrolet Bolt",
+      "beneficios_consumo": "Economia de 60% em relação ao combustível tradicional",
+      "beneficios_manutencao": "Custos de manutenção reduzidos em 40%",
+      "impacto_ambiental": "Emissão zero de gases poluentes"
+    },
+    {
+      "modelo": "Ford Ranger",
+      "ano": 2021,
+      "eletrico_equivalente": "Ford Mustang Mach-E",
+      "beneficios_consumo": "Economia de 50% em relação ao combustível tradicional",
+      "beneficios_manutencao": "Custos de manutenção reduzidos em 35%",
+      "impacto_ambiental": "Emissão zero de gases poluentes"
+    },
+    {
+      "modelo": "Toyota Corolla",
+      "ano": 2021,
+      "eletrico_equivalente": "Toyota Prius",
+      "beneficios_consumo": "Economia de 55% em relação ao combustível tradicional",
+      "beneficios_manutencao": "Custos de manutenção reduzidos em 30%",
+      "impacto_ambiental": "Emissão zero de gases poluentes"
+    },
+    {
+      "modelo": "Nissan Sentra",
+      "ano": 2019,
+      "eletrico_equivalente": "Nissan Leaf",
+      "beneficios_consumo": "Economia de 70% em relação ao combustível tradicional",
+      "beneficios_manutencao": "Custos de manutenção reduzidos em 50%",
+      "impacto_ambiental": "Emissão zero de gases poluentes"
+    },
+    {
+      "modelo": "Honda Civic",
+      "ano": 2020,
+      "eletrico_equivalente": "Honda e",
+      "beneficios_consumo": "Economia de 65% em relação ao combustível tradicional",
+      "beneficios_manutencao": "Custos de manutenção reduzidos em 40%",
+      "impacto_ambiental": "Emissão zero de gases poluentes"
+    },
+    {
+      "modelo": "Volkswagen Golf",
+      "ano": 2021,
+      "eletrico_equivalente": "Volkswagen ID.3",
+      "beneficios_consumo": "Economia de 60% em relação ao combustível tradicional",
+      "beneficios_manutencao": "Custos de manutenção reduzidos em 45%",
+      "impacto_ambiental": "Emissão zero de gases poluentes"
+    },
+    {
+      "modelo": "Hyundai Tucson",
+      "ano": 2022,
+      "eletrico_equivalente": "Hyundai Kona Electric",
+      "beneficios_consumo": "Economia de 50% em relação ao combustível tradicional",
+      "beneficios_manutencao": "Custos de manutenção reduzidos em 38%",
+      "impacto_ambiental": "Emissão zero de gases poluentes"
+    },
+    {
+      "modelo": "Kia Sportage",
+      "ano": 2021,
+      "eletrico_equivalente": "Kia EV6",
+      "beneficios_consumo": "Economia de 55% em relação ao combustível tradicional",
+      "beneficios_manutencao": "Custos de manutenção reduzidos em 42%",
+      "impacto_ambiental": "Emissão zero de gases poluentes"
+    },
+    {
+      "modelo": "Audi A4",
+      "ano": 2020,
+      "eletrico_equivalente": "Audi e-tron GT",
+      "beneficios_consumo": "Economia de 60% em relação ao combustível tradicional",
+      "beneficios_manutencao": "Custos de manutenção reduzidos em 50%",
+      "impacto_ambiental": "Emissão zero de gases poluentes"
+    },
+    {
+      "modelo": "BMW Série 3",
+      "ano": 2021,
+      "eletrico_equivalente": "BMW i4",
+      "beneficios_consumo": "Economia de 65% em relação ao combustível tradicional",
+      "beneficios_manutencao": "Custos de manutenção reduzidos em 55%",
+      "impacto_ambiental": "Emissão zero de gases poluentes"
+    },
+    {
+      "modelo": "Mercedes-Benz C-Class",
+      "ano": 2021,
+      "eletrico_equivalente": "Mercedes-Benz EQC",
+      "beneficios_consumo": "Economia de 55% em relação ao combustível tradicional",
+      "beneficios_manutencao": "Custos de manutenção reduzidos em 48%",
+      "impacto_ambiental": "Emissão zero de gases poluentes"
+    },
+    {
+      "modelo": "Renault Duster",
+      "ano": 2021,
+      "eletrico_equivalente": "Renault Zoe",
+      "beneficios_consumo": "Economia de 68% em relação ao combustível tradicional",
+      "beneficios_manutencao": "Custos de manutenção reduzidos em 60%",
+      "impacto_ambiental": "Emissão zero de gases poluentes"
+    },
+    {
+      "modelo": "Jeep Compass",
+      "ano": 2022,
+      "eletrico_equivalente": "Jeep Wrangler 4xe",
+      "beneficios_consumo": "Economia de 50% em relação ao combustível tradicional",
+      "beneficios_manutencao": "Custos de manutenção reduzidos em 40%",
+      "impacto_ambiental": "Emissão zero de gases poluentes"
+    },
+    {
+      "modelo": "Subaru Outback",
+      "ano": 2020,
+      "eletrico_equivalente": "Subaru Solterra",
+      "beneficios_consumo": "Economia de 65% em relação ao combustível tradicional",
+      "beneficios_manutencao": "Custos de manutenção reduzidos em 52%",
+      "impacto_ambiental": "Emissão zero de gases poluentes"
+    },
+    {
+      "modelo": "Mazda CX-5",
+      "ano": 2021,
+      "eletrico_equivalente": "Mazda MX-30",
+      "beneficios_consumo": "Economia de 58% em relação ao combustível tradicional",
+      "beneficios_manutencao": "Custos de manutenção reduzidos em 47%",
+      "impacto_ambiental": "Emissão zero de gases poluentes"
+    }
+  ]
+}

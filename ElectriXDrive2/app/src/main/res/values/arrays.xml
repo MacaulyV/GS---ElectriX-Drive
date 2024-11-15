@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="combustiveis">
+        <item>Gasolina</item>
+        <item>Etanol</item>
+        <item>Diesel</item>
+        <item>GNV</item>
+    </string-array>
+
+    <string-array name="modelos_carros">
+        <item>Chevrolet S10</item>
+        <item>Ford Ranger</item>
+        <item>Volkswagen Golf</item>
+        <item>Nissan Sentra</item>
+        <item>Hyundai Tucson</item>
+        <item>Honda Civic</item>
+        <item>Toyota Corolla</item>
+        <item>Kia Sportage</item>
+        <item>Audi A4</item>
+        <item>Mercedes-Benz C-Class</item>
+        <item>BMW Série 3</item>
+        <item>Renault Duster</item>
+        <item>Jeep Compass</item>
+        <item>Subaru Outback</item>
+        <item>Mazda CX-5</item>
+    </string-array>
+
+    <string-array name="anos_carros">
+        <item>2015</item>
+        <item>2016</item>
+        <item>2017</item>
+        <item>2018</item>
+        <item>2019</item>
+        <item>2020</item>
+        <item>2021</item>
+        <item>2022</item>
+        <item>2023</item>
+        <item>2024</item>
+    </string-array>
+
+</resources>
