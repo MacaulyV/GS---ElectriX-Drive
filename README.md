@@ -107,7 +107,7 @@ A **Tela do Menu Principal** é onde o usuário tem acesso às principais funcio
   <summary><h4>Ver Imagem da Tela do Menu Principal</h4></summary>
   <p align="center">
 
-  ![Tela do Menu Principal](https://github.com/user-attachments/assets/4f6cde87-bc4c-483d-8584-cb6bedf2f24c)
+  ![Tela do Menu Principal](https://github.com/user-attachments/assets/642702fe-8138-47a1-845e-bb28d9718534)
   </p>
 </details>
 </p>
