@@ -14,8 +14,6 @@ A plataforma ElectriX Drive é uma solução desenvolvida para fornecer aos usu�
 
 O aplicativo ElectriX Drive foi desenvolvido como um protótipo usando Kotlin, com o objetivo de demonstrar uma solução viável na plataforma móvel para incentivar a adoção de veículos elétricos. Este protótipo apresenta ao usuário informações essenciais sobre eficiência e sustentabilidade, ajudando a facilitar a escolha de um veiculo eletrico para um futuro mais limpo e econômico.
 
----
-
 ## 🚀 Deploy do Projeto
 
 Para acessar o deploy do **ElectriX Drive Platform**, copie e cole o link abaixo diretamente no seu navegador:
