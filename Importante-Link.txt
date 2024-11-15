@@ -1,0 +1,11 @@
+Projeto GS-ElectriX-Drive
+=========================
+
+- Repositório do Projeto no GitHub:
+  https://github.com/MacaulyV/GS-ElectriX-Drive/tree/ElectriX-Drive-App
+
+----------------
+
+- Importante:
+
+  O link para o vídeo e o protótipo do Figma está disponível no repositório acima.
