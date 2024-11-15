@@ -53,7 +53,7 @@ A primeira tela do aplicativo é a **Tela de Introdução**, que convida os usu�
   <summary><h4>Ver Imagem da Tela de Introdução</h4></summary>
   <p align="center">
     
-![Tela de Introdução](https://github.com/user-attachments/assets/ed7b50e3-177b-4a05-b6d9-71a586255b61)
+![Tela de Introdução](https://github.com/user-attachments/assets/6464c97d-a5a0-4eee-aa74-95ce75c700a8)
 </p>
 </details>
 </p>
@@ -71,7 +71,7 @@ A **Tela de Login** permite que os usuários acessem sua conta inserindo seu e-m
   <summary><h4>Ver Imagem da Tela de Login</h4></summary>
   <p align="center">
     
-  ![Tela de Login](https://github.com/user-attachments/assets/3531a568-db5c-44cb-b27a-d91e719a6db4)
+  ![Tela de Login](https://github.com/user-attachments/assets/d239a355-d3ad-4136-86c0-174d74c5885e)
   </p>
 </details>
 </p>
@@ -89,7 +89,7 @@ Caso o usuário tenha esquecido sua senha, ele será direcionado para a **Tela d
   <summary><h4>Ver Imagem da Tela de Redefinição de Senha</h4></summary>
   <p align="center">
     
-  ![Tela de Redefinição de Senha](https://github.com/user-attachments/assets/68d64e7e-fa93-4b53-8ca5-db224e1e96a6)
+  ![Tela de Redefinição de Senha](https://github.com/user-attachments/assets/d239a355-d3ad-4136-86c0-174d74c5885e)
   </p>
 </details>
 </p>
