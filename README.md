@@ -89,7 +89,7 @@ Caso o usuário tenha esquecido sua senha, ele será direcionado para a **Tela d
   <summary><h4>Ver Imagem da Tela de Redefinição de Senha</h4></summary>
   <p align="center">
     
-  ![Tela de Redefinição de Senha](https://github.com/user-attachments/assets/d239a355-d3ad-4136-86c0-174d74c5885e)
+  ![Tela de Redefinição de Senha](https://github.com/user-attachments/assets/485ec9d2-8544-40e4-861d-83ba9dd7f4c0)
   </p>
 </details>
 </p>
