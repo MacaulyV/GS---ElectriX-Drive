@@ -16,6 +16,18 @@ O aplicativo ElectriX Drive foi desenvolvido como um protótipo usando Kotlin, c
 
 ---
 
+## 🚀 Deploy do Projeto
+
+Para acessar o deploy do **ElectriX Drive Platform**, copie e cole o link abaixo diretamente no seu navegador:
+
+[🔗 Link do Deploy](URL_DO_DEPLOY_AQUI)
+
+⚠️ **Atenção**: Não clique diretamente no link. Copie e cole o link no navegador e aguarde um momento para o carregamento completo do projeto. O deploy foi realizado utilizando o Render.
+
+Este deploy permite que você explore todas as funcionalidades do projeto em um ambiente operacional.
+
+---
+
 ## 🎥 Vídeo do Projeto
 
 Para assistir ao vídeo de apresentação do **ElectriX Drive Platform**, clique no link abaixo:
