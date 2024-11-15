@@ -62,7 +62,7 @@ A primeira tela do aplicativo é a **Tela de Introdução**, que convida os usu�
 
 ### 2. Tela de Login 🔑
 
-A **Tela de Login** permite que os usuários acessem sua conta inserindo seu e-mail 📧 e senha 🔒. Além disso, há opções para **Cadastrar-se** com o Google 🌐 e uma opção para redefinir a senha 🔄 caso o usuário a tenha esquecido. A interface apresenta um design acolhedor, com elementos visuais que lembram a natureza e sustentabilidade 🌲, ajudando a criar uma experiência tranquila para o usuário.
+A **Tela de Login** permite que os usuários acessem sua conta inserindo seu e-mail 📧 e senha 🔒. Além disso, há opções para **Cadastrar-se** com o Google 🌐. A interface apresenta um design acolhedor, com elementos visuais que lembram a natureza e sustentabilidade 🌲, ajudando a criar uma experiência tranquila para o usuário.
 
 ---
 
@@ -98,7 +98,7 @@ Caso o usuário tenha esquecido sua senha, ele será direcionado para a **Tela d
 
 ### 4. Tela do Menu Principal 🏠
 
-A **Tela do Menu Principal** é onde o usuário tem acesso às principais funcionalidades dao App. Aqui, o usuário pode **Comparar a Eficiência** de seu veículo com um carro elétrico ⚙️ ou **Visualizar a Lista de Carros** cadastrados 🚘. Há também a opção de **Deslogar** 🔓, facilitando o controle de acesso à conta. A interface foi projetada para ser clara e de fácil navegação 🧭.
+A **Tela do Menu Principal** é onde o usuário tem acesso às principais funcionalidades dao App. Aqui, o usuário pode **Comparar a Eficiência** de seu veículo com um carro elétrico ⚙️ ou **Visualizar a Lista de Carros** cadastrados 🚘 e uma opção para **trocar a senha** 🔄, Há também a opção de **Deslogar** 🔓, facilitando o controle de acesso à conta. A interface foi projetada para ser clara e de fácil navegação 🧭.
 
 ---
 
