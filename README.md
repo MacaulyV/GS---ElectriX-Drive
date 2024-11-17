@@ -39,13 +39,6 @@ Para assistir ao vídeo de apresentação do **Projeto**, clique no link abaixo:
 
 ---
 
-### Instruções Importantes
-
- **Endpoint de Edição (PUT)**: 
-   - Ao testar o endpoint de edição (PUT) na interface web, você precisará fornecer no último campo o mesmo tipo de combustível que está salvo no JSON. Você pode visualizar esse valor na tabela de combustível já salva do veículo correspondente.
-
----
-
  <details>
   <summary align="center"><h3>📋 GestaoVeiculosAPI</h3></summary>
   <p>
