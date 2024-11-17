@@ -160,7 +160,86 @@ Além disso, a documentação bem estruturada facilita o uso, a integração e o
 
   ---
 
-Em Andamento
+## 🚗 Documentação da Camada Web - ElectriXDriveUI
+
+## 📄 Descrição Inicial
+
+A camada web do projeto **ElectriXDriveUI** é responsável pela interface visual do sistema, permitindo que os usuários interajam com as funcionalidades da API de gestão de veículos. Esta camada utiliza o padrão MVC (Model-View-Controller) para organizar o código, facilitando a manutenção e a expansão do sistema. A camada web comunica-se diretamente com a API para realizar operações CRUD (Create, Read, Update, Delete) sobre 🚘 veículos de combustão e ⚡ veículos elétricos, além de realizar comparações de eficiência entre esses tipos de veículos.
+
+## 📂 Estrutura dos Arquivos da Camada Web
+
+Abaixo está a descrição dos principais arquivos e pastas do projeto, organizada para facilitar o entendimento da função de cada um dentro do contexto da camada web.
+
+### 🧭 Controllers
+
+- **🔄 ComparacaoController.cs**: Responsável por lidar com as requisições relacionadas à comparação de eficiência entre veículos de combustão e elétricos. Coordena a chamada à API de comparação e direciona os resultados para a view correta.
+- **🏠 HomeController.cs**: Gerencia as requisições relacionadas à página inicial da aplicação, como o acesso à página principal e às rotas de privacidade.
+- **🔑 LoginController.cs**: Realiza a autenticação do usuário, permitindo o login e redirecionando o usuário para a tela de introdução após o sucesso na autenticação.
+- **🛠️ VeiculoCombustaoController.cs**: Gerencia as operações de CRUD relacionadas aos veículos de combustão. Realiza a integração com a API para adicionar, editar, listar e remover veículos de combustão.
+- **⚡ VeiculoEletricoController.cs**: Responsável pelas operações CRUD para os veículos elétricos. Realiza chamadas à API para criar, listar, editar e deletar veículos elétricos.
+
+### 📊 Data
+
+#### 🗂️ Repositories/Implementations
+
+- **👤 UsuarioRepository.cs**: Implementação do repositório para realizar as operações necessárias com os dados do usuário, como acesso e manipulação de informações.
+- **🛠️ VeiculoCombustaoRepository.cs**: Gerencia o acesso aos dados dos veículos de combustão, incluindo métodos para obtenção, criação e exclusão.
+- **⚡ VeiculoEletricoRepository.cs**: Implementação dos métodos para interação com os dados dos veículos elétricos.
+
+#### 🔌 Repositories/Interfaces
+
+Contém as interfaces de cada repositório (e.g., **IUsuarioRepository**, **IVeiculoCombustaoRepository**, **IVeiculoEletricoRepository**), que definem os contratos para implementação das operações de acesso aos dados.
+
+### 📦 DTOs (Data Transfer Objects)
+
+- **👤 UsuarioResponseDTO.cs**: Contém a definição do DTO usado para representar as respostas dos dados de usuário da API, garantindo a transferência de informações de forma organizada.
+- **🛠️ VeiculoCombustaoResponseDTO.cs**: DTO que define a estrutura dos dados retornados pela API sobre veículos de combustão.
+- **⚡ VeiculoEletricoResponseDTO.cs**: Define a estrutura dos dados retornados pela API sobre veículos elétricos.
+
+### 📐 Models
+
+- **❗ ErrorViewModel.cs**: Model utilizado para gerenciar os erros que possam ocorrer durante a execução das requisições do sistema, armazenando o identificador do erro e a mensagem correspondente.
+
+### 📊 ViewModels
+
+- **🔑 LoginViewModel.cs**: Contém a estrutura necessária para a autenticação do usuário, como campos de e-mail e senha.
+- **🛠️ VeiculoCombustaoViewModel.cs**: Define os dados necessários para realizar operações com veículos de combustão na interface do usuário.
+- **⚡ VeiculoEletricoViewModel.cs**: Define os dados utilizados para manipulação de veículos elétricos na camada de interface.
+
+### 👁️ Views
+
+#### 🔄 Comparacao
+
+- **📄 Index.cshtml**: View responsável por exibir o formulário de comparação entre um veículo de combustão e um veículo elétrico. Apresenta os campos necessários para realização da comparação e mostra o resultado.
+
+#### 🏠 Home
+
+- **📄 Index.cshtml**: Exibe a página inicial do sistema, apresentando uma introdução sobre o ElectriX Drive e direcionando o usuário às funcionalidades.
+- **🔒 Privacy.cshtml**: Página de política de privacidade.
+
+#### 🔑 Login
+
+- **📄 Index.cshtml**: View de login que coleta informações como e-mail e senha do usuário, permitindo o acesso ao sistema.
+
+#### 🛠️ VeiculoCombustao
+
+- **📝 Create.cshtml**: Formulário para criação de um novo veículo de combustão.
+- **✏️ Edit.cshtml**: Formulário para edição de um veículo de combustão existente.
+- **📋 Index.cshtml**: Lista todos os veículos de combustão do usuário, exibindo os dados cadastrados e permitindo as ações de edição e exclusão.
+
+#### ⚡ VeiculoEletrico
+
+- **📝 Create.cshtml**: Formulário para criação de um novo veículo elétrico.
+- **✏️ Edit.cshtml**: Formulário para edição de um veículo elétrico existente.
+- **📋 Index.cshtml**: Exibe a lista de veículos elétricos cadastrados e permite a realização de operações CRUD.
+
+### 🚀 Program.cs
+
+Arquivo principal para configurar o pipeline de execução do **ASP.NET Core**. Ele define os serviços usados pela aplicação, como Swagger para documentação, 📜 CORS para permissões de acesso e injeção de dependências para os repositórios.
+
+## 🏁 Conclusão
+
+A camada web do **ElectriXDriveUI** é responsável pela interface visual do sistema, proporcionando uma experiência de usuário intuitiva e integrando diretamente com a API. Com uma organização clara em **🧭 Controllers**, **👁️ Views**, **🗂️ Repositories**, e **📊 ViewModels**, ela facilita a realização de operações CRUD e permite uma comparação detalhada entre veículos de combustão e elétricos. Esta camada está devidamente estruturada para suportar o desenvolvimento futuro e possibilitar um alto grau de manutenção e expansão.
     </p>
 </details>
 
