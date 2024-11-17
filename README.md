@@ -35,7 +35,7 @@ Assim, a solução completa visa oferecer uma experiência integrada para a gest
 
 Para assistir ao vídeo de apresentação do **Projeto**, clique no link abaixo:
 
-[🔗 Assista ao Vídeo do Projeto](URL_DO_VIDEO_AQUI)
+[🔗 Assista ao Vídeo do Projeto](https://youtu.be/c1FmrArBt5c)
 
 ---
 
