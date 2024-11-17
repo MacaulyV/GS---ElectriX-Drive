@@ -41,10 +41,7 @@ Para assistir ao vídeo de apresentação do **Projeto**, clique no link abaixo:
 
 ### Instruções Importantes
 
-1. **Erro ao Adicionar Veículos**: 
-   - Ao adicionar os veículos, embora exista um modelo e uma marca no JSON, pode ocorrer um erro indicando que não foi possível identificar alguns modelos ou que são inválidos. Isso acontece por um motivo que ainda não descobrimos. Portanto, caso um veículo não funcione no teste, tente outro modelo e marca até que funcione corretamente.
-
-2. **Endpoint de Edição (PUT)**: 
+ **Endpoint de Edição (PUT)**: 
    - Ao testar o endpoint de edição (PUT) na interface web, você precisará fornecer no último campo o mesmo tipo de combustível que está salvo no JSON. Você pode visualizar esse valor na tabela de combustível já salva do veículo correspondente.
 
 ---
