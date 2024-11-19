@@ -36,7 +36,7 @@ Este protótipo contém todas as telas desenvolvidas para o app, apresentando as
 
 Para assistir ao vídeo de apresentação do **ElectriX Drive App**, clique no link abaixo:
 
-[🔗 Assista ao Vídeo do Projeto](URL_DO_VIDEO_AQUI)
+[🔗 Assista ao Vídeo do Projeto](https://youtu.be/P81YH66JqY0)
 
 Este vídeo demonstra as funcionalidades do aplicativo, explicando sua usabilidade.
 
