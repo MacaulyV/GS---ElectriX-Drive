@@ -26,22 +26,12 @@ Este deploy permite que você explore todas as funcionalidades do projeto em um 
 
 ---
 
-## 🎥 Vídeo do Projeto
+## 🎥 Vídeo do Projeto junto ao Pitch
 
 Para assistir ao vídeo de apresentação do **ElectriX Drive Platform**, clique no link abaixo:
 
 [🔗 Assista ao Vídeo do Projeto](URL_DO_VIDEO_AQUI)
 
 Este vídeo demonstra as funcionalidades & explicando sua usabilidade.
-
----
-
-## 🎥 Vídeo do Pitch
-
-Para assistir ao vídeo do pitch sobre o **ElectriX Drive Platform**, clique no link abaixo:
-
-[🔗 Assista ao Vídeo do Pitch](URL_DO_VIDEO_AQUI)
-
-Este vídeo apresenta o projeto de forma envolvente e ressalta as vantagens exclusivas da Plataforma, mostrando o por que ela se destaca.
 
 ---
