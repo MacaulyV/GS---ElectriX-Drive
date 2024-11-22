@@ -24,14 +24,10 @@ st.markdown(
 
 # Função para carregar CSS personalizado a partir de um arquivo
 def local_css(file_name):
-    try:
-        with open(file_name) as f:
-            st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
-    except FileNotFoundError:
-        st.error(f"Arquivo CSS '{file_name}' não encontrado.")
-        st.stop()
+    with open(file_name) as f:
+        st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
-local_css(os.path.join("interface", "assets", "style.css"))
+local_css("interface/assets/style.css")
 
 # Definir o caminho base como a pasta do arquivo atual (interface)
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -41,34 +37,9 @@ model_cost_path = os.path.join(BASE_DIR, '../model/model_cost.pkl')
 model_emissions_path = os.path.join(BASE_DIR, '../model/model_emissions.pkl')
 scaler_path = os.path.join(BASE_DIR, '../model/scaler.pkl')
 
-# Carregar o scaler
-try:
-    scaler = joblib.load(scaler_path)
-    if scaler is None:
-        st.error("Erro ao carregar o scaler. Verifique se o arquivo está presente e acessível.")
-        st.stop()
-except FileNotFoundError:
-    st.error(f"Arquivo 'scaler.pkl' não encontrado no caminho '{scaler_path}'.")
-    st.stop()
-
-# Carregar os modelos
-try:
-    model_cost = joblib.load(model_cost_path)
-    model_emissions = joblib.load(model_emissions_path)
-    if model_cost is None or model_emissions is None:
-        st.error("Erro ao carregar um ou mais modelos. Verifique se todos os arquivos estão presentes e acessíveis.")
-        st.stop()
-except FileNotFoundError as e:
-    st.error(f"Erro ao carregar os modelos: {e}")
-    st.stop()
-
 # Carregar dados dos veículos elétricos a partir de um arquivo JSON
-try:
-    with open(os.path.join(BASE_DIR, '../data/vehicle_data.json'), 'r', encoding='utf-8') as f:
-        vehicle_data = json.load(f)
-except FileNotFoundError:
-    st.error("Arquivo 'vehicle_data.json' não encontrado.")
-    st.stop()
+with open(os.path.join(BASE_DIR, '../data/vehicle_data.json'), 'r', encoding='utf-8') as f:
+    vehicle_data = json.load(f)
 
 # Certificar que os dados do JSON estão corretos
 if not vehicle_data:
