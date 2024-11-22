@@ -162,9 +162,18 @@ O **EcoDrive Insight AI** proporciona aos motoristas uma ferramenta poderosa e i
 
 4. **Execute a aplicação**:
 
-   ```bash
-   streamlit run interface/app.py
-   ```
+ Primeiro, navegue até o diretório onde o arquivo `app.py` está localizado:
+
+```bash
+cd interface
+```
+
+Em seguida, execute a aplicação usando o Streamlit:
+
+```bash
+streamlit run app.py
+```
+
 
 5. **Acesse no navegador**:
    Abra o navegador e acesse `http://localhost:8501`
