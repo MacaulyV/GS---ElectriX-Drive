@@ -17,8 +17,5 @@ plotly==5.17.0
 # Matplotlib para visualização dos dados
 matplotlib==3.8.0
 
-# Pillow para suporte a imagens (versão compatível)
-pillow==9.5.0
-
-# Requests para requisições HTTP
-requests==2.31.0
+# Pillow para suporte a imagens (versão compatível com Streamlit)
+pillow<10,>=7.1.0
