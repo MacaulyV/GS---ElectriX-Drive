@@ -151,43 +151,28 @@ O **EcoDrive Insight AI** proporciona aos motoristas uma ferramenta poderosa e i
 
 ---
 
-## 🚀 Como Executar o Projeto
-
-1. **Clone o repositório**:
-
-   ```bash
-   git clone -b EcoDrive-Insight-AI https://github.com/MacaulyV/GS-ElectriX-Drive.git
-   ```
-
-2. **Crie e ative um ambiente virtual**:
-
-   ```bash
-   python -m venv .venv
-   source .venv/bin/activate  # Para Windows, use .venv\Scripts\activate
-   ```
-
-3. **Instale as dependências**:
-
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-4. **Execute a aplicação**:
-
- Primeiro, navegue até o diretório onde o arquivo `app.py` está localizado:
-
 ```bash
-cd interface
-```
-
-Em seguida, execute a aplicação usando o Streamlit:
-
-```bash
-streamlit run app.py
-```
-
-
 5. **Acesse no navegador**:
    Abra o navegador e acesse `http://localhost:8501`
+ ```
+
+## 🚀 Clone o repositório
+git clone -b EcoDrive-Insight-AI https://github.com/MacaulyV/GS-ElectriX-Drive.git
+
+## 📦 Instale as dependências
+pip install setuptools
+pip install joblib
+pip install plotly
+pip install xgboost
+pip install scikit-learn
+
+###  📂 Navegue até o diretório onde o arquivo app.py está localizado
+cd interface
+
+###  ⚙️ Execute a aplicação usando o Streamlit
+streamlit run app.py
+
+###  🌐 Acesse no navegador
+###  Abra o navegador e acesse http://localhost:8501
 
  ---  
