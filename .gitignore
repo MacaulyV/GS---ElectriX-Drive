@@ -1,0 +1,26 @@
+# Ignorar a pasta do ambiente virtual
+.venv/
+
+# Ignorar arquivos de configuração do PyCharm (caso não queira compartilhar configurações específicas da IDE)
+.idea/
+
+# Ignorar arquivos de log
+*.log
+
+# Ignorar arquivos compilados do Python
+__pycache__/
+*.py[cod]
+
+# Ignorar arquivos de cache do Jupyter Notebook (caso utilize no futuro)
+.ipynb_checkpoints/
+
+# Ignorar arquivos de teste ou resultados de execução
+*.out
+*.tmp
+
+# Ignorar arquivos do sistema operacional
+.DS_Store  # macOS
+Thumbs.db  # Windows
+
+# Ignorar configurações pessoais de pacotes Python
+.env

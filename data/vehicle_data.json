@@ -1,0 +1,904 @@
+{
+    "veiculos_eletricos": [
+        {
+            "marca": "Tesla",
+            "modelo": "Model S",
+            "ano": "2020",
+            "consumo_medio": 18.88,
+            "autonomia_bateria_km": 474,
+            "custo_recarga": 157.23,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "Tesla",
+            "modelo": "Model S",
+            "ano": "2021",
+            "consumo_medio": 15.63,
+            "autonomia_bateria_km": 573,
+            "custo_recarga": 106.06,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "Tesla",
+            "modelo": "Model S",
+            "ano": "2022",
+            "consumo_medio": 15.47,
+            "autonomia_bateria_km": 511,
+            "custo_recarga": 123.45,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "Tesla",
+            "modelo": "Model S",
+            "ano": "2023",
+            "consumo_medio": 15.52,
+            "autonomia_bateria_km": 444,
+            "custo_recarga": 102.42,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "Tesla",
+            "modelo": "Model 3",
+            "ano": "2020",
+            "consumo_medio": 15.99,
+            "autonomia_bateria_km": 412,
+            "custo_recarga": 119.34,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "Tesla",
+            "modelo": "Model 3",
+            "ano": "2021",
+            "consumo_medio": 16.16,
+            "autonomia_bateria_km": 531,
+            "custo_recarga": 108.59,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "Tesla",
+            "modelo": "Model 3",
+            "ano": "2022",
+            "consumo_medio": 19.15,
+            "autonomia_bateria_km": 575,
+            "custo_recarga": 109.86,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "Tesla",
+            "modelo": "Model 3",
+            "ano": "2023",
+            "consumo_medio": 17.76,
+            "autonomia_bateria_km": 417,
+            "custo_recarga": 144.18,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "Tesla",
+            "modelo": "Model X",
+            "ano": "2020",
+            "consumo_medio": 13.74,
+            "autonomia_bateria_km": 555,
+            "custo_recarga": 189.54,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "Tesla",
+            "modelo": "Model X",
+            "ano": "2021",
+            "consumo_medio": 13.05,
+            "autonomia_bateria_km": 413,
+            "custo_recarga": 180.65,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "Tesla",
+            "modelo": "Model X",
+            "ano": "2022",
+            "consumo_medio": 19.56,
+            "autonomia_bateria_km": 436,
+            "custo_recarga": 153.16,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "Tesla",
+            "modelo": "Model X",
+            "ano": "2023",
+            "consumo_medio": 16.98,
+            "autonomia_bateria_km": 577,
+            "custo_recarga": 102.4,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "Tesla",
+            "modelo": "Model Y",
+            "ano": "2020",
+            "consumo_medio": 14.96,
+            "autonomia_bateria_km": 463,
+            "custo_recarga": 138.64,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "Tesla",
+            "modelo": "Model Y",
+            "ano": "2021",
+            "consumo_medio": 13.19,
+            "autonomia_bateria_km": 492,
+            "custo_recarga": 143.12,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "Tesla",
+            "modelo": "Model Y",
+            "ano": "2022",
+            "consumo_medio": 19.13,
+            "autonomia_bateria_km": 486,
+            "custo_recarga": 174.37,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "Tesla",
+            "modelo": "Model Y",
+            "ano": "2023",
+            "consumo_medio": 19.82,
+            "autonomia_bateria_km": 553,
+            "custo_recarga": 199.92,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "Tesla",
+            "modelo": "Cybertruck",
+            "ano": "2020",
+            "consumo_medio": 18.2,
+            "autonomia_bateria_km": 457,
+            "custo_recarga": 153.13,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "Tesla",
+            "modelo": "Cybertruck",
+            "ano": "2021",
+            "consumo_medio": 15.05,
+            "autonomia_bateria_km": 430,
+            "custo_recarga": 106.62,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "Tesla",
+            "modelo": "Cybertruck",
+            "ano": "2022",
+            "consumo_medio": 13.3,
+            "autonomia_bateria_km": 417,
+            "custo_recarga": 189.53,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "Tesla",
+            "modelo": "Cybertruck",
+            "ano": "2023",
+            "consumo_medio": 15.45,
+            "autonomia_bateria_km": 388,
+            "custo_recarga": 104.57,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "Tesla",
+            "modelo": "Roadster",
+            "ano": "2020",
+            "consumo_medio": 14.63,
+            "autonomia_bateria_km": 487,
+            "custo_recarga": 182.73,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "Tesla",
+            "modelo": "Roadster",
+            "ano": "2021",
+            "consumo_medio": 18.53,
+            "autonomia_bateria_km": 482,
+            "custo_recarga": 110.3,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "Tesla",
+            "modelo": "Roadster",
+            "ano": "2022",
+            "consumo_medio": 19.02,
+            "autonomia_bateria_km": 501,
+            "custo_recarga": 165.16,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "Tesla",
+            "modelo": "Roadster",
+            "ano": "2023",
+            "consumo_medio": 18.82,
+            "autonomia_bateria_km": 584,
+            "custo_recarga": 135.54,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "Nissan",
+            "modelo": "Leaf",
+            "ano": "2020",
+            "consumo_medio": 13.67,
+            "autonomia_bateria_km": 379,
+            "custo_recarga": 116.16,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "Nissan",
+            "modelo": "Leaf",
+            "ano": "2021",
+            "consumo_medio": 17.14,
+            "autonomia_bateria_km": 348,
+            "custo_recarga": 157.19,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "Nissan",
+            "modelo": "Leaf",
+            "ano": "2022",
+            "consumo_medio": 15.07,
+            "autonomia_bateria_km": 383,
+            "custo_recarga": 86.16,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "Nissan",
+            "modelo": "Leaf",
+            "ano": "2023",
+            "consumo_medio": 17.46,
+            "autonomia_bateria_km": 297,
+            "custo_recarga": 140.16,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "Nissan",
+            "modelo": "Ariya",
+            "ano": "2020",
+            "consumo_medio": 12.62,
+            "autonomia_bateria_km": 350,
+            "custo_recarga": 118.22,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "Nissan",
+            "modelo": "Ariya",
+            "ano": "2021",
+            "consumo_medio": 16.18,
+            "autonomia_bateria_km": 377,
+            "custo_recarga": 114.3,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "Nissan",
+            "modelo": "Ariya",
+            "ano": "2022",
+            "consumo_medio": 13.85,
+            "autonomia_bateria_km": 335,
+            "custo_recarga": 129.31,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "Nissan",
+            "modelo": "Ariya",
+            "ano": "2023",
+            "consumo_medio": 16.4,
+            "autonomia_bateria_km": 367,
+            "custo_recarga": 86.98,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "BMW",
+            "modelo": "i3",
+            "ano": "2020",
+            "consumo_medio": 17.39,
+            "autonomia_bateria_km": 372,
+            "custo_recarga": 106.63,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "BMW",
+            "modelo": "i3",
+            "ano": "2021",
+            "consumo_medio": 15.43,
+            "autonomia_bateria_km": 388,
+            "custo_recarga": 127.66,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "BMW",
+            "modelo": "i3",
+            "ano": "2022",
+            "consumo_medio": 18.26,
+            "autonomia_bateria_km": 494,
+            "custo_recarga": 142.65,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "BMW",
+            "modelo": "i3",
+            "ano": "2023",
+            "consumo_medio": 15.47,
+            "autonomia_bateria_km": 319,
+            "custo_recarga": 137.13,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "BMW",
+            "modelo": "i4",
+            "ano": "2020",
+            "consumo_medio": 16.16,
+            "autonomia_bateria_km": 376,
+            "custo_recarga": 130.13,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "BMW",
+            "modelo": "i4",
+            "ano": "2021",
+            "consumo_medio": 14.12,
+            "autonomia_bateria_km": 460,
+            "custo_recarga": 144.98,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "BMW",
+            "modelo": "i4",
+            "ano": "2022",
+            "consumo_medio": 15.14,
+            "autonomia_bateria_km": 342,
+            "custo_recarga": 173.57,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "BMW",
+            "modelo": "i4",
+            "ano": "2023",
+            "consumo_medio": 14.11,
+            "autonomia_bateria_km": 388,
+            "custo_recarga": 152.74,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "BMW",
+            "modelo": "iX",
+            "ano": "2020",
+            "consumo_medio": 15.03,
+            "autonomia_bateria_km": 477,
+            "custo_recarga": 111.04,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "BMW",
+            "modelo": "iX",
+            "ano": "2021",
+            "consumo_medio": 16.42,
+            "autonomia_bateria_km": 442,
+            "custo_recarga": 132.91,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "BMW",
+            "modelo": "iX",
+            "ano": "2022",
+            "consumo_medio": 14.35,
+            "autonomia_bateria_km": 435,
+            "custo_recarga": 153.54,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "BMW",
+            "modelo": "iX",
+            "ano": "2023",
+            "consumo_medio": 15.51,
+            "autonomia_bateria_km": 348,
+            "custo_recarga": 106.45,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "Chevrolet",
+            "modelo": "Bolt EV",
+            "ano": "2020",
+            "consumo_medio": 14.08,
+            "autonomia_bateria_km": 314,
+            "custo_recarga": 85.66,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "Chevrolet",
+            "modelo": "Bolt EV",
+            "ano": "2021",
+            "consumo_medio": 15.61,
+            "autonomia_bateria_km": 386,
+            "custo_recarga": 105.81,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "Chevrolet",
+            "modelo": "Bolt EV",
+            "ano": "2022",
+            "consumo_medio": 15.64,
+            "autonomia_bateria_km": 387,
+            "custo_recarga": 142.08,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "Chevrolet",
+            "modelo": "Bolt EV",
+            "ano": "2023",
+            "consumo_medio": 18.58,
+            "autonomia_bateria_km": 381,
+            "custo_recarga": 84.47,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "Chevrolet",
+            "modelo": "Bolt EUV",
+            "ano": "2020",
+            "consumo_medio": 14.97,
+            "autonomia_bateria_km": 392,
+            "custo_recarga": 115.63,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "Chevrolet",
+            "modelo": "Bolt EUV",
+            "ano": "2021",
+            "consumo_medio": 15.12,
+            "autonomia_bateria_km": 370,
+            "custo_recarga": 145.7,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "Chevrolet",
+            "modelo": "Bolt EUV",
+            "ano": "2022",
+            "consumo_medio": 16.44,
+            "autonomia_bateria_km": 261,
+            "custo_recarga": 90.7,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "Chevrolet",
+            "modelo": "Bolt EUV",
+            "ano": "2023",
+            "consumo_medio": 13.92,
+            "autonomia_bateria_km": 265,
+            "custo_recarga": 141.1,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "Hyundai",
+            "modelo": "Kona Electric",
+            "ano": "2020",
+            "consumo_medio": 17.16,
+            "autonomia_bateria_km": 382,
+            "custo_recarga": 137.01,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "Hyundai",
+            "modelo": "Kona Electric",
+            "ano": "2021",
+            "consumo_medio": 16.16,
+            "autonomia_bateria_km": 300,
+            "custo_recarga": 95.62,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "Hyundai",
+            "modelo": "Kona Electric",
+            "ano": "2022",
+            "consumo_medio": 14.26,
+            "autonomia_bateria_km": 441,
+            "custo_recarga": 106.3,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "Hyundai",
+            "modelo": "Kona Electric",
+            "ano": "2023",
+            "consumo_medio": 15.62,
+            "autonomia_bateria_km": 318,
+            "custo_recarga": 157.9,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "Hyundai",
+            "modelo": "Ioniq 5",
+            "ano": "2020",
+            "consumo_medio": 14.79,
+            "autonomia_bateria_km": 395,
+            "custo_recarga": 146.14,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "Hyundai",
+            "modelo": "Ioniq 5",
+            "ano": "2021",
+            "consumo_medio": 12.63,
+            "autonomia_bateria_km": 360,
+            "custo_recarga": 125.15,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "Hyundai",
+            "modelo": "Ioniq 5",
+            "ano": "2022",
+            "consumo_medio": 13.15,
+            "autonomia_bateria_km": 482,
+            "custo_recarga": 142.44,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "Hyundai",
+            "modelo": "Ioniq 5",
+            "ano": "2023",
+            "consumo_medio": 15.59,
+            "autonomia_bateria_km": 366,
+            "custo_recarga": 134.26,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "Hyundai",
+            "modelo": "Ioniq 6",
+            "ano": "2020",
+            "consumo_medio": 12.96,
+            "autonomia_bateria_km": 314,
+            "custo_recarga": 158.5,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "Hyundai",
+            "modelo": "Ioniq 6",
+            "ano": "2021",
+            "consumo_medio": 15.53,
+            "autonomia_bateria_km": 314,
+            "custo_recarga": 161.15,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "Hyundai",
+            "modelo": "Ioniq 6",
+            "ano": "2022",
+            "consumo_medio": 12.52,
+            "autonomia_bateria_km": 422,
+            "custo_recarga": 104.38,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "Hyundai",
+            "modelo": "Ioniq 6",
+            "ano": "2023",
+            "consumo_medio": 16.81,
+            "autonomia_bateria_km": 316,
+            "custo_recarga": 127.11,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "Kia",
+            "modelo": "Soul EV",
+            "ano": "2020",
+            "consumo_medio": 14.73,
+            "autonomia_bateria_km": 438,
+            "custo_recarga": 94.71,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "Kia",
+            "modelo": "Soul EV",
+            "ano": "2021",
+            "consumo_medio": 13.0,
+            "autonomia_bateria_km": 484,
+            "custo_recarga": 100.01,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "Kia",
+            "modelo": "Soul EV",
+            "ano": "2022",
+            "consumo_medio": 13.78,
+            "autonomia_bateria_km": 319,
+            "custo_recarga": 118.41,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "Kia",
+            "modelo": "Soul EV",
+            "ano": "2023",
+            "consumo_medio": 12.46,
+            "autonomia_bateria_km": 346,
+            "custo_recarga": 145.83,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "Kia",
+            "modelo": "EV6",
+            "ano": "2020",
+            "consumo_medio": 13.8,
+            "autonomia_bateria_km": 453,
+            "custo_recarga": 123.72,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "Kia",
+            "modelo": "EV6",
+            "ano": "2021",
+            "consumo_medio": 15.16,
+            "autonomia_bateria_km": 323,
+            "custo_recarga": 163.17,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "Kia",
+            "modelo": "EV6",
+            "ano": "2022",
+            "consumo_medio": 12.92,
+            "autonomia_bateria_km": 465,
+            "custo_recarga": 141.41,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "Kia",
+            "modelo": "EV6",
+            "ano": "2023",
+            "consumo_medio": 15.61,
+            "autonomia_bateria_km": 444,
+            "custo_recarga": 151.38,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "Audi",
+            "modelo": "e-tron",
+            "ano": "2020",
+            "consumo_medio": 19.31,
+            "autonomia_bateria_km": 484,
+            "custo_recarga": 175.19,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "Audi",
+            "modelo": "e-tron",
+            "ano": "2021",
+            "consumo_medio": 18.04,
+            "autonomia_bateria_km": 419,
+            "custo_recarga": 100.83,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "Audi",
+            "modelo": "e-tron",
+            "ano": "2022",
+            "consumo_medio": 14.32,
+            "autonomia_bateria_km": 312,
+            "custo_recarga": 131.16,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "Audi",
+            "modelo": "e-tron",
+            "ano": "2023",
+            "consumo_medio": 17.58,
+            "autonomia_bateria_km": 407,
+            "custo_recarga": 147.68,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "Audi",
+            "modelo": "Q4 e-tron",
+            "ano": "2020",
+            "consumo_medio": 16.26,
+            "autonomia_bateria_km": 313,
+            "custo_recarga": 163.52,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "Audi",
+            "modelo": "Q4 e-tron",
+            "ano": "2021",
+            "consumo_medio": 15.19,
+            "autonomia_bateria_km": 384,
+            "custo_recarga": 155.61,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "Audi",
+            "modelo": "Q4 e-tron",
+            "ano": "2022",
+            "consumo_medio": 15.41,
+            "autonomia_bateria_km": 398,
+            "custo_recarga": 127.59,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "Audi",
+            "modelo": "Q4 e-tron",
+            "ano": "2023",
+            "consumo_medio": 15.04,
+            "autonomia_bateria_km": 358,
+            "custo_recarga": 146.24,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "Volkswagen",
+            "modelo": "ID.3",
+            "ano": "2020",
+            "consumo_medio": 17.06,
+            "autonomia_bateria_km": 436,
+            "custo_recarga": 157.43,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "Volkswagen",
+            "modelo": "ID.3",
+            "ano": "2021",
+            "consumo_medio": 15.01,
+            "autonomia_bateria_km": 301,
+            "custo_recarga": 134.08,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "Volkswagen",
+            "modelo": "ID.3",
+            "ano": "2022",
+            "consumo_medio": 16.58,
+            "autonomia_bateria_km": 381,
+            "custo_recarga": 98.77,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "Volkswagen",
+            "modelo": "ID.3",
+            "ano": "2023",
+            "consumo_medio": 14.61,
+            "autonomia_bateria_km": 300,
+            "custo_recarga": 128.44,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "Volkswagen",
+            "modelo": "ID.4",
+            "ano": "2020",
+            "consumo_medio": 17.93,
+            "autonomia_bateria_km": 480,
+            "custo_recarga": 165.22,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "Volkswagen",
+            "modelo": "ID.4",
+            "ano": "2021",
+            "consumo_medio": 14.78,
+            "autonomia_bateria_km": 300,
+            "custo_recarga": 109.65,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "Volkswagen",
+            "modelo": "ID.4",
+            "ano": "2022",
+            "consumo_medio": 13.32,
+            "autonomia_bateria_km": 445,
+            "custo_recarga": 151.46,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "Volkswagen",
+            "modelo": "ID.4",
+            "ano": "2023",
+            "consumo_medio": 17.58,
+            "autonomia_bateria_km": 367,
+            "custo_recarga": 142.9,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "Volkswagen",
+            "modelo": "ID. Buzz",
+            "ano": "2020",
+            "consumo_medio": 14.02,
+            "autonomia_bateria_km": 445,
+            "custo_recarga": 141.0,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "Volkswagen",
+            "modelo": "ID. Buzz",
+            "ano": "2021",
+            "consumo_medio": 15.69,
+            "autonomia_bateria_km": 419,
+            "custo_recarga": 134.02,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "Volkswagen",
+            "modelo": "ID. Buzz",
+            "ano": "2022",
+            "consumo_medio": 18.33,
+            "autonomia_bateria_km": 472,
+            "custo_recarga": 127.43,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "Volkswagen",
+            "modelo": "ID. Buzz",
+            "ano": "2023",
+            "consumo_medio": 15.25,
+            "autonomia_bateria_km": 341,
+            "custo_recarga": 118.37,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "Ford",
+            "modelo": "Mustang Mach-E",
+            "ano": "2020",
+            "consumo_medio": 17.08,
+            "autonomia_bateria_km": 406,
+            "custo_recarga": 158.43,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "Ford",
+            "modelo": "Mustang Mach-E",
+            "ano": "2021",
+            "consumo_medio": 17.15,
+            "autonomia_bateria_km": 302,
+            "custo_recarga": 101.29,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "Ford",
+            "modelo": "Mustang Mach-E",
+            "ano": "2022",
+            "consumo_medio": 19.38,
+            "autonomia_bateria_km": 334,
+            "custo_recarga": 145.23,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "Ford",
+            "modelo": "Mustang Mach-E",
+            "ano": "2023",
+            "consumo_medio": 17.33,
+            "autonomia_bateria_km": 419,
+            "custo_recarga": 112.2,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "Ford",
+            "modelo": "F-150 Lightning",
+            "ano": "2020",
+            "consumo_medio": 19.44,
+            "autonomia_bateria_km": 415,
+            "custo_recarga": 147.37,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "Ford",
+            "modelo": "F-150 Lightning",
+            "ano": "2021",
+            "consumo_medio": 17.96,
+            "autonomia_bateria_km": 342,
+            "custo_recarga": 163.16,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "Ford",
+            "modelo": "F-150 Lightning",
+            "ano": "2022",
+            "consumo_medio": 17.86,
+            "autonomia_bateria_km": 316,
+            "custo_recarga": 137.73,
+            "emissoes_CO2": 0
+        },
+        {
+            "marca": "Ford",
+            "modelo": "F-150 Lightning",
+            "ano": "2023",
+            "consumo_medio": 17.37,
+            "autonomia_bateria_km": 447,
+            "custo_recarga": 104.43,
+            "emissoes_CO2": 0
+        }
+    ]
+}
