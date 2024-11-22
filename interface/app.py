@@ -1,3 +1,4 @@
+import os
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -5,6 +6,19 @@ import joblib
 import json
 import requests  # Necessário para futuras integrações com APIs
 import plotly.express as px  # Importação para gráficos interativos
+
+# Construindo o caminho absoluto para os modelos
+model_cost_path = os.path.join(BASE_DIR, '../model/model_cost.pkl')
+model_emissions_path = os.path.join(BASE_DIR, '../model/model_emissions.pkl')
+scaler_path = os.path.join(BASE_DIR, '../model/scaler.pkl')
+
+# Carregar os arquivos de modelo com os caminhos absolutos
+try:
+    model_cost = joblib.load(model_cost_path)
+    model_emissions = joblib.load(model_emissions_path)
+    scaler = joblib.load(scaler_path)
+except FileNotFoundError as e:
+    st.error(f"Erro ao carregar o arquivo: {e}")
 
 
 # Configurando o estilo da página com CSS personalizado
@@ -458,19 +472,6 @@ footer {
     """,
     unsafe_allow_html=True
 )
-
-# Construindo o caminho absoluto para os modelos
-model_cost_path = os.path.join(BASE_DIR, '../model/model_cost.pkl')
-model_emissions_path = os.path.join(BASE_DIR, '../model/model_emissions.pkl')
-scaler_path = os.path.join(BASE_DIR, '../model/scaler.pkl')
-
-# Carregar os arquivos de modelo com os caminhos absolutos
-try:
-    model_cost = joblib.load(model_cost_path)
-    model_emissions = joblib.load(model_emissions_path)
-    scaler = joblib.load(scaler_path)
-except FileNotFoundError as e:
-    st.error(f"Erro ao carregar o arquivo: {e}")
 
 # Carregar dados dos veículos elétricos a partir de um arquivo JSON
 with open('../data/vehicle_data.json', 'r', encoding='utf-8') as f:
