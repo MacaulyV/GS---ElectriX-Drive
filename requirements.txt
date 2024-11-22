@@ -1,26 +1,28 @@
-# Bibliotecas essenciais para instalação
-setuptools>=58.0
-wheel
-
+# Requisitos do Projeto EcoDrive Insight AI
+ 
 # Streamlit para a interface da aplicação
 streamlit==1.25.0
-
+ 
 # Bibliotecas para manipulação de dados
-numpy==1.21.6
-pandas==1.3.5
-
+numpy==1.24.3
+pandas==1.5.3
+ 
 # Scikit-learn para modelagem e joblib para salvar modelos
-scikit-learn==1.0.2
-joblib==1.1.0
-
+scikit-learn==1.2.2
+joblib==1.2.0
+ 
 # Plotly para gráficos interativos na interface
 plotly==5.15.0
-
+ 
 # Matplotlib para visualização dos dados
-matplotlib==3.4.3
-
+matplotlib==3.7.1
+ 
 # Pillow para suporte a imagens (versão compatível com Streamlit)
-pillow==8.3.2
-
+pillow==9.5.0
+ 
 # Requests para requisições HTTP
-requests==2.31.0
+requests==2.32.3
+ 
+# Adicionar setuptools e wheel
+setuptools>=58.0
+wheel
