@@ -176,8 +176,6 @@ streamlit run app.py
 ```
 
 ##  🌐 Acesse no navegador
-```bash
 ###  Abra o navegador e acesse http://localhost:8501
-```
 
  ---  
