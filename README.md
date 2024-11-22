@@ -12,7 +12,7 @@
 
 ## 🚀 Deploy do Projeto
 
-Para acessar o deploy da **EcoDrive Insight AI**, copie e cole o link abaixo diretamente no seu navegador:
+Para acessar o deploy da **EcoDrive Insight AI**, clique no link abaixo:
 
 [🔗 Link do Deploy](URL_DO_DEPLOY_AQUI)
 
@@ -20,7 +20,7 @@ Este deploy permite que você explore todas as funcionalidades do projeto em um 
 
 ---
 
-## 🎥 Vídeo do Projeto junto ao Pitch
+## 🎥 Vídeo do Projeto
 
 Para assistir ao vídeo de apresentação do **ElectriX Drive Platform**, clique no link abaixo:
 
