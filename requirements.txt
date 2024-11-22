@@ -1,5 +1,9 @@
 # Requisitos do Projeto EcoDrive Insight AI
 
+# Bibliotecas essenciais para instalação
+setuptools>=58.0
+wheel
+
 # Streamlit para a interface da aplicação
 streamlit==1.25.0
 
@@ -22,7 +26,3 @@ pillow==9.5.0
 
 # Requests para requisições HTTP
 requests==2.32.3
-
-# Adicionar setuptools e wheel
-setuptools>=58.0
-wheel
