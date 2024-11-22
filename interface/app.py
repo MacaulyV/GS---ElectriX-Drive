@@ -3,9 +3,7 @@ import pandas as pd
 import numpy as np
 import joblib
 import json
-import requests  # Necessário para futuras integrações com APIs
 import plotly.express as px  # Importação para gráficos interativos
-import os  # Certifique-se de importar o módulo 'os'
 
 # Configurando o estilo da página com CSS personalizado
 st.markdown(
@@ -22,40 +20,22 @@ st.markdown(
     unsafe_allow_html=True
 )
 
+
 # Função para carregar CSS personalizado a partir de um arquivo
 def local_css(file_name):
     with open(file_name) as f:
         st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
-local_css("interface/assets/style.css")
+local_css("assets/style.css")
 
-# Definir o caminho base como a pasta do arquivo atual (interface)
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-
-# Construindo o caminho absoluto para os modelos
-model_cost_path = os.path.join(BASE_DIR, '../model/model_cost.pkl')
-model_emissions_path = os.path.join(BASE_DIR, '../model/model_emissions.pkl')
-scaler_path = os.path.join(BASE_DIR, '../model/scaler.pkl')
+# Carregar modelos e escalonador pré-treinados
+model_cost = joblib.load('../model/model_cost.pkl')
+model_emissions = joblib.load('../model/model_emissions.pkl')
+scaler = joblib.load('../model/scaler.pkl')
 
 # Carregar dados dos veículos elétricos a partir de um arquivo JSON
-with open(os.path.join(BASE_DIR, '../data/vehicle_data.json'), 'r', encoding='utf-8') as f:
+with open('../data/vehicle_data.json', 'r', encoding='utf-8') as f:
     vehicle_data = json.load(f)
-
-# Certificar que os dados do JSON estão corretos
-if not vehicle_data:
-    st.error("Erro: os dados dos veículos não foram carregados corretamente.")
-    st.stop()
-
-# Código adicional para realizar o cálculo e utilizar o scaler
-# Exemplo: criar uma entrada fictícia para teste
-X_usuario = np.array([[1200, 150, 3]])  # Ajustar para o formato esperado
-
-try:
-    X_usuario_scaled = scaler.transform(X_usuario)
-    st.write("Dados escalados:", X_usuario_scaled)
-except Exception as e:
-    st.error(f"Erro ao escalar os dados do usuário. Detalhes do erro: {e}")
-    st.stop()
 
 # Função para obter dados de um veículo elétrico selecionado pelo usuário
 def get_electric_vehicle_data(marca, modelo, ano):
