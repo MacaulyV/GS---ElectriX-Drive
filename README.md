@@ -24,7 +24,7 @@ Este deploy permite que você explore todas as funcionalidades do projeto em um 
 
 Para assistir ao vídeo de apresentação do **ElectriX Drive Platform**, clique no link abaixo:
 
-[🔗 Assista ao Vídeo do Projeto](URL_DO_VIDEO_AQUI)
+[🔗 Assista ao Vídeo do Projeto](https://youtu.be/cawgKS99ugc)
 
 Este vídeo demonstra as funcionalidades & explicando sua usabilidade.
 
