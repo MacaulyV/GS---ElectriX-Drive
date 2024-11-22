@@ -1,5 +1,3 @@
-# interface/app.py
-
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -8,6 +6,7 @@ import json
 import requests  # Necessário para futuras integrações com APIs
 import plotly.express as px  # Importação para gráficos interativos
 
+# Configurando o estilo da página com CSS personalizado
 st.markdown(
     """
     <style>
@@ -23,30 +22,30 @@ st.markdown(
 )
 
 
-# Função para carregar CSS personalizado
+# Função para carregar CSS personalizado a partir de um arquivo
 def local_css(file_name):
     with open(file_name) as f:
         st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
 local_css("assets/style.css")
 
-# Carregar modelos e escalonador
+# Carregar modelos e escalonador pré-treinados
 model_cost = joblib.load('../model/model_cost.pkl')
 model_emissions = joblib.load('../model/model_emissions.pkl')
 scaler = joblib.load('../model/scaler.pkl')
 
-# Carregar dados dos veículos elétricos
+# Carregar dados dos veículos elétricos a partir de um arquivo JSON
 with open('../data/vehicle_data.json', 'r', encoding='utf-8') as f:
     vehicle_data = json.load(f)
 
-# Função para obter dados de um veículo elétrico selecionado
+# Função para obter dados de um veículo elétrico selecionado pelo usuário
 def get_electric_vehicle_data(marca, modelo, ano):
     for veiculo in vehicle_data['veiculos_eletricos']:
         if veiculo['marca'] == marca and veiculo['modelo'] == modelo and veiculo['ano'] == ano:
             return veiculo
-    return None
+    return None  # Retorna None se o veículo não for encontrado
 
-# Função para validar os campos de entrada
+# Função para validar os campos de entrada fornecidos pelo usuário
 def validar_entradas(consumo_medio, quilometragem_mensal, custo_combustivel, emissao_co2):
     erros = []
     if consumo_medio < 3 or consumo_medio > 20:
@@ -57,7 +56,7 @@ def validar_entradas(consumo_medio, quilometragem_mensal, custo_combustivel, emi
         erros.append("O custo do combustível deve estar entre R$ 3,00 e R$ 10,00 por litro.")
     if emissao_co2 < 2 or emissao_co2 > 3:
         erros.append("A emissão de CO₂ deve estar entre 2 kg/litro e 3 kg/litro.")
-    return erros
+    return erros  # Retorna a lista de erros encontrados
 
 # Função para obter o custo médio da eletricidade
 def obter_custo_eletricidade():
@@ -66,13 +65,13 @@ def obter_custo_eletricidade():
     custo_eletricidade_padrao = 0.65  # R$/kWh
     return custo_eletricidade_padrao
 
-# Função para calcular economias ao longo do tempo
+# Função para calcular economias e reduções de emissões ao longo dos anos
 def calcular_economias(custo_atual, custo_ev, anos, emissoes_atual, emissoes_ev):
     economias = []
     reducoes = []
     for ano in anos:
-        economia = (custo_atual - custo_ev) * 12 * ano  # Economia mensal multiplicada por 12 meses e anos
-        reducao = (emissoes_atual - emissoes_ev) * 12 * ano
+        economia = (custo_atual - custo_ev) * 12 * ano  # Economia anual
+        reducao = (emissoes_atual - emissoes_ev) * 12 * ano  # Redução anual de emissões
         economias.append(economia)
         reducoes.append(reducao)
     return economias, reducoes
@@ -81,7 +80,7 @@ def calcular_economias(custo_atual, custo_ev, anos, emissoes_atual, emissoes_ev)
 if 'comparacao_mensal' not in st.session_state:
     st.session_state.comparacao_mensal = None
 
-# Título e descrição
+# Título e descrição do aplicativo
 st.markdown("<div class='title'>🌿 EcoDrive Insight AI</div>", unsafe_allow_html=True)
 st.markdown("<div class='description'>Compare seu veículo atual com veículos elétricos e descubra os benefícios da transição para energia sustentável.</div>", unsafe_allow_html=True)
 
