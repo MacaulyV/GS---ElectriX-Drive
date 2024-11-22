@@ -5,7 +5,7 @@ streamlit==1.24.0
 
 # Bibliotecas para manipulação de dados
 pandas==1.5.3
-numpy==1.22.4  # Versão compatível para evitar distutils issue
+numpy==1.23.5  # Versão compatível com pandas 1.5.3
 
 # Scikit-learn para modelagem e joblib para salvar modelos
 scikit-learn==1.2.2
