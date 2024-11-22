@@ -1,1 +1,2 @@
 zlib1g-dev
+python3.10-distutils
