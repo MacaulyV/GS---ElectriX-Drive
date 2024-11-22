@@ -29,10 +29,10 @@ def local_css(file_name):
 
 local_css("interface/assets/style.css")
 
-# Carregar modelos e escalonador pré-treinados
-model_cost = joblib.load('../model/model_cost.pkl')
-model_emissions = joblib.load('../model/model_emissions.pkl')
-scaler = joblib.load('../model/scaler.pkl')
+# Construindo o caminho absoluto para os modelos
+model_cost_path = os.path.join(BASE_DIR, '../model/model_cost.pkl')
+model_emissions_path = os.path.join(BASE_DIR, '../model/model_emissions.pkl')
+scaler_path = os.path.join(BASE_DIR, '../model/scaler.pkl')
 
 # Carregar dados dos veículos elétricos a partir de um arquivo JSON
 with open('../data/vehicle_data.json', 'r', encoding='utf-8') as f:
