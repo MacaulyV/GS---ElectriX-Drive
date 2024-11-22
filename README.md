@@ -151,28 +151,31 @@ O **EcoDrive Insight AI** proporciona aos motoristas uma ferramenta poderosa e i
 
 ---
 
+## 🚀 Clone o repositório
 ```bash
-5. **Acesse no navegador**:
-   Abra o navegador e acesse `http://localhost:8501`
+git clone -b EcoDrive-Insight-AI https://github.com/MacaulyV/GS-ElectriX-Drive.git
  ```
 
-## 🚀 Clone o repositório
-git clone -b EcoDrive-Insight-AI https://github.com/MacaulyV/GS-ElectriX-Drive.git
-
 ## 📦 Instale as dependências
+```bash
 pip install setuptools
 pip install joblib
 pip install plotly
 pip install xgboost
 pip install scikit-learn
+ ```
 
 ###  📂 Navegue até o diretório onde o arquivo app.py está localizado
+```bash
 cd interface
+```
 
 ###  ⚙️ Execute a aplicação usando o Streamlit
+```bash
 streamlit run app.py
+```
 
-###  🌐 Acesse no navegador
+##  🌐 Acesse no navegador
 ###  Abra o navegador e acesse http://localhost:8501
 
  ---  
