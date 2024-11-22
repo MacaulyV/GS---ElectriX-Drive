@@ -4,8 +4,8 @@
 streamlit==1.24.0
 
 # Bibliotecas para manipulação de dados
-pandas==1.5.3  # Utilizando uma versão anterior compatível com numpy 1.24
-numpy==1.24.3
+pandas==1.5.3
+numpy==1.22.4  # Versão compatível para evitar distutils issue
 
 # Scikit-learn para modelagem e joblib para salvar modelos
 scikit-learn==1.2.2
@@ -21,7 +21,8 @@ matplotlib==3.5.2
 requests==2.31.0
 
 # Setuptools para garantir a presença do distutils
-setuptools>=58.0.0
+setuptools==65.5.1
+
 
 # Use o seguinte comando
 # pip install -r requirements.txt
