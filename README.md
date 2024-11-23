@@ -130,11 +130,9 @@ As configurações para conexão com o banco **Oracle** estão no arquivo `appli
 Para visualizar a documentação da API, visite: `http://localhost:8080/swagger-ui/index.html#/`
 
 ---
+
 ## 📈 **Considerações Finais**
 
 O projeto **ElectriXDrive Platform** foi desenvolvido para fornecer aos usuários uma visão clara e objetiva dos benefícios da transição para veículos elétricos, tanto do ponto de vista ambiental quanto econômico. Utilizando **Spring Boot** e **Oracle**, o sistema garante um backend robusto enquanto oferece uma interface de usuário amigável com **Thymeleaf**.
 
-Se você tiver qualquer dúvida ou sugestão, sinta-se à vontade para abrir uma issue no repositório ou entrar em contato.
-
 ---
-**Atendi ao que você tinha em mente para documentar o projeto?** Sinta-se à vontade para sugerir qualquer ajuste ou incluir mais detalhes.
