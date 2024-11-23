@@ -2,7 +2,7 @@
   
 ---
 
-# 🚗 **ElectriXDrive Platform - Solução Ponta a Ponta**
+# 🚗 **ElectriXDrive Platform -**
 
 ---
 
