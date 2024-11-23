@@ -1,4 +1,4 @@
-![Descrição banner](https://github.com/user-attachments/assets/fd23aae5-3758-4cd8-9b38-4abbf9e8b845)
+![Descrição banner](https://github.com/user-attachments/assets/2d864420-d85b-4652-94b3-92f73370635b)
 
 # **ElectriX Drive Platform** 🚗💡
   
