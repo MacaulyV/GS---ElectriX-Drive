@@ -2,7 +2,7 @@
   
 ---
 
-# 🚗 **ElectriXDrive Platform -**
+# 🚗 **ElectriXDrive Platform**
 
 ---
 
