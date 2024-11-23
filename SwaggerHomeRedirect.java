@@ -15,6 +15,6 @@ public class SwaggerHomeRedirect {
      */
     @GetMapping("/")
     public String redirectToSwagger() {
-        return "redirect:/swagger-ui/";
+        return "redirect:/login/";
     }
 }
