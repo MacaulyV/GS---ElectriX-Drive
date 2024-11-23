@@ -18,8 +18,6 @@ Clique no link para acessar o deploy da ElectriX Drive Platform, feito no Render
 
 ⚠️ **Atenção**: o carregamento no render é um pouco demorado clique e aguarde um momento para o carregamento completo do projeto.
 
-Este deploy permite que você explore todas as funcionalidades do projeto em um ambiente operacional.
-
 ---
 
 ## 🎥 Vídeo do Projeto junto ao Pitch
