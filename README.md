@@ -12,7 +12,7 @@
 
 ## 🚀 Deploy do Projeto
 
-Para acessar o deploy do **ElectriX Drive Platform**, copie e cole o link abaixo diretamente no seu navegador:
+Clique no link para acessar o deploy da ElectriX Drive Platform, feito no Render.
 
 [🔗 Link do Deploy](https://electrix-drive-platform.onrender.com/login)
 
