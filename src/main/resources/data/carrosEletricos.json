@@ -1,0 +1,542 @@
+[
+  {
+    "marca": "Volkswagen",
+    "modelos": [
+      {
+        "modelo": "ID.3",
+        "anosDisponiveis": [2020, 2021, 2022, 2023],
+        "consumoMedioKwh100km": 15.5,
+        "autonomiaBateriaKm": 420,
+        "emissoesCO2gKm": 0,
+        "custoRecargaBateria": 41.43
+      },
+      {
+        "modelo": "ID.4",
+        "anosDisponiveis": [2020, 2021, 2022, 2023],
+        "consumoMedioKwh100km": 18.7,
+        "autonomiaBateriaKm": 410,
+        "emissoesCO2gKm": 0,
+        "custoRecargaBateria": 48.76
+      },
+      {
+        "modelo": "e-Up!",
+        "anosDisponiveis": [2019, 2020, 2021, 2022],
+        "consumoMedioKwh100km": 12.7,
+        "autonomiaBateriaKm": 260,
+        "emissoesCO2gKm": 0,
+        "custoRecargaBateria": 21.06
+      },
+      {
+        "modelo": "ID. Buzz",
+        "anosDisponiveis": [2022, 2023],
+        "consumoMedioKwh100km": 20.6,
+        "autonomiaBateriaKm": 400,
+        "emissoesCO2gKm": 0,
+        "custoRecargaBateria": 52.42
+      },
+      {
+        "modelo": "ID.5",
+        "anosDisponiveis": [2021, 2022, 2023],
+        "consumoMedioKwh100km": 17.1,
+        "autonomiaBateriaKm": 480,
+        "emissoesCO2gKm": 0,
+        "custoRecargaBateria": 52.18
+      }
+    ]
+  },
+  {
+    "marca": "Toyota",
+    "modelos": [
+      {
+        "modelo": "bZ4X",
+        "anosDisponiveis": [2022, 2023],
+        "consumoMedioKwh100km": 18.0,
+        "autonomiaBateriaKm": 460,
+        "emissoesCO2gKm": 0,
+        "custoRecargaBateria": 52.75
+      },
+      {
+        "modelo": "Proace Electric",
+        "anosDisponiveis": [2020, 2021, 2022, 2023],
+        "consumoMedioKwh100km": 23.5,
+        "autonomiaBateriaKm": 330,
+        "emissoesCO2gKm": 0,
+        "custoRecargaBateria": 49.34
+      },
+      {
+        "modelo": "C-HR EV",
+        "anosDisponiveis": [2020, 2021, 2022],
+        "consumoMedioKwh100km": 16.2,
+        "autonomiaBateriaKm": 400,
+        "emissoesCO2gKm": 0,
+        "custoRecargaBateria": 41.18
+      },
+      {
+        "modelo": "Lexus UX 300e",
+        "anosDisponiveis": [2020, 2021, 2022, 2023],
+        "consumoMedioKwh100km": 17.1,
+        "autonomiaBateriaKm": 315,
+        "emissoesCO2gKm": 0,
+        "custoRecargaBateria": 34.29
+      },
+      {
+        "modelo": "RAV4 Prime (Plug-in Hybrid)",
+        "anosDisponiveis": [2020, 2021, 2022, 2023],
+        "consumoMedioKwh100km": 20.0,
+        "autonomiaBateriaKm": 68,
+        "emissoesCO2gKm": 0,
+        "custoRecargaBateria": 8.64
+      }
+    ]
+  },
+  {
+    "marca": "Ford",
+    "modelos": [
+      {
+        "modelo": "Mustang Mach-E",
+        "anosDisponiveis": [2020, 2021, 2022, 2023],
+        "consumoMedioKwh100km": 19.5,
+        "autonomiaBateriaKm": 435,
+        "emissoesCO2gKm": 0,
+        "custoRecargaBateria": 54.05
+      },
+      {
+        "modelo": "F-150 Lightning",
+        "anosDisponiveis": [2022, 2023],
+        "consumoMedioKwh100km": 24.0,
+        "autonomiaBateriaKm": 370,
+        "emissoesCO2gKm": 0,
+        "custoRecargaBateria": 56.59
+      },
+      {
+        "modelo": "E-Transit",
+        "anosDisponiveis": [2021, 2022, 2023],
+        "consumoMedioKwh100km": 27.0,
+        "autonomiaBateriaKm": 317,
+        "emissoesCO2gKm": 0,
+        "custoRecargaBateria": 54.55
+      },
+      {
+        "modelo": "Focus Electric",
+        "anosDisponiveis": [2017, 2018],
+        "consumoMedioKwh100km": 20.0,
+        "autonomiaBateriaKm": 185,
+        "emissoesCO2gKm": 0,
+        "custoRecargaBateria": 23.53
+      },
+      {
+        "modelo": "Escape Plug-in Hybrid",
+        "anosDisponiveis": [2020, 2021, 2022, 2023],
+        "consumoMedioKwh100km": 19.1,
+        "autonomiaBateriaKm": 60,
+        "emissoesCO2gKm": 0,
+        "custoRecargaBateria": 7.29
+      }
+    ]
+  },
+  {
+    "marca": "Fiat",
+    "modelos": [
+      {
+        "modelo": "500e",
+        "anosDisponiveis": [2020, 2021, 2022, 2023],
+        "consumoMedioKwh100km": 13.0,
+        "autonomiaBateriaKm": 320,
+        "emissoesCO2gKm": 0,
+        "custoRecargaBateria": 26.45
+      },
+      {
+        "modelo": "E-Ducato",
+        "anosDisponiveis": [2021, 2022, 2023],
+        "consumoMedioKwh100km": 29.0,
+        "autonomiaBateriaKm": 235,
+        "emissoesCO2gKm": 0,
+        "custoRecargaBateria": 43.35
+      },
+      {
+        "modelo": "Panda Electric",
+        "anosDisponiveis": [2022, 2023],
+        "consumoMedioKwh100km": 14.5,
+        "autonomiaBateriaKm": 300,
+        "emissoesCO2gKm": 0,
+        "custoRecargaBateria": 27.63
+      },
+      {
+        "modelo": "E-Ulysse",
+        "anosDisponiveis": [2022, 2023],
+        "consumoMedioKwh100km": 24.0,
+        "autonomiaBateriaKm": 330,
+        "emissoesCO2gKm": 0,
+        "custoRecargaBateria": 50.35
+      },
+      {
+        "modelo": "E-Scudo",
+        "anosDisponiveis": [2022, 2023],
+        "consumoMedioKwh100km": 25.0,
+        "autonomiaBateriaKm": 330,
+        "emissoesCO2gKm": 0,
+        "custoRecargaBateria": 52.53
+      }
+    ]
+  },
+  {
+    "marca": "Chevrolet",
+    "modelos": [
+      {
+        "modelo": "Bolt EV",
+        "anosDisponiveis": [2017, 2018, 2019, 2020, 2021, 2022, 2023],
+        "consumoMedioKwh100km": 17.6,
+        "autonomiaBateriaKm": 416,
+        "emissoesCO2gKm": 0,
+        "custoRecargaBateria": 46.64
+      },
+      {
+        "modelo": "Bolt EUV",
+        "anosDisponiveis": [2021, 2022, 2023],
+        "consumoMedioKwh100km": 18.0,
+        "autonomiaBateriaKm": 402,
+        "emissoesCO2gKm": 0,
+        "custoRecargaBateria": 46.02
+      },
+      {
+        "modelo": "Equinox EV",
+        "anosDisponiveis": [2023],
+        "consumoMedioKwh100km": 19.0,
+        "autonomiaBateriaKm": 480,
+        "emissoesCO2gKm": 0,
+        "custoRecargaBateria": 58.03
+      },
+      {
+        "modelo": "Silverado EV",
+        "anosDisponiveis": [2023],
+        "consumoMedioKwh100km": 24.0,
+        "autonomiaBateriaKm": 640,
+        "emissoesCO2gKm": 0,
+        "custoRecargaBateria": 97.66
+      },
+      {
+        "modelo": "Blazer EV",
+        "anosDisponiveis": [2023],
+        "consumoMedioKwh100km": 20.0,
+        "autonomiaBateriaKm": 515,
+        "emissoesCO2gKm": 0,
+        "custoRecargaBateria": 65.47
+      }
+    ]
+  },
+  {
+    "marca": "Renault",
+    "modelos": [
+      {
+        "modelo": "Zoe",
+        "anosDisponiveis": [2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023],
+        "consumoMedioKwh100km": 17.2,
+        "autonomiaBateriaKm": 395,
+        "emissoesCO2gKm": 0,
+        "custoRecargaBateria": 43.25
+      },
+      {
+        "modelo": "Kangoo Z.E.",
+        "anosDisponiveis": [2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023],
+        "consumoMedioKwh100km": 19.0,
+        "autonomiaBateriaKm": 230,
+        "emissoesCO2gKm": 0,
+        "custoRecargaBateria": 27.75
+      },
+      {
+        "modelo": "Twingo Electric",
+        "anosDisponiveis": [2020, 2021, 2022, 2023],
+        "consumoMedioKwh100km": 16.0,
+        "autonomiaBateriaKm": 190,
+        "emissoesCO2gKm": 0,
+        "custoRecargaBateria": 19.32
+      },
+      {
+        "modelo": "Megane E-Tech Electric",
+        "anosDisponiveis": [2022, 2023],
+        "consumoMedioKwh100km": 16.1,
+        "autonomiaBateriaKm": 450,
+        "emissoesCO2gKm": 0,
+        "custoRecargaBateria": 46.12
+      },
+      {
+        "modelo": "Master E-Tech Electric",
+        "anosDisponiveis": [2022, 2023],
+        "consumoMedioKwh100km": 22.0,
+        "autonomiaBateriaKm": 200,
+        "emissoesCO2gKm": 0,
+        "custoRecargaBateria": 27.98
+      }
+    ]
+  },
+  {
+    "marca": "Hyundai",
+    "modelos": [
+      {
+        "modelo": "Kona Electric",
+        "anosDisponiveis": [2018, 2019, 2020, 2021, 2022, 2023],
+        "consumoMedioKwh100km": 14.7,
+        "autonomiaBateriaKm": 484,
+        "emissoesCO2gKm": 0,
+        "custoRecargaBateria": 45.34
+      },
+      {
+        "modelo": "Ioniq Electric",
+        "anosDisponiveis": [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023],
+        "consumoMedioKwh100km": 13.8,
+        "autonomiaBateriaKm": 311,
+        "emissoesCO2gKm": 0,
+        "custoRecargaBateria": 27.34
+      },
+      {
+        "modelo": "Ioniq 5",
+        "anosDisponiveis": [2021, 2022, 2023],
+        "consumoMedioKwh100km": 16.8,
+        "autonomiaBateriaKm": 507,
+        "emissoesCO2gKm": 0,
+        "custoRecargaBateria": 54.20
+      },
+      {
+        "modelo": "Ioniq 6",
+        "anosDisponiveis": [2023],
+        "consumoMedioKwh100km": 14.3,
+        "autonomiaBateriaKm": 614,
+        "emissoesCO2gKm": 0,
+        "custoRecargaBateria": 56.00
+      },
+      {
+        "modelo": "Nexo (Fuel Cell)",
+        "anosDisponiveis": [2018, 2019, 2020, 2021, 2022, 2023],
+        "consumoMedioKwh100km": 0,
+        "autonomiaBateriaKm": 666,
+        "emissoesCO2gKm": 0,
+        "custoRecargaBateria": 0
+      }
+    ]
+  },
+  {
+    "marca": "Honda",
+    "modelos": [
+      {
+        "modelo": "Honda e",
+        "anosDisponiveis": [2020, 2021, 2022, 2023],
+        "consumoMedioKwh100km": 17.8,
+        "autonomiaBateriaKm": 220,
+        "emissoesCO2gKm": 0,
+        "custoRecargaBateria": 24.92
+      },
+      {
+        "modelo": "Clarity Electric",
+        "anosDisponiveis": [2017, 2018, 2019],
+        "consumoMedioKwh100km": 20.0,
+        "autonomiaBateriaKm": 143,
+        "emissoesCO2gKm": 0,
+        "custoRecargaBateria": 18.18
+      },
+      {
+        "modelo": "Fit EV",
+        "anosDisponiveis": [2013, 2014],
+        "consumoMedioKwh100km": 20.0,
+        "autonomiaBateriaKm": 132,
+        "emissoesCO2gKm": 0,
+        "custoRecargaBateria": 16.79
+      },
+      {
+        "modelo": "Prologue",
+        "anosDisponiveis": [2024],
+        "consumoMedioKwh100km": 20.0,
+        "autonomiaBateriaKm": 480,
+        "emissoesCO2gKm": 0,
+        "custoRecargaBateria": 60.00
+      },
+      {
+        "modelo": "HR-V e:HEV",
+        "anosDisponiveis": [2021, 2022, 2023],
+        "consumoMedioKwh100km": 0,
+        "autonomiaBateriaKm": 0,
+        "emissoesCO2gKm": 0,
+        "custoRecargaBateria": 0
+      }
+    ]
+  },
+  {
+    "marca": "Nissan",
+    "modelos": [
+      {
+        "modelo": "Leaf",
+        "anosDisponiveis": [2019, 2020, 2021, 2022, 2023],
+        "consumoMedioKwh100km": 15.0,
+        "autonomiaBateriaKm": 270,
+        "emissoesCO2gKm": 0,
+        "custoRecargaBateria": 25.65
+      },
+      {
+        "modelo": "Ariya",
+        "anosDisponiveis": [2022, 2023],
+        "consumoMedioKwh100km": 17.0,
+        "autonomiaBateriaKm": 500,
+        "emissoesCO2gKm": 0,
+        "custoRecargaBateria": 54.15
+      },
+      {
+        "modelo": "e-NV200",
+        "anosDisponiveis": [2014, 2015, 2016, 2017, 2018, 2019],
+        "consumoMedioKwh100km": 20.0,
+        "autonomiaBateriaKm": 200,
+        "emissoesCO2gKm": 0,
+        "custoRecargaBateria": 25.45
+      },
+      {
+        "modelo": "Sylphy Zero Emission",
+        "anosDisponiveis": [2018, 2019, 2020, 2021, 2022, 2023],
+        "consumoMedioKwh100km": 13.8,
+        "autonomiaBateriaKm": 338,
+        "emissoesCO2gKm": 0,
+        "custoRecargaBateria": 29.70
+      },
+      {
+        "modelo": "Townstar EV",
+        "anosDisponiveis": [2022, 2023],
+        "consumoMedioKwh100km": 18.0,
+        "autonomiaBateriaKm": 300,
+        "emissoesCO2gKm": 0,
+        "custoRecargaBateria": 34.20
+      }
+    ]
+  },
+  {
+    "marca": "Peugeot",
+    "modelos": [
+      {
+        "modelo": "e-208",
+        "anosDisponiveis": [2020, 2021, 2022, 2023],
+        "consumoMedioKwh100km": 15.3,
+        "autonomiaBateriaKm": 340,
+        "emissoesCO2gKm": 0,
+        "custoRecargaBateria": 33.03
+      },
+      {
+        "modelo": "e-2008",
+        "anosDisponiveis": [2021, 2022, 2023],
+        "consumoMedioKwh100km": 15.8,
+        "autonomiaBateriaKm": 320,
+        "emissoesCO2gKm": 0,
+        "custoRecargaBateria": 31.97
+      },
+      {
+        "modelo": "e-Traveller",
+        "anosDisponiveis": [2020, 2021, 2022],
+        "consumoMedioKwh100km": 26.0,
+        "autonomiaBateriaKm": 230,
+        "emissoesCO2gKm": 0,
+        "custoRecargaBateria": 38.10
+      },
+      {
+        "modelo": "e-Expert",
+        "anosDisponiveis": [2021, 2022, 2023],
+        "consumoMedioKwh100km": 23.8,
+        "autonomiaBateriaKm": 330,
+        "emissoesCO2gKm": 0,
+        "custoRecargaBateria": 49.85
+      },
+      {
+        "modelo": "Partner Electric",
+        "anosDisponiveis": [2015, 2016, 2017, 2018, 2019, 2020],
+        "consumoMedioKwh100km": 16.2,
+        "autonomiaBateriaKm": 170,
+        "emissoesCO2gKm": 0,
+        "custoRecargaBateria": 17.46
+      }
+    ]
+  },
+  {
+    "marca": "Kia",
+    "modelos": [
+      {
+        "modelo": "EV6",
+        "anosDisponiveis": [2021, 2022, 2023],
+        "consumoMedioKwh100km": 16.5,
+        "autonomiaBateriaKm": 506,
+        "emissoesCO2gKm": 0,
+        "custoRecargaBateria": 53.05
+      },
+      {
+        "modelo": "Soul EV",
+        "anosDisponiveis": [2020, 2021, 2022, 2023],
+        "consumoMedioKwh100km": 17.9,
+        "autonomiaBateriaKm": 383,
+        "emissoesCO2gKm": 0,
+        "custoRecargaBateria": 43.59
+      },
+      {
+        "modelo": "Niro EV",
+        "anosDisponiveis": [2021, 2022, 2023],
+        "consumoMedioKwh100km": 16.2,
+        "autonomiaBateriaKm": 385,
+        "emissoesCO2gKm": 0,
+        "custoRecargaBateria": 39.69
+      },
+      {
+        "modelo": "Ray EV",
+        "anosDisponiveis": [2023],
+        "consumoMedioKwh100km": 14.5,
+        "autonomiaBateriaKm": 300,
+        "emissoesCO2gKm": 0,
+        "custoRecargaBateria": 27.63
+      },
+      {
+        "modelo": "e-Soul",
+        "anosDisponiveis": [2022, 2023],
+        "consumoMedioKwh100km": 17.0,
+        "autonomiaBateriaKm": 452,
+        "emissoesCO2gKm": 0,
+        "custoRecargaBateria": 49.10
+      }
+    ]
+  },
+  {
+    "marca": "Jeep",
+    "modelos": [
+      {
+        "modelo": "Avenger EV",
+        "anosDisponiveis": [2023, 2024],
+        "consumoMedioKwh100km": 15.0,
+        "autonomiaBateriaKm": 400,
+        "emissoesCO2gKm": 0,
+        "custoRecargaBateria": 38.16
+      },
+      {
+        "modelo": "Wagoneer S",
+        "anosDisponiveis": [2024],
+        "consumoMedioKwh100km": 20.0,
+        "autonomiaBateriaKm": 480,
+        "emissoesCO2gKm": 0,
+        "custoRecargaBateria": 61.15
+      },
+      {
+        "modelo": "Recon",
+        "anosDisponiveis": [2024],
+        "consumoMedioKwh100km": 18.0,
+        "autonomiaBateriaKm": 400,
+        "emissoesCO2gKm": 0,
+        "custoRecargaBateria": 45.89
+      },
+      {
+        "modelo": "Grand Cherokee 4xe",
+        "anosDisponiveis": [2022, 2023, 2024],
+        "consumoMedioKwh100km": 25.0,
+        "autonomiaBateriaKm": 40,
+        "emissoesCO2gKm": 0,
+        "custoRecargaBateria": 6.36
+      },
+      {
+        "modelo": "Wrangler 4xe",
+        "anosDisponiveis": [2021, 2022, 2023, 2024],
+        "consumoMedioKwh100km": 27.0,
+        "autonomiaBateriaKm": 35,
+        "emissoesCO2gKm": 0,
+        "custoRecargaBateria": 6.02
+      }
+    ]
+  }
+]

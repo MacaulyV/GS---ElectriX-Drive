@@ -1,0 +1,1304 @@
+[
+  {
+    "marca": "Volkswagen",
+    "modelo": "Golf",
+    "anosDisponiveis": [2020, 2021, 2022],
+    "tiposCombustivel": [
+      {
+        "tipo": "Gasolina",
+        "consumoMedioKmL": 11,
+        "autonomiaKm": 550,
+        "emissoesCO2gKm": 110,
+        "custoCombustivelPorTanque": 600
+      },
+      {
+        "tipo": "Etanol",
+        "consumoMedioKmL": 7,
+        "autonomiaKm": 350,
+        "emissoesCO2gKm": 130,
+        "custoCombustivelPorTanque": 400
+      }
+    ]
+  },
+  {
+    "marca": "Toyota",
+    "modelo": "Corolla",
+    "anosDisponiveis": [2020, 2021, 2023],
+    "tiposCombustivel": [
+      {
+        "tipo": "Gasolina",
+        "consumoMedioKmL": 12,
+        "autonomiaKm": 600,
+        "emissoesCO2gKm": 120,
+        "custoCombustivelPorTanque": 650
+      },
+      {
+        "tipo": "Híbrido",
+        "consumoMedioKmL": 18,
+        "autonomiaKm": 900,
+        "emissoesCO2gKm": 80,
+        "custoCombustivelPorTanque": 500
+      }
+    ]
+  },
+  {
+    "marca": "Ford",
+    "modelo": "Ka",
+    "anosDisponiveis": [2019, 2020, 2022],
+    "tiposCombustivel": [
+      {
+        "tipo": "Gasolina",
+        "consumoMedioKmL": 14,
+        "autonomiaKm": 700,
+        "emissoesCO2gKm": 100,
+        "custoCombustivelPorTanque": 500
+      },
+      {
+        "tipo": "Etanol",
+        "consumoMedioKmL": 10,
+        "autonomiaKm": 500,
+        "emissoesCO2gKm": 130,
+        "custoCombustivelPorTanque": 300
+      }
+    ]
+  },
+  {
+    "marca": "Fiat",
+    "modelo": "Argo",
+    "anosDisponiveis": [2021, 2022, 2023],
+    "tiposCombustivel": [
+      {
+        "tipo": "Gasolina",
+        "consumoMedioKmL": 13,
+        "autonomiaKm": 650,
+        "emissoesCO2gKm": 115,
+        "custoCombustivelPorTanque": 600
+      },
+      {
+        "tipo": "Etanol",
+        "consumoMedioKmL": 9,
+        "autonomiaKm": 450,
+        "emissoesCO2gKm": 135,
+        "custoCombustivelPorTanque": 350
+      },
+      {
+        "tipo": "GNV",
+        "consumoMedioKmL": 16,
+        "autonomiaKm": 800,
+        "emissoesCO2gKm": 90,
+        "custoCombustivelPorTanque": 200
+      }
+    ]
+  },
+  {
+    "marca": "Chevrolet",
+    "modelo": "Onix",
+    "anosDisponiveis": [2020, 2021, 2024],
+    "tiposCombustivel": [
+      {
+        "tipo": "Gasolina",
+        "consumoMedioKmL": 15,
+        "autonomiaKm": 750,
+        "emissoesCO2gKm": 95,
+        "custoCombustivelPorTanque": 600
+      }
+    ]
+  },
+  {
+    "marca": "Renault",
+    "modelo": "Sandero",
+    "anosDisponiveis": [2021, 2022, 2023],
+    "tiposCombustivel": [
+      {
+        "tipo": "Gasolina",
+        "consumoMedioKmL": 12,
+        "autonomiaKm": 600,
+        "emissoesCO2gKm": 120,
+        "custoCombustivelPorTanque": 580
+      },
+      {
+        "tipo": "Etanol",
+        "consumoMedioKmL": 8,
+        "autonomiaKm": 400,
+        "emissoesCO2gKm": 140,
+        "custoCombustivelPorTanque": 300
+      }
+    ]
+  },
+  {
+    "marca": "Hyundai",
+    "modelo": "HB20",
+    "anosDisponiveis": [2020, 2021, 2022, 2023],
+    "tiposCombustivel": [
+      {
+        "tipo": "Gasolina",
+        "consumoMedioKmL": 14,
+        "autonomiaKm": 700,
+        "emissoesCO2gKm": 100,
+        "custoCombustivelPorTanque": 570
+      }
+    ]
+  },
+  {
+    "marca": "Honda",
+    "modelo": "Civic",
+    "anosDisponiveis": [2019, 2020, 2021, 2022],
+    "tiposCombustivel": [
+      {
+        "tipo": "Gasolina",
+        "consumoMedioKmL": 11,
+        "autonomiaKm": 550,
+        "emissoesCO2gKm": 125,
+        "custoCombustivelPorTanque": 700
+      },
+      {
+        "tipo": "Híbrido",
+        "consumoMedioKmL": 17,
+        "autonomiaKm": 850,
+        "emissoesCO2gKm": 75,
+        "custoCombustivelPorTanque": 400
+      }
+    ]
+  },
+  {
+    "marca": "Nissan",
+    "modelo": "Kicks",
+    "anosDisponiveis": [2020, 2021, 2023],
+    "tiposCombustivel": [
+      {
+        "tipo": "Gasolina",
+        "consumoMedioKmL": 13,
+        "autonomiaKm": 650,
+        "emissoesCO2gKm": 110,
+        "custoCombustivelPorTanque": 600
+      },
+      {
+        "tipo": "Etanol",
+        "consumoMedioKmL": 8,
+        "autonomiaKm": 400,
+        "emissoesCO2gKm": 140,
+        "custoCombustivelPorTanque": 350
+      }
+    ]
+  },
+  {
+    "marca": "Peugeot",
+    "modelo": "Peugeot 208",
+    "anosDisponiveis": [2020, 2021, 2022],
+    "tiposCombustivel": [
+      {
+        "tipo": "Gasolina",
+        "consumoMedioKmL": 14,
+        "autonomiaKm": 700,
+        "emissoesCO2gKm": 105,
+        "custoCombustivelPorTanque": 590
+      }
+    ]
+  },
+  {
+    "marca": "Fiat",
+    "modelo": "Uno",
+    "anosDisponiveis": [2018, 2019, 2020, 2021],
+    "tiposCombustivel": [
+      {
+        "tipo": "Gasolina",
+        "consumoMedioKmL": 15,
+        "autonomiaKm": 750,
+        "emissoesCO2gKm": 95,
+        "custoCombustivelPorTanque": 600
+      },
+      {
+        "tipo": "Etanol",
+        "consumoMedioKmL": 10,
+        "autonomiaKm": 500,
+        "emissoesCO2gKm": 135,
+        "custoCombustivelPorTanque": 350
+      }
+    ]
+  },
+  {
+    "marca": "Volkswagen",
+    "modelo": "Polo",
+    "anosDisponiveis": [2019, 2020, 2021, 2022],
+    "tiposCombustivel": [
+      {
+        "tipo": "Gasolina",
+        "consumoMedioKmL": 13,
+        "autonomiaKm": 650,
+        "emissoesCO2gKm": 110,
+        "custoCombustivelPorTanque": 650
+      },
+      {
+        "tipo": "Etanol",
+        "consumoMedioKmL": 9,
+        "autonomiaKm": 450,
+        "emissoesCO2gKm": 140,
+        "custoCombustivelPorTanque": 350
+      },
+      {
+        "tipo": "GNV",
+        "consumoMedioKmL": 18,
+        "autonomiaKm": 900,
+        "emissoesCO2gKm": 85,
+        "custoCombustivelPorTanque": 250
+      }
+    ]
+  },
+  {
+    "marca": "Chevrolet",
+    "modelo": "Prisma",
+    "anosDisponiveis": [2018, 2019, 2020, 2021],
+    "tiposCombustivel": [
+      {
+        "tipo": "Gasolina",
+        "consumoMedioKmL": 14,
+        "autonomiaKm": 700,
+        "emissoesCO2gKm": 100,
+        "custoCombustivelPorTanque": 620
+      },
+      {
+        "tipo": "Etanol",
+        "consumoMedioKmL": 10,
+        "autonomiaKm": 500,
+        "emissoesCO2gKm": 130,
+        "custoCombustivelPorTanque": 350
+      }
+    ]
+  },
+  {
+    "marca": "Toyota",
+    "modelo": "Yaris",
+    "anosDisponiveis": [2020, 2021, 2022, 2023],
+    "tiposCombustivel": [
+      {
+        "tipo": "Gasolina",
+        "consumoMedioKmL": 16,
+        "autonomiaKm": 800,
+        "emissoesCO2gKm": 90,
+        "custoCombustivelPorTanque": 640
+      },
+      {
+        "tipo": "Etanol",
+        "consumoMedioKmL": 11,
+        "autonomiaKm": 550,
+        "emissoesCO2gKm": 125,
+        "custoCombustivelPorTanque": 385
+      },
+      {
+        "tipo": "GNV",
+        "consumoMedioKmL": 19,
+        "autonomiaKm": 950,
+        "emissoesCO2gKm": 80,
+        "custoCombustivelPorTanque": 270
+      }
+    ]
+  },
+  {
+    "marca": "Honda",
+    "modelo": "Fit",
+    "anosDisponiveis": [2018, 2019, 2020, 2021],
+    "tiposCombustivel": [
+      {
+        "tipo": "Gasolina",
+        "consumoMedioKmL": 15,
+        "autonomiaKm": 750,
+        "emissoesCO2gKm": 95,
+        "custoCombustivelPorTanque": 600
+      },
+      {
+        "tipo": "Etanol",
+        "consumoMedioKmL": 10,
+        "autonomiaKm": 500,
+        "emissoesCO2gKm": 135,
+        "custoCombustivelPorTanque": 350
+      }
+    ]
+  },
+  {
+    "marca": "Nissan",
+    "modelo": "Versa",
+    "anosDisponiveis": [2019, 2020, 2021, 2022],
+    "tiposCombustivel": [
+      {
+        "tipo": "Gasolina",
+        "consumoMedioKmL": 14,
+        "autonomiaKm": 700,
+        "emissoesCO2gKm": 100,
+        "custoCombustivelPorTanque": 610
+      },
+      {
+        "tipo": "Etanol",
+        "consumoMedioKmL": 9,
+        "autonomiaKm": 450,
+        "emissoesCO2gKm": 140,
+        "custoCombustivelPorTanque": 350
+      }
+    ]
+  },
+  {
+    "marca": "Hyundai",
+    "modelo": "Tucson",
+    "anosDisponiveis": [2020, 2021, 2022, 2023],
+    "tiposCombustivel": [
+      {
+        "tipo": "Gasolina",
+        "consumoMedioKmL": 10,
+        "autonomiaKm": 500,
+        "emissoesCO2gKm": 150,
+        "custoCombustivelPorTanque": 550
+      },
+      {
+        "tipo": "Etanol",
+        "consumoMedioKmL": 7,
+        "autonomiaKm": 350,
+        "emissoesCO2gKm": 170,
+        "custoCombustivelPorTanque": 245
+      }
+    ]
+  },
+  {
+    "marca": "Kia",
+    "modelo": "Sportage",
+    "anosDisponiveis": [2019, 2020, 2021, 2022],
+    "tiposCombustivel": [
+      {
+        "tipo": "Gasolina",
+        "consumoMedioKmL": 11,
+        "autonomiaKm": 550,
+        "emissoesCO2gKm": 130,
+        "custoCombustivelPorTanque": 600
+      },
+      {
+        "tipo": "Etanol",
+        "consumoMedioKmL": 8,
+        "autonomiaKm": 400,
+        "emissoesCO2gKm": 150,
+        "custoCombustivelPorTanque": 280
+      }
+    ]
+  },
+  {
+    "marca": "Jeep",
+    "modelo": "Renegade",
+    "anosDisponiveis": [2020, 2021, 2022, 2023],
+    "tiposCombustivel": [
+      {
+        "tipo": "Gasolina",
+        "consumoMedioKmL": 9,
+        "autonomiaKm": 450,
+        "emissoesCO2gKm": 160,
+        "custoCombustivelPorTanque": 500
+      },
+      {
+        "tipo": "Etanol",
+        "consumoMedioKmL": 6,
+        "autonomiaKm": 300,
+        "emissoesCO2gKm": 180,
+        "custoCombustivelPorTanque": 210
+      }
+    ]
+  },
+  {
+    "marca": "Renault",
+    "modelo": "Kwid",
+    "anosDisponiveis": [2021, 2022, 2023],
+    "tiposCombustivel": [
+      {
+        "tipo": "Gasolina",
+        "consumoMedioKmL": 14,
+        "autonomiaKm": 700,
+        "emissoesCO2gKm": 100,
+        "custoCombustivelPorTanque": 770
+      },
+      {
+        "tipo": "Etanol",
+        "consumoMedioKmL": 10,
+        "autonomiaKm": 500,
+        "emissoesCO2gKm": 130,
+        "custoCombustivelPorTanque": 350
+      },
+      {
+        "tipo": "GNV",
+        "consumoMedioKmL": 20,
+        "autonomiaKm": 1000,
+        "emissoesCO2gKm": 80,
+        "custoCombustivelPorTanque": 300
+      }
+    ]
+  },
+  {
+    "marca": "Fiat",
+    "modelo": "Mobi",
+    "anosDisponiveis": [2019, 2020, 2021, 2022],
+    "tiposCombustivel": [
+      {
+        "tipo": "Gasolina",
+        "consumoMedioKmL": 16,
+        "autonomiaKm": 800,
+        "emissoesCO2gKm": 90,
+        "custoCombustivelPorTanque": 640
+      },
+      {
+        "tipo": "Etanol",
+        "consumoMedioKmL": 11,
+        "autonomiaKm": 550,
+        "emissoesCO2gKm": 125,
+        "custoCombustivelPorTanque": 385
+      }
+    ]
+  },
+  {
+    "marca": "Volkswagen",
+    "modelo": "Virtus",
+    "anosDisponiveis": [2020, 2021, 2022, 2023],
+    "tiposCombustivel": [
+      {
+        "tipo": "Gasolina",
+        "consumoMedioKmL": 12,
+        "autonomiaKm": 600,
+        "emissoesCO2gKm": 115,
+        "custoCombustivelPorTanque": 620
+      },
+      {
+        "tipo": "Etanol",
+        "consumoMedioKmL": 9,
+        "autonomiaKm": 450,
+        "emissoesCO2gKm": 140,
+        "custoCombustivelPorTanque": 315
+      }
+    ]
+  },
+  {
+    "marca": "Hyundai",
+    "modelo": "i30",
+    "anosDisponiveis": [2019, 2020, 2021, 2022],
+    "tiposCombustivel": [
+      {
+        "tipo": "Gasolina",
+        "consumoMedioKmL": 13,
+        "autonomiaKm": 650,
+        "emissoesCO2gKm": 105,
+        "custoCombustivelPorTanque": 650
+      },
+      {
+        "tipo": "Etanol",
+        "consumoMedioKmL": 8,
+        "autonomiaKm": 400,
+        "emissoesCO2gKm": 145,
+        "custoCombustivelPorTanque": 280
+      }
+    ]
+  },
+  {
+    "marca": "Chevrolet",
+    "modelo": "Tracker",
+    "anosDisponiveis": [2020, 2021, 2022, 2023],
+    "tiposCombustivel": [
+      {
+        "tipo": "Gasolina",
+        "consumoMedioKmL": 10,
+        "autonomiaKm": 500,
+        "emissoesCO2gKm": 150,
+        "custoCombustivelPorTanque": 500
+      },
+      {
+        "tipo": "Etanol",
+        "consumoMedioKmL": 7,
+        "autonomiaKm": 350,
+        "emissoesCO2gKm": 170,
+        "custoCombustivelPorTanque": 245
+      }
+    ]
+  },
+  {
+    "marca": "Toyota",
+    "modelo": "Etios",
+    "anosDisponiveis": [2018, 2019, 2020, 2021],
+    "tiposCombustivel": [
+      {
+        "tipo": "Gasolina",
+        "consumoMedioKmL": 14,
+        "autonomiaKm": 700,
+        "emissoesCO2gKm": 100,
+        "custoCombustivelPorTanque": 630
+      },
+      {
+        "tipo": "Etanol",
+        "consumoMedioKmL": 9,
+        "autonomiaKm": 450,
+        "emissoesCO2gKm": 140,
+        "custoCombustivelPorTanque": 315
+      }
+    ]
+  },
+  {
+    "marca": "Honda",
+    "modelo": "HR-V",
+    "anosDisponiveis": [2020, 2021, 2022, 2023],
+    "tiposCombustivel": [
+      {
+        "tipo": "Gasolina",
+        "consumoMedioKmL": 11,
+        "autonomiaKm": 550,
+        "emissoesCO2gKm": 130,
+        "custoCombustivelPorTanque": 605
+      },
+      {
+        "tipo": "Etanol",
+        "consumoMedioKmL": 8,
+        "autonomiaKm": 400,
+        "emissoesCO2gKm": 150,
+        "custoCombustivelPorTanque": 280
+      }
+    ]
+  },
+  {
+    "marca": "Nissan",
+    "modelo": "March",
+    "anosDisponiveis": [2019, 2020, 2021, 2022],
+    "tiposCombustivel": [
+      {
+        "tipo": "Gasolina",
+        "consumoMedioKmL": 15,
+        "autonomiaKm": 750,
+        "emissoesCO2gKm": 95,
+        "custoCombustivelPorTanque": 600
+      },
+      {
+        "tipo": "Etanol",
+        "consumoMedioKmL": 10,
+        "autonomiaKm": 500,
+        "emissoesCO2gKm": 135,
+        "custoCombustivelPorTanque": 350
+      }
+    ]
+  },
+  {
+    "marca": "Renault",
+    "modelo": "Duster",
+    "anosDisponiveis": [2019, 2020, 2021, 2022],
+    "tiposCombustivel": [
+      {
+        "tipo": "Gasolina",
+        "consumoMedioKmL": 10,
+        "autonomiaKm": 500,
+        "emissoesCO2gKm": 150,
+        "custoCombustivelPorTanque": 550
+      },
+      {
+        "tipo": "Diesel",
+        "consumoMedioKmL": 8,
+        "autonomiaKm": 400,
+        "emissoesCO2gKm": 170,
+        "custoCombustivelPorTanque": 384
+      }
+    ]
+  },
+  {
+    "marca": "Volkswagen",
+    "modelo": "Tiguan",
+    "anosDisponiveis": [2020, 2021, 2022, 2023],
+    "tiposCombustivel": [
+      {
+        "tipo": "Gasolina",
+        "consumoMedioKmL": 9,
+        "autonomiaKm": 450,
+        "emissoesCO2gKm": 160,
+        "custoCombustivelPorTanque": 495
+      },
+      {
+        "tipo": "Diesel",
+        "consumoMedioKmL": 7,
+        "autonomiaKm": 350,
+        "emissoesCO2gKm": 180,
+        "custoCombustivelPorTanque": 336
+      }
+    ]
+  },
+  {
+    "marca": "Fiat",
+    "modelo": "Cronos",
+    "anosDisponiveis": [2020, 2021, 2022, 2023],
+    "tiposCombustivel": [
+      {
+        "tipo": "Gasolina",
+        "consumoMedioKmL": 13,
+        "autonomiaKm": 650,
+        "emissoesCO2gKm": 110,
+        "custoCombustivelPorTanque": 650
+      },
+      {
+        "tipo": "Etanol",
+        "consumoMedioKmL": 9,
+        "autonomiaKm": 450,
+        "emissoesCO2gKm": 140,
+        "custoCombustivelPorTanque": 315
+      }
+    ]
+  },
+  {
+    "marca": "Honda",
+    "modelo": "City",
+    "anosDisponiveis": [2019, 2020, 2021, 2022],
+    "tiposCombustivel": [
+      {
+        "tipo": "Gasolina",
+        "consumoMedioKmL": 14,
+        "autonomiaKm": 700,
+        "emissoesCO2gKm": 100,
+        "custoCombustivelPorTanque": 630
+      },
+      {
+        "tipo": "Etanol",
+        "consumoMedioKmL": 9,
+        "autonomiaKm": 450,
+        "emissoesCO2gKm": 140,
+        "custoCombustivelPorTanque": 315
+      }
+    ]
+  },
+  {
+    "marca": "Nissan",
+    "modelo": "Frontier",
+    "anosDisponiveis": [2021, 2022, 2023],
+    "tiposCombustivel": [
+      {
+        "tipo": "Gasolina",
+        "consumoMedioKmL": 8,
+        "autonomiaKm": 400,
+        "emissoesCO2gKm": 180,
+        "custoCombustivelPorTanque": 440
+      },
+      {
+        "tipo": "Diesel",
+        "consumoMedioKmL": 6,
+        "autonomiaKm": 300,
+        "emissoesCO2gKm": 200,
+        "custoCombustivelPorTanque": 288
+      }
+    ]
+  },
+  {
+    "marca": "Jeep",
+    "modelo": "Compass",
+    "anosDisponiveis": [2020, 2021, 2022, 2023],
+    "tiposCombustivel": [
+      {
+        "tipo": "Gasolina",
+        "consumoMedioKmL": 10,
+        "autonomiaKm": 500,
+        "emissoesCO2gKm": 150,
+        "custoCombustivelPorTanque": 500
+      },
+      {
+        "tipo": "Diesel",
+        "consumoMedioKmL": 7,
+        "autonomiaKm": 350,
+        "emissoesCO2gKm": 180,
+        "custoCombustivelPorTanque": 336
+      }
+    ]
+  },
+  {
+    "marca": "Renault",
+    "modelo": "Logan",
+    "anosDisponiveis": [2018, 2019, 2020, 2021],
+    "tiposCombustivel": [
+      {
+        "tipo": "Gasolina",
+        "consumoMedioKmL": 15,
+        "autonomiaKm": 750,
+        "emissoesCO2gKm": 95,
+        "custoCombustivelPorTanque": 600
+      },
+      {
+        "tipo": "Etanol",
+        "consumoMedioKmL": 10,
+        "autonomiaKm": 500,
+        "emissoesCO2gKm": 135,
+        "custoCombustivelPorTanque": 350
+      }
+    ]
+  },
+  {
+    "marca": "Hyundai",
+    "modelo": "Creta",
+    "anosDisponiveis": [2019, 2020, 2021, 2022],
+    "tiposCombustivel": [
+      {
+        "tipo": "Gasolina",
+        "consumoMedioKmL": 11,
+        "autonomiaKm": 550,
+        "emissoesCO2gKm": 130,
+        "custoCombustivelPorTanque": 605
+      },
+      {
+        "tipo": "Etanol",
+        "consumoMedioKmL": 8,
+        "autonomiaKm": 400,
+        "emissoesCO2gKm": 150,
+        "custoCombustivelPorTanque": 280
+      }
+    ]
+  },
+  {
+    "marca": "Kia",
+    "modelo": "Soul",
+    "anosDisponiveis": [2020, 2021, 2022, 2023],
+    "tiposCombustivel": [
+      {
+        "tipo": "Gasolina",
+        "consumoMedioKmL": 12,
+        "autonomiaKm": 600,
+        "emissoesCO2gKm": 115,
+        "custoCombustivelPorTanque": 620
+      },
+      {
+        "tipo": "Etanol",
+        "consumoMedioKmL": 9,
+        "autonomiaKm": 450,
+        "emissoesCO2gKm": 140,
+        "custoCombustivelPorTanque": 315
+      }
+    ]
+  },
+  {
+    "marca": "Fiat",
+    "modelo": "Strada",
+    "anosDisponiveis": [2019, 2020, 2021, 2022],
+    "tiposCombustivel": [
+      {
+        "tipo": "Gasolina",
+        "consumoMedioKmL": 10,
+        "autonomiaKm": 500,
+        "emissoesCO2gKm": 150,
+        "custoCombustivelPorTanque": 500
+      },
+      {
+        "tipo": "Etanol",
+        "consumoMedioKmL": 7,
+        "autonomiaKm": 350,
+        "emissoesCO2gKm": 170,
+        "custoCombustivelPorTanque": 245
+      },
+      {
+        "tipo": "Diesel",
+        "consumoMedioKmL": 8,
+        "autonomiaKm": 400,
+        "emissoesCO2gKm": 160,
+        "custoCombustivelPorTanque": 384
+      }
+    ]
+  },
+  {
+    "marca": "Chevrolet",
+    "modelo": "S10",
+    "anosDisponiveis": [2020, 2021, 2022, 2023],
+    "tiposCombustivel": [
+      {
+        "tipo": "Gasolina",
+        "consumoMedioKmL": 9,
+        "autonomiaKm": 450,
+        "emissoesCO2gKm": 160,
+        "custoCombustivelPorTanque": 495
+      },
+      {
+        "tipo": "Diesel",
+        "consumoMedioKmL": 7,
+        "autonomiaKm": 350,
+        "emissoesCO2gKm": 180,
+        "custoCombustivelPorTanque": 336
+      }
+    ]
+  },
+  {
+    "marca": "Toyota",
+    "modelo": "Hilux",
+    "anosDisponiveis": [2019, 2020, 2021, 2022],
+    "tiposCombustivel": [
+      {
+        "tipo": "Gasolina",
+        "consumoMedioKmL": 8,
+        "autonomiaKm": 400,
+        "emissoesCO2gKm": 180,
+        "custoCombustivelPorTanque": 440
+      },
+      {
+        "tipo": "Diesel",
+        "consumoMedioKmL": 6,
+        "autonomiaKm": 300,
+        "emissoesCO2gKm": 200,
+        "custoCombustivelPorTanque": 288
+      }
+    ]
+  },
+  {
+    "marca": "Honda",
+    "modelo": "BR-V",
+    "anosDisponiveis": [2020, 2021, 2022, 2023],
+    "tiposCombustivel": [
+      {
+        "tipo": "Gasolina",
+        "consumoMedioKmL": 12,
+        "autonomiaKm": 600,
+        "emissoesCO2gKm": 115,
+        "custoCombustivelPorTanque": 620
+      },
+      {
+        "tipo": "Etanol",
+        "consumoMedioKmL": 9,
+        "autonomiaKm": 450,
+        "emissoesCO2gKm": 140,
+        "custoCombustivelPorTanque": 315
+      }
+    ]
+  },
+  {
+    "marca": "Renault",
+    "modelo": "Kangoo",
+    "anosDisponiveis": [2019, 2020, 2021, 2022],
+    "tiposCombustivel": [
+      {
+        "tipo": "Gasolina",
+        "consumoMedioKmL": 11,
+        "autonomiaKm": 550,
+        "emissoesCO2gKm": 130,
+        "custoCombustivelPorTanque": 605
+      },
+      {
+        "tipo": "Diesel",
+        "consumoMedioKmL": 8,
+        "autonomiaKm": 400,
+        "emissoesCO2gKm": 170,
+        "custoCombustivelPorTanque": 384
+      }
+    ]
+  },
+  {
+    "marca": "Fiat",
+    "modelo": "Toro",
+    "anosDisponiveis": [2020, 2021, 2022, 2023],
+    "tiposCombustivel": [
+      {
+        "tipo": "Gasolina",
+        "consumoMedioKmL": 9,
+        "autonomiaKm": 450,
+        "emissoesCO2gKm": 160,
+        "custoCombustivelPorTanque": 495
+      },
+      {
+        "tipo": "Diesel",
+        "consumoMedioKmL": 7,
+        "autonomiaKm": 350,
+        "emissoesCO2gKm": 180,
+        "custoCombustivelPorTanque": 336
+      }
+    ]
+  },
+  {
+    "marca": "Volkswagen",
+    "modelo": "Amarok",
+    "anosDisponiveis": [2020, 2021, 2022, 2023],
+    "tiposCombustivel": [
+      {
+        "tipo": "Gasolina",
+        "consumoMedioKmL": 8,
+        "autonomiaKm": 400,
+        "emissoesCO2gKm": 180,
+        "custoCombustivelPorTanque": 440
+      },
+      {
+        "tipo": "Diesel",
+        "consumoMedioKmL": 6,
+        "autonomiaKm": 300,
+        "emissoesCO2gKm": 200,
+        "custoCombustivelPorTanque": 288
+      }
+    ]
+  },
+  {
+    "marca": "Chevrolet",
+    "modelo": "Celta",
+    "anosDisponiveis": [2016, 2017, 2018, 2019],
+    "tiposCombustivel": [
+      {
+        "tipo": "Gasolina",
+        "consumoMedioKmL": 16,
+        "autonomiaKm": 800,
+        "emissoesCO2gKm": 90,
+        "custoCombustivelPorTanque": 640
+      },
+      {
+        "tipo": "Etanol",
+        "consumoMedioKmL": 11,
+        "autonomiaKm": 550,
+        "emissoesCO2gKm": 125,
+        "custoCombustivelPorTanque": 385
+      }
+    ]
+  },
+  {
+    "marca": "Fiat",
+    "modelo": "Palio",
+    "anosDisponiveis": [2017, 2018, 2019, 2020],
+    "tiposCombustivel": [
+      {
+        "tipo": "Gasolina",
+        "consumoMedioKmL": 15,
+        "autonomiaKm": 750,
+        "emissoesCO2gKm": 95,
+        "custoCombustivelPorTanque": 600
+      },
+      {
+        "tipo": "Etanol",
+        "consumoMedioKmL": 10,
+        "autonomiaKm": 500,
+        "emissoesCO2gKm": 135,
+        "custoCombustivelPorTanque": 350
+      }
+    ]
+  },
+  {
+    "marca": "Hyundai",
+    "modelo": "Accent",
+    "anosDisponiveis": [2019, 2020, 2021, 2022],
+    "tiposCombustivel": [
+      {
+        "tipo": "Gasolina",
+        "consumoMedioKmL": 14,
+        "autonomiaKm": 700,
+        "emissoesCO2gKm": 105,
+        "custoCombustivelPorTanque": 630
+      },
+      {
+        "tipo": "Etanol",
+        "consumoMedioKmL": 9,
+        "autonomiaKm": 450,
+        "emissoesCO2gKm": 140,
+        "custoCombustivelPorTanque": 315
+      }
+    ]
+  },
+  {
+    "marca": "Kia",
+    "modelo": "Cerato",
+    "anosDisponiveis": [2020, 2021, 2022, 2023],
+    "tiposCombustivel": [
+      {
+        "tipo": "Gasolina",
+        "consumoMedioKmL": 13,
+        "autonomiaKm": 650,
+        "emissoesCO2gKm": 110,
+        "custoCombustivelPorTanque": 650
+      },
+      {
+        "tipo": "Etanol",
+        "consumoMedioKmL": 9,
+        "autonomiaKm": 450,
+        "emissoesCO2gKm": 140,
+        "custoCombustivelPorTanque": 315
+      }
+    ]
+  },
+  {
+    "marca": "Renault",
+    "modelo": "Duster Oroch",
+    "anosDisponiveis": [2021, 2022, 2023],
+    "tiposCombustivel": [
+      {
+        "tipo": "Gasolina",
+        "consumoMedioKmL": 10,
+        "autonomiaKm": 500,
+        "emissoesCO2gKm": 150,
+        "custoCombustivelPorTanque": 500
+      },
+      {
+        "tipo": "Diesel",
+        "consumoMedioKmL": 7,
+        "autonomiaKm": 350,
+        "emissoesCO2gKm": 180,
+        "custoCombustivelPorTanque": 336
+      }
+    ]
+  },
+  {
+    "marca": "Volkswagen",
+    "modelo": "Saveiro",
+    "anosDisponiveis": [2018, 2019, 2020, 2021],
+    "tiposCombustivel": [
+      {
+        "tipo": "Gasolina",
+        "consumoMedioKmL": 12,
+        "autonomiaKm": 600,
+        "emissoesCO2gKm": 115,
+        "custoCombustivelPorTanque": 620
+      },
+      {
+        "tipo": "Etanol",
+        "consumoMedioKmL": 9,
+        "autonomiaKm": 450,
+        "emissoesCO2gKm": 140,
+        "custoCombustivelPorTanque": 315
+      }
+    ]
+  },
+  {
+    "marca": "Fiat",
+    "modelo": "Doblo",
+    "anosDisponiveis": [2019, 2020, 2021, 2022],
+    "tiposCombustivel": [
+      {
+        "tipo": "Gasolina",
+        "consumoMedioKmL": 11,
+        "autonomiaKm": 550,
+        "emissoesCO2gKm": 130,
+        "custoCombustivelPorTanque": 605
+      },
+      {
+        "tipo": "Diesel",
+        "consumoMedioKmL": 8,
+        "autonomiaKm": 400,
+        "emissoesCO2gKm": 170,
+        "custoCombustivelPorTanque": 384
+      }
+    ]
+  },
+  {
+    "marca": "Chevrolet",
+    "modelo": "Spin",
+    "anosDisponiveis": [2018, 2019, 2020, 2021],
+    "tiposCombustivel": [
+      {
+        "tipo": "Gasolina",
+        "consumoMedioKmL": 14,
+        "autonomiaKm": 700,
+        "emissoesCO2gKm": 105,
+        "custoCombustivelPorTanque": 630
+      },
+      {
+        "tipo": "Etanol",
+        "consumoMedioKmL": 9,
+        "autonomiaKm": 450,
+        "emissoesCO2gKm": 140,
+        "custoCombustivelPorTanque": 315
+      }
+    ]
+  },
+  {
+    "marca": "Honda",
+    "modelo": "WR-V",
+    "anosDisponiveis": [2019, 2020, 2021, 2022],
+    "tiposCombustivel": [
+      {
+        "tipo": "Gasolina",
+        "consumoMedioKmL": 13,
+        "autonomiaKm": 650,
+        "emissoesCO2gKm": 110,
+        "custoCombustivelPorTanque": 650
+      },
+      {
+        "tipo": "Etanol",
+        "consumoMedioKmL": 9,
+        "autonomiaKm": 450,
+        "emissoesCO2gKm": 140,
+        "custoCombustivelPorTanque": 315
+      }
+    ]
+  },
+  {
+    "marca": "Nissan",
+    "modelo": "Navara",
+    "anosDisponiveis": [2020, 2021, 2022, 2023],
+    "tiposCombustivel": [
+      {
+        "tipo": "Gasolina",
+        "consumoMedioKmL": 8,
+        "autonomiaKm": 400,
+        "emissoesCO2gKm": 180,
+        "custoCombustivelPorTanque": 440
+      },
+      {
+        "tipo": "Diesel",
+        "consumoMedioKmL": 6,
+        "autonomiaKm": 300,
+        "emissoesCO2gKm": 200,
+        "custoCombustivelPorTanque": 288
+      }
+    ]
+  },
+  {
+    "marca": "Renault",
+    "modelo": "Kwid",
+    "anosDisponiveis": [2021, 2022, 2023],
+    "tiposCombustivel": [
+      {
+        "tipo": "Gasolina",
+        "consumoMedioKmL": 14,
+        "autonomiaKm": 700,
+        "emissoesCO2gKm": 100,
+        "custoCombustivelPorTanque": 770
+      },
+      {
+        "tipo": "Etanol",
+        "consumoMedioKmL": 10,
+        "autonomiaKm": 500,
+        "emissoesCO2gKm": 130,
+        "custoCombustivelPorTanque": 350
+      },
+      {
+        "tipo": "GNV",
+        "consumoMedioKmL": 20,
+        "autonomiaKm": 1000,
+        "emissoesCO2gKm": 80,
+        "custoCombustivelPorTanque": 300
+      }
+    ]
+  },
+  {
+    "marca": "Fiat",
+    "modelo": "Palio Weekend",
+    "anosDisponiveis": [2017, 2018, 2019, 2020],
+    "tiposCombustivel": [
+      {
+        "tipo": "Gasolina",
+        "consumoMedioKmL": 15,
+        "autonomiaKm": 750,
+        "emissoesCO2gKm": 95,
+        "custoCombustivelPorTanque": 600
+      },
+      {
+        "tipo": "Etanol",
+        "consumoMedioKmL": 10,
+        "autonomiaKm": 500,
+        "emissoesCO2gKm": 135,
+        "custoCombustivelPorTanque": 350
+      }
+    ]
+  },
+  {
+    "marca": "Hyundai",
+    "modelo": "Santa Fe",
+    "anosDisponiveis": [2020, 2021, 2022, 2023],
+    "tiposCombustivel": [
+      {
+        "tipo": "Gasolina",
+        "consumoMedioKmL": 10,
+        "autonomiaKm": 500,
+        "emissoesCO2gKm": 150,
+        "custoCombustivelPorTanque": 500
+      },
+      {
+        "tipo": "Diesel",
+        "consumoMedioKmL": 7,
+        "autonomiaKm": 350,
+        "emissoesCO2gKm": 180,
+        "custoCombustivelPorTanque": 336
+      }
+    ]
+  },
+  {
+    "marca": "Kia",
+    "modelo": "Rio",
+    "anosDisponiveis": [2018, 2019, 2020, 2021],
+    "tiposCombustivel": [
+      {
+        "tipo": "Gasolina",
+        "consumoMedioKmL": 16,
+        "autonomiaKm": 800,
+        "emissoesCO2gKm": 90,
+        "custoCombustivelPorTanque": 640
+      },
+      {
+        "tipo": "Etanol",
+        "consumoMedioKmL": 11,
+        "autonomiaKm": 550,
+        "emissoesCO2gKm": 125,
+        "custoCombustivelPorTanque": 385
+      }
+    ]
+  },
+  {
+    "marca": "Renault",
+    "modelo": "Stepway",
+    "anosDisponiveis": [2019, 2020, 2021, 2022],
+    "tiposCombustivel": [
+      {
+        "tipo": "Gasolina",
+        "consumoMedioKmL": 13,
+        "autonomiaKm": 650,
+        "emissoesCO2gKm": 110,
+        "custoCombustivelPorTanque": 650
+      },
+      {
+        "tipo": "Etanol",
+        "consumoMedioKmL": 9,
+        "autonomiaKm": 450,
+        "emissoesCO2gKm": 140,
+        "custoCombustivelPorTanque": 315
+      }
+    ]
+  },
+  {
+    "marca": "Fiat",
+    "modelo": "Strada Freedom",
+    "anosDisponiveis": [2020, 2021, 2022, 2023],
+    "tiposCombustivel": [
+      {
+        "tipo": "Gasolina",
+        "consumoMedioKmL": 10,
+        "autonomiaKm": 500,
+        "emissoesCO2gKm": 150,
+        "custoCombustivelPorTanque": 500
+      },
+      {
+        "tipo": "Diesel",
+        "consumoMedioKmL": 7,
+        "autonomiaKm": 350,
+        "emissoesCO2gKm": 180,
+        "custoCombustivelPorTanque": 336
+      }
+    ]
+  },
+  {
+    "marca": "Chevrolet",
+    "modelo": "Aveo",
+    "anosDisponiveis": [2018, 2019, 2020, 2021],
+    "tiposCombustivel": [
+      {
+        "tipo": "Gasolina",
+        "consumoMedioKmL": 14,
+        "autonomiaKm": 700,
+        "emissoesCO2gKm": 105,
+        "custoCombustivelPorTanque": 630
+      },
+      {
+        "tipo": "Etanol",
+        "consumoMedioKmL": 9,
+        "autonomiaKm": 450,
+        "emissoesCO2gKm": 140,
+        "custoCombustivelPorTanque": 315
+      }
+    ]
+  },
+  {
+    "marca": "Honda",
+    "modelo": "Passport",
+    "anosDisponiveis": [2021, 2022, 2023],
+    "tiposCombustivel": [
+      {
+        "tipo": "Gasolina",
+        "consumoMedioKmL": 10,
+        "autonomiaKm": 500,
+        "emissoesCO2gKm": 150,
+        "custoCombustivelPorTanque": 500
+      },
+      {
+        "tipo": "Diesel",
+        "consumoMedioKmL": 7,
+        "autonomiaKm": 350,
+        "emissoesCO2gKm": 180,
+        "custoCombustivelPorTanque": 336
+      }
+    ]
+  }
+]

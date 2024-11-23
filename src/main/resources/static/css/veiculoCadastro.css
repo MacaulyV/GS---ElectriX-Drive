@@ -1,0 +1,239 @@
+/* Estilo global */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+html{
+background-color: black;
+}
+
+body{
+    background-color: rgba(0, 0, 0, 0);
+
+}
+
+/* Estilos do Container de Cadastro */
+.cadastro-container {
+    background: black;
+    padding: 40px;
+    border: solid 3px deepskyblue;
+    border-radius: 50px;
+    box-shadow: 0 10px 100px rgba(0, 123, 255, 0.5);
+    max-width: 600px;
+    width: 100%;
+    color: #ffffff;
+    opacity: 0; /* Inicialmente invisível para animação */
+}
+
+/* Estilos para os ícones dos Input Groups */
+.icon-background {
+    background-color: #1e1e1e; /* Fundo do ícone */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.icon-background i {
+    background-image: linear-gradient( 0.2deg,  rgba(51,204,255,1) 4.8%, rgba(51,102,255,1) 85.5% );
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 1em;
+}
+
+/* Ajustar a altura dos input groups para centralizar os ícones */
+.input-group .form-control,
+.input-group .form-select {
+    border-radius: 15px;
+}
+
+/* Opcional: Alterar a cor de fundo do input-group-text ao focar */
+.input-group .form-control:focus + .input-group-text,
+.input-group .form-select:focus + .input-group-text {
+    background-color: rgba(0, 123, 255, 0.2);
+}
+
+/* Título */
+h2 {
+    font-size: 2.5em;
+    font-weight: 700;
+    margin-bottom: 30px;
+    background-image: linear-gradient( 0.2deg,  rgba(51,204,255,1) 4.8%, rgba(51,102,255,1) 85.5% );
+    -webkit-background-clip: text;
+    color: transparent;
+    text-align: center;
+}
+
+/* Formulário */
+form .form-label {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    box-shadow: 0 10px 50px rgba(0, 123, 255, 0.5);
+}
+
+form .form-control, form .form-select {
+    background: #080808;
+    border: 1px solid deepskyblue;
+    border-radius: 15px;
+    color: #ffffff;
+    padding: 10px 15px;
+    transition: background 0.3s, border 0.3s;
+}
+
+form .form-control:focus, form .form-select:focus {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: deepskyblue;
+    outline: none;
+    box-shadow: none;
+}
+
+/* Estilizar o elemento select */
+form .form-select {
+    background: #121212; /* Fundo cinza escuro */
+    color: #ffffff; /* Texto branco */
+    border: 1px solid deepskyblue;
+    border-radius: 15px;
+    padding: 10px 15px;
+    appearance: none; /* Remover seta padrão */
+    background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23ffffff" class="bi bi-caret-down-fill" viewBox="0 0 16 16"><path d="M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 1em;
+    cursor: pointer;
+}
+
+/* Estilizar as opções do select */
+form .form-select option {
+    background: #1e1e1e; /* Fundo quase preto */
+    color: #ffffff; /* Texto branco */
+}
+
+/* Melhorar a aparência no foco */
+form .form-select:focus {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: deepskyblue;
+    outline: none;
+    box-shadow: none;
+}
+
+/* Adicionar um ícone personalizado para a seta do select (opcional) */
+form .form-select::-ms-expand {
+    display: none; /* Remover seta padrão no IE */
+}
+
+/* Botão Animado */
+.btn-animated {
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    background-image: linear-gradient(to right, #00d2ff 0%, #3a7bd5  51%, #00d2ff  100%);
+    margin-top: 20px;
+}
+
+.btn-animated::before {
+    content: '';
+    position: absolute;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease-in-out;
+    transform: translate(-50%, -50%) rotate(45deg) scale(0);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    z-index: 0;
+}
+
+.btn-animated:hover::before {
+    transform: translate(-50%, -50%) rotate(45deg) scale(1);
+}
+
+.btn-animated span {
+    position: relative;
+    z-index: 1;
+}
+
+.btn-animated:hover {
+    color: #fff;
+    background-image: linear-gradient( 179.2deg,  rgba(21,21,212,1) 0.9%, rgba(53,220,243,1) 95.5% );
+}
+
+/* Estilo específico para o botão "Voltar" */
+#voltar {
+    transition: all 0.3s ease-in-out;
+    background-image: linear-gradient(to right, #f857a6 0%, #ff5858  51%, #f857a6  100%);
+}
+
+#voltar:hover {
+background-image: linear-gradient(to right, #FF512F 0%, #DD2476  51%, #FF512F  100%);
+    transform: scale(1.05);
+}
+
+.icon-style {
+    margin-right: 5px; /* Aumenta a distância do ícone para o texto */
+    color: white;
+}
+
+/* Efeitos de Hover nos Campos */
+form .form-control:hover, form .form-select:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .cadastro-container {
+        padding: 20px;
+        border-radius: 15px;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    form .form-control, form .form-select {
+        padding: 8px 12px;
+    }
+
+    .btn-animated {
+        width: 100%;
+        padding: 10px 0;
+    }
+}
+
+/* Preferência de Redução de Movimento para Acessibilidade */
+@media (prefers-reduced-motion: reduce) {
+    .cadastro-container, .anime-title, .anime-form .mb-3, .btn-animated {
+        animation: none !important;
+        transition: none !important;
+    }
+
+    .btn-animated::before {
+        display: none;
+    }
+
+    .btn-animated:hover {
+        transform: none !important;
+        box-shadow: none !important;
+    }
+}
+
+/* Ajustes no container para garantir que o conteúdo fique acima das partículas */
+.cadastro-container {
+    position: relative;
+    z-index: 1;
+    /* Seus estilos existentes */
+}
+

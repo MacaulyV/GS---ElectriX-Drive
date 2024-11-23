@@ -1,0 +1,228 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+html {
+    background-image: linear-gradient(72.1deg, rgba(0,0,128,1) 1.7%, rgba(100,149,237,1) 99.1%);
+}
+
+body {
+    background-color: rgba(0, 0, 0, 0); /* Fundo transparente para permitir o background do html */
+}
+
+/* Estilização das Labels */
+.label-branco {
+    color: white;
+    font-weight: bold;
+    margin-bottom: 8%;
+}
+
+.btn-primary {
+    transition: all 0.3s ease-in-out;
+    border-radius: 15px;
+    background-color: #1CB5E0;
+}
+
+.btn:hover {
+    font-weight: bold;
+    box-shadow: 0 10px 25px deepskyblue;
+    background-image: radial-gradient(circle farthest-corner at 7.2% 13.6%, rgba(37,249,245,1) 0%, rgba(8,70,218,1) 90%);
+    border: 1px solid deepskyblue;
+}
+
+/* Estilização dos Selects */
+.form-select {
+    width: 110%;
+    color: white;
+    background-color: #1e1e1e;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    padding: 12px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"><path fill="%23ffffff" d="M6 8.4L1.2 3.6l.8-.8L6 6.8l3.999-3.999.8.8z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 12px;
+    cursor: pointer;
+}
+
+/* Estilizar o fundo e a cor do texto do item selecionado */
+.form-select option {
+    background-color: #121212; /* Fundo escuro */
+    color: #ffffff; /* Texto branco */
+}
+
+/* Para o select em foco */
+.form-select:focus {
+    background-color: #121212; /* Altere o fundo ao focar */
+    box-shadow: 0 0 50px deepskyblue /* Adicione um efeito de brilho */
+}
+
+.selects-container {
+    gap: 30px;
+}
+
+.form-select:focus {
+    outline: none;
+    border-color: #00d2ff;
+    box-shadow: 0 0 5px #00d2ff;
+}
+
+/* Margens e Padding */
+.me-3 {
+    margin-bottom: 20px;
+    padding-left: 2%;
+}
+
+/* Container principal */
+.escolha-container {
+    background: #080808;
+    padding: 40px;
+    border-radius: 50px;
+    border: solid 3px deepskyblue;
+    box-shadow: 0 10px 25px deepskyblue;
+    max-width: 700px;
+    width: 100%;
+    text-align: center;
+    transition: transform 0.5s ease; /* Adiciona suavidade ao movimento */
+    position: relative;
+}
+
+/* Título Principal */
+.anime-title {
+    font-weight: bold;
+    background-image: linear-gradient(109.6deg, rgba(62,161,219,1) 11.2%, rgba(93,52,236,1) 100.2%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 20px;
+    font-size: 2.5em; /* Ajuste conforme necessário */
+}
+
+/* Estilo básico do select com borda azul */
+select {
+    border: 2px solid blue; /* Cor da borda */
+    border-radius: 5px; /* Cantos arredondados (opcional) */
+    padding: 10px;
+    font-size: 16px;
+}
+
+/* Alterar a cor da borda quando o select está focado */
+select:focus {
+    border-color: green; /* Cor da borda ao focar */
+    box-shadow: 0 0 5px green; /* Adiciona um efeito de brilho (opcional) */
+    outline: none; /* Remove o contorno padrão do navegador */
+}
+
+/* Recomendação Card */
+.recomendacao-card {
+    background-color: #080808;
+    color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.recomendacao-card .card-title {
+    font-size: 2.2em;
+    margin-bottom: 35px;
+    background-image: radial-gradient( circle 382px at 50% 50.2%,  rgba(73,76,212,1) 0.1%, rgba(3,1,50,1) 100.2% );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.recomendacao-card .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.recomendacao-card .col-md-6 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.recomendacao-card .col-md-6 i {
+    margin-right: 15px;
+    min-width: 30px;
+}
+
+.recomendacao-card .btn-warning {
+    display: flex;
+    gap: 10px;
+    padding: 2.7%;
+    border-radius: 17px;
+    background-image: linear-gradient( 68.3deg,  rgba(245,177,97,1) 0.4%, rgba(236,54,110,1) 100.2% );
+    color: #ffffff;
+    line-height: 1
+}
+
+.recomendacao-card .btn-warning:hover {
+    transition: all 0.3s ease-in-out;
+    border: none;
+    box-shadow: 0 0 25px orangered;
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(237,3,32,0.87) 20.8%, rgba(242,121,1,0.84) 74.4% );
+}
+
+.gap{
+    margin-top: 1%;
+    display: flex;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.icon-azul, .icon-verde, .icon-amarelo, .icon-vermelho, .icon-ciano, .icon-cinza {
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: linear-gradient( 178.7deg,  rgba(126,184,253,1) 5.6%, rgba(2,71,157,1) 95.3% );
+}
+
+/* Ícone ao lado da label de Marca */
+.icon-marca {
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(109.6deg, rgba(62,161,219,1) 11.2%, rgba(93,52,236,1) 100.2%);
+}
+
+/* Ícone ao lado da label de Modelo */
+.icon-modelo {
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(109.6deg, rgba(62,161,219,1) 11.2%, rgba(93,52,236,1) 100.2%);
+}
+
+/* Ajustes para Alinhamento e Layout dos Elementos */
+.recomendacao-card .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.recomendacao-card .col-md-6 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px; /* Espaço entre o ícone e o texto */
+}
+
+/* Ajuste das Labels com Ícones */
+.label-branco i {
+    margin-right: 10px; /* Espaço entre o ícone e o texto da label */
+}

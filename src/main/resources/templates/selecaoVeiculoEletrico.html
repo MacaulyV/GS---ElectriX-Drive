@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seleção de Veículo Elétrico - ElectriXDrive</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Anime.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" defer></script>
+
+    <!-- tsParticles -->
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.9.3/tsparticles.bundle.min.js" defer></script>
+
+    <!-- Axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js" defer></script>
+
+    <!-- Seu CSS Personalizado -->
+    <link rel="stylesheet" href="/css/selecaoVeiculoEletrico.css">
+</head>
+<body>
+<!-- Div de fundo para partículas -->
+<div id="particles-js"></div>
+
+<!-- Container de Seleção -->
+<div class="container selecao-container anime-container">
+    <h2 class="anime-title">Seleção do Veículo Elétrico</h2>
+    <form id="veiculoEletricoForm" class="anime-form">
+        <div class="mb-3">
+            <label for="marcaEletrica" class="form-label">Marca do Veículo Elétrico:</label>
+            <div class="input-group">
+                    <span class="input-group-text icon-background">
+                        <i class="fas fa-car"></i>
+                    </span>
+                <select id="marcaEletrica" class="form-select" required>
+                    <option value="">Selecione uma marca...</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="modeloEletrico" class="form-label">Modelo do Veículo Elétrico:</label>
+            <div class="input-group">
+                    <span class="input-group-text icon-background">
+                        <i class="fas fa-car-side"></i>
+                    </span>
+                <select id="modeloEletrico" class="form-select" required>
+                    <option value="">Selecione um modelo...</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="anoEletrico" class="form-label">Ano do Veículo:</label>
+            <div class="input-group">
+                    <span class="input-group-text icon-background">
+                        <i class="fas fa-calendar-alt"></i>
+                    </span>
+                <select id="anoEletrico" class="form-select" required>
+                    <option value="">Selecione o ano...</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="consumoMedioEletrico" class="form-label">Consumo Médio (kWh/100km):</label>
+            <div class="input-group">
+                    <span class="input-group-text icon-background">
+                        <i class="fas fa-bolt"></i>
+                    </span>
+                <input type="text" id="consumoMedioEletrico" class="form-control" readonly>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="autonomiaBateria" class="form-label">Autonomia da Bateria (km):</label>
+            <div class="input-group">
+                    <span class="input-group-text icon-background">
+                        <i class="fas fa-battery-full"></i>
+                    </span>
+                <input type="text" id="autonomiaBateria" class="form-control" readonly>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="custoRecargaBateria" class="form-label">Custo de Recarga da Bateria (R$):</label>
+            <div class="input-group">
+                    <span class="input-group-text icon-background">
+                        <i class="fas fa-money-bill-wave"></i>
+                    </span>
+                <input type="text" id="custoRecargaBateria" class="form-control" readonly>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="emissaoCO2Eletrico" class="form-label">Emissões de CO₂ (g/km):</label>
+            <div class="input-group">
+                    <span class="input-group-text icon-background">
+                        <i class="fas fa-smog"></i>
+                    </span>
+                <input type="text" id="emissaoCO2Eletrico" class="form-control" readonly>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="interesseSolar" class="form-label">Interesse em Painéis Solares:</label>
+            <div class="input-group">
+                    <span class="input-group-text icon-background">
+                        <i class="fas fa-solar-panel"></i>
+                    </span>
+                <select id="interesseSolar" class="form-select" required>
+                    <option value="">Selecione...</option>
+                    <option value="true">Sim</option>
+                    <option value="false">Não</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Botão Salvar Centralizado com Ícone -->
+        <div class="text-center">
+            <button type="button" id="salvarVeiculoEletrico" class="btn btn-animated btn-success">
+                <i class="fas fa-save btn-icon"></i>
+                <span>Salvar Veículo Elétrico</span>
+            </button>
+        </div>
+    </form>
+</div>
+
+<!-- Novo Script de Partículas -->
+<script>
+    // Configuração inicial
+    const particleConfig = {
+        fullScreen: {
+            enable: true,
+            zIndex: -1
+        },
+        particles: {
+            color: {
+                value: ["#3b00ff"] // Define várias cores possíveis para as partículas
+            },
+            number: {
+                value: 0, // Inicia com 0 partículas
+                density: {
+                    enable: true,
+                    area: 800
+                }
+            },
+            shape: {
+                type: "image",
+                image: {
+                    src: "/assets/java.png", // Caminho para seu SVG
+                    width: 50,
+                    height: 50
+                },
+                polygon: {
+                    nb_sides: 5
+                }
+            },
+            opacity: {
+                value: 0.5,
+                random: false,
+                animation: {
+                    enable: false,
+                    speed: 1,
+                    minimumValue: 0.1,
+                    destroy: "none"
+                }
+            },
+            size: {
+                value: 5,
+                random: true,
+                animation: {
+                    enable: false,
+                    speed: 40,
+                    minimumValue: 0.1,
+                    destroy: "none"
+                }
+            },
+            links: {
+                enable: true,
+                distance: 300,
+                color: "#3b00ff",
+                opacity: 1.0,
+                width: 3
+            },
+            move: {
+                enable: true,
+                speed: 10,
+                direction: "right",
+                random: false,
+                straight: false,
+                outModes: {
+                    default: "out"
+                },
+                bounce: false,
+                attract: {
+                    enable: false,
+                    rotateX: 600,
+                    rotateY: 1200
+                }
+            }
+        },
+        interactivity: {
+            detectsOn: "canvas", // Onde detectar a interação: 'canvas' detecta apenas dentro da área de partículas, 'window' detecta em toda a janela.
+            events: {
+                onHover: {
+                    enable: true, // Ativa a interação quando o mouse passa sobre as partículas.
+                    mode: "bubble" // Define o efeito ao passar o mouse (pode ser 'grab', 'repulse' ou 'bubble').
+                },
+                onClick: {
+                    enable: true, // Ativa a interação ao clicar nas partículas.
+                    mode: "bubble" // Define o efeito ao clicar nas partículas (pode ser 'push', 'repulse', 'bubble', etc.).
+                },
+                resize: true // Atualiza a posição e quantidade de partículas ao redimensionar a janela.
+            },
+            modes: {
+                grab: {
+                    distance: 400, // Define a distância máxima em que as partículas se conectam ao cursor com linhas.
+                    links: {
+                        opacity: 1 // Define a opacidade das linhas que conectam as partículas ao cursor no modo 'grab'.
+                    }
+                },
+                bubble: {
+                    distance: 300, // Define até onde o efeito de bolha alcança a partir do cursor.
+                    size: 60, // Define o tamanho máximo das partículas durante o efeito de bolha.
+                    duration: 2, // Define quanto tempo as partículas permanecem "inchadas" durante o efeito de bolha.
+                    opacity: 1, // Define a opacidade das partículas durante o efeito de bolha.
+                    speed: 3 // Define a velocidade com que as partículas crescem e diminuem durante o efeito de bolha.
+                },
+                repulse: {
+                    distance: 200, // Define a distância de repulsão entre o cursor e as partículas.
+                    duration: 0.4 // Define a duração da repulsão após o mouse passar.
+                },
+                push: {
+                    quantity: 4 // Quantidade de partículas adicionadas quando o modo 'push' é acionado.
+                },
+                remove: {
+                    quantity: 2 // Quantidade de partículas removidas quando o modo 'remove' é acionado.
+                }
+            }
+        },
+        retina_detect: true,
+        fps_limit: 60
+    };
+
+    // Carregar as partículas com atraso inicial de 1500ms
+    setTimeout(() => {
+        tsParticles.load("particles-js", particleConfig).then((container) => {
+            // Inicia o aumento gradual das partículas
+            graduallyAddParticles(container, 50, 100); // 50 partículas alvo, adicionadas a cada 100ms
+        });
+    }, 1500); // 1500 milissegundos = 1.5 segundos
+
+    // Função para adicionar partículas gradualmente
+    function graduallyAddParticles(container, targetCount, delay) {
+        let currentCount = 0;
+        const interval = setInterval(() => {
+            container.particles.addParticle(); // Adiciona uma partícula por vez
+            currentCount++;
+            if (currentCount >= targetCount) {
+                clearInterval(interval); // Para quando atingir o valor alvo
+            }
+        }, delay); // Tempo entre cada incremento (100ms)
+    }
+</script>
+
+<!-- Script Principal -->
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        // Efeito de movimento 3D com o mouse
+        const container = document.querySelector('.selecao-container');
+
+        container.addEventListener('mousemove', (e) => {
+            const { width, height, left, top } = container.getBoundingClientRect();
+            const x = e.clientX - left - width / 2;
+            const y = e.clientY - top - height / 2;
+            const rotateX = (y / height) * 25;
+            const rotateY = (x / width) * -25;
+            container.style.transform = `perspective(6000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`;
+        });
+
+        container.addEventListener('mouseleave', () => {
+            container.style.transform = 'perspective(2000px) rotateX(0deg) rotateY(0deg) scale(1)';
+            container.style.transition = 'transform 0.5s ease-out';
+        });
+
+        container.addEventListener('mouseenter', () => {
+            container.style.transition = 'transform 0.2s ease-out';
+        });
+
+        // Animação de entrada com Anime.js
+        anime.timeline({ loop: false })
+            .add({
+                targets: '.selecao-container',
+                opacity: [0, 1],
+                translateY: ['-200vh', '0'],
+                easing: 'easeOutQuad',
+                duration: 2500,
+            })
+            .add({
+                targets: '.anime-title',
+                opacity: [0, 1],
+                translateY: [20, 0],
+                easing: 'easeOutExpo',
+                duration: 1000,
+                delay: 500
+            })
+            .add({
+                targets: '.anime-form .mb-3',
+                opacity: [0, 1],
+                translateY: [20, 0],
+                easing: 'easeOutExpo',
+                duration: 800,
+                delay: (el, i) => 300 * i
+            })
+            .add({
+                targets: '.btn-animated',
+                scale: [0.8, 1],
+                opacity: [0, 1],
+                easing: 'easeOutExpo',
+                duration: 1000,
+                delay: 500
+            });
+
+        // Carregar o JSON e popular os campos de seleção
+        axios.get('/api/data/veiculos-eletricos')
+            .then(response => {
+                const veiculosEletricos = response.data;
+                const marcaSelect = document.getElementById('marcaEletrica');
+
+                if (veiculosEletricos && Array.isArray(veiculosEletricos)) {
+                    const marcas = [...new Set(veiculosEletricos.map(veiculo => veiculo.marca))];
+                    marcas.forEach(marca => {
+                        const option = document.createElement('option');
+                        option.value = marca;
+                        option.textContent = marca;
+                        marcaSelect.appendChild(option);
+                    });
+
+                    // Atualizar modelos quando uma marca for selecionada
+                    marcaSelect.addEventListener('change', function () {
+                        const marcaSelecionada = marcaSelect.value;
+                        const modeloSelect = document.getElementById('modeloEletrico');
+                        modeloSelect.innerHTML = '<option value="">Selecione um modelo...</option>';
+
+                        veiculosEletricos.filter(veiculo => veiculo.marca === marcaSelecionada).forEach(veiculo => {
+                            veiculo.modelos.forEach(modelo => {
+                                const option = document.createElement('option');
+                                option.value = modelo.modelo;
+                                option.textContent = modelo.modelo;
+                                modeloSelect.appendChild(option);
+                            });
+                        });
+
+                        // Limpar campos dependentes
+                        document.getElementById('anoEletrico').innerHTML = '<option value="">Selecione o ano...</option>';
+                        limparCamposLeitura();
+                    });
+
+                    // Atualizar anos e outros campos com base no modelo selecionado
+                    document.getElementById('modeloEletrico').addEventListener('change', function () {
+                        const modeloSelecionado = this.value;
+                        const veiculoSelecionado = veiculosEletricos.flatMap(veiculo => veiculo.modelos)
+                            .find(modelo => modelo.modelo === modeloSelecionado);
+                        if (veiculoSelecionado) {
+                            const anoSelect = document.getElementById('anoEletrico');
+                            anoSelect.innerHTML = '<option value="">Selecione o ano...</option>';
+
+                            veiculoSelecionado.anosDisponiveis.forEach(ano => {
+                                const option = document.createElement('option');
+                                option.value = ano;
+                                option.textContent = ano;
+                                anoSelect.appendChild(option);
+                            });
+
+                            // Preencher campos automaticamente
+                            document.getElementById('consumoMedioEletrico').value = veiculoSelecionado.consumoMedioKwh100km;
+                            document.getElementById('autonomiaBateria').value = veiculoSelecionado.autonomiaBateriaKm;
+                            document.getElementById('custoRecargaBateria').value = veiculoSelecionado.custoRecargaBateria;
+                            document.getElementById('emissaoCO2Eletrico').value = veiculoSelecionado.emissoesCO2gKm;
+                        }
+                    });
+                } else {
+                    console.error('O JSON retornado não contém dados válidos.');
+                }
+            })
+            .catch(error => console.error('Erro ao carregar JSON: ', error));
+
+        // Função para limpar campos de leitura
+        function limparCamposLeitura() {
+            document.getElementById('consumoMedioEletrico').value = '';
+            document.getElementById('autonomiaBateria').value = '';
+            document.getElementById('custoRecargaBateria').value = '';
+            document.getElementById('emissaoCO2Eletrico').value = '';
+        }
+
+        // Função para salvar o veículo elétrico
+        document.getElementById('salvarVeiculoEletrico').addEventListener('click', function () {
+            const marca = document.getElementById('marcaEletrica').value;
+            const modelo = document.getElementById('modeloEletrico').value;
+            const ano = document.getElementById('anoEletrico').value;
+            const interesseSolar = document.getElementById('interesseSolar').value;
+
+            // Verificar se todos os campos obrigatórios foram preenchidos
+            if (!marca || !modelo || !ano || !interesseSolar) {
+                alert('Por favor, preencha todos os campos obrigatórios.');
+                return;
+            }
+
+            // Enviar os dados para a API
+            axios.post('/api/veiculos-eletricos', {
+                marca: marca,
+                modelo: modelo,
+                ano: parseInt(ano),
+                interesseSolar: interesseSolar // Enviar "Sim" ou "Não"
+            })
+                .then(response => {
+                    alert('Veículo elétrico salvo com sucesso!');
+                    console.log(response.data);
+                    // Trocar o botão "Salvar" por "Vizualizar Comparação" e "Voltar"
+                    trocarBotoes();
+                })
+                .catch(error => {
+                    console.error('Erro ao salvar o veículo elétrico: ', error);
+                    alert('Erro ao salvar o veículo elétrico. Por favor, tente novamente.');
+                });
+        });
+
+        // Função para trocar os botões após salvar
+        function trocarBotoes() {
+            const salvarButton = document.getElementById('salvarVeiculoEletrico');
+            salvarButton.style.display = 'none'; // Ocultar o botão "Salvar"
+
+            // Criar container para o novo botão
+            const buttonContainer = document.createElement('div');
+            buttonContainer.className = 'd-flex justify-content-center gap-3 mt-4'; // Centralizar e adicionar espaçamento
+
+            // Criar botão "Visualizar Comparação" com ícone
+            const visualizarButton = document.createElement('button');
+            visualizarButton.type = 'button';
+            visualizarButton.id = 'visualizarComparacao';
+            visualizarButton.className = 'btn btn-animated btn-recommend';
+            visualizarButton.innerHTML = '<i class="fas fa-chart-bar btn-icon"></i><span>Visualizar Comparação</span>';
+
+            // Adicionar o botão ao container
+            buttonContainer.appendChild(visualizarButton);
+
+            // Adicionar o container ao formulário
+            const form = document.getElementById('veiculoEletricoForm');
+            form.appendChild(buttonContainer);
+
+            visualizarButton.addEventListener('click', function () {
+                window.location.href = "/comparacao"; // Certifique-se que essa rota corresponde ao mapeamento do Controller
+            });
+        }
+    });
+</script>
+<script src="js/recomendacaoVeiculoEletrico.js" defer></script>
+</body>
+</html>

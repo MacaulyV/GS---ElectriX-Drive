@@ -1,0 +1,82 @@
+/* Estilo global */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   background-color: #080808;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container principal */
+.escolha-container {
+    background: #080808;
+    padding: 40px;
+    border-radius: 20px;
+    border: solid 2px deepskyblue;
+    box-shadow: 0 10px 25px deepskyblue;
+    max-width: 700px;
+    width: 100%;
+    text-align: center;
+    transition: transform 0.5s ease; /* Adiciona suavidade ao movimento */
+}
+
+.escolha-container p {
+    font-size: 1.2em;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+
+.anime-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    background: linear-gradient(45deg, #007bff, #ff5733);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Botoes */
+.escolha-container button {
+    font-size: 1.1em;
+    padding: 15px 25px;
+    border-radius: 15px;
+    border: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.escolha-container button:hover {
+    transform: scale(1.1);
+}
+
+/* Botao de recomendacao */
+#btnRecomendacao {
+    background-image: linear-gradient(to right, #00d2ff 0%, #3a7bd5 100%);
+    color: white;
+}
+
+#btnRecomendacao:hover {
+    box-shadow: 0 0 25px dodgerblue;
+    background-image: linear-gradient(to right, #3a7bd5 0%, #00d2ff 100%);
+}
+
+/* Botao de selecao manual */
+#btnSelecionar {
+    background-image: linear-gradient(to right, #28a745 0%, #218838 100%);
+    color: white;
+}
+
+#btnSelecionar:hover {
+    box-shadow: 0 0 25px lawngreen;
+    background-image: linear-gradient(to right, #218838 0%, #28a745 100%);
+}
+
+/* Div de fundo para particulas */
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}

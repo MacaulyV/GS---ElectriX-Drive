@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - ElectriXDrive</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Font Awesome para ícones -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
+<div class="container-pai">
+    <div class="left-section">
+        <img src="/assets/Car.gif" width="120%">
+    </div>
+    <div class="right-section">
+        <h2 class="sub-title anime-title" style="margin-bottom: 30px;"><i class="fas fa-sign-in-alt"></i> Login</h2>
+        <div class="form-group anime-form" style="margin-bottom: 20px;">
+            <i class="fas fa-envelope"></i>
+            <input type="email" id="email" class="form-control" placeholder="Digite seu email" required>
+        </div>
+        <div class="form-group anime-form">
+            <i class="fas fa-lock"></i>
+            <input type="password" id="senha" class="form-control" placeholder="Digite sua senha" required>
+        </div>
+        <button class="btn btn-primary btn-animated anime-button" onclick="autenticarOuRegistrar()">Entrar</button>
+        <p id="mensagem" style="color: red; display: none; text-align: center; margin-top: 15px;">Por favor, insira e-mail e senha válidos!</p>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+<script>
+    // Efeito de movimento 3D com o mouse
+    const container = document.querySelector('.container-pai');
+
+    container.addEventListener('mousemove', (e) => {
+        const { width, height, left, top } = container.getBoundingClientRect();
+        const x = e.clientX - left - width / 2;
+        const y = e.clientY - top - height / 2;
+        const rotateX = (y / height) * 25;  // Aumenta o ângulo para rotação mais perceptível
+        const rotateY = (x / width) * -25;
+        container.style.transform = `perspective(2000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`;
+    });
+
+    container.addEventListener('mouseleave', () => {
+        container.style.transform = `rotateX(0deg) rotateY(0deg) scale(1)`;
+        container.style.transition = 'transform 0.5s ease-out';
+    });
+
+    container.addEventListener('mouseenter', () => {
+        container.style.transition = 'transform 0.2s ease-out';
+    });
+
+    // Animação de entrada com Anime.js
+    document.addEventListener("DOMContentLoaded", () => {
+        anime.timeline({ loop: false })
+            // Primeira parte: movimento da esquerda para o centro
+            .add({
+                targets: '.container-pai',
+                opacity: [0, 1],
+                translateX: ['-100vw', '0'],
+                easing: 'easeOutQuad',
+                duration: 3000,
+            })
+            .add({
+                targets: '.anime-title',
+                opacity: [0, 1],
+                translateY: [50, 0],
+                easing: 'easeOutExpo',
+                duration: 1200,
+            })
+            .add({
+                targets: '.anime-form',
+                opacity: [0, 1],
+                translateY: [30, 0],
+                easing: 'easeOutExpo',
+                duration: 1200,
+                offset: '-=800'
+            })
+            .add({
+                targets: '.anime-button',
+                scale: [0.8, 1],
+                opacity: [0, 1],
+                easing: 'easeOutExpo',
+                duration: 1000,
+                delay: 500
+            });
+    });
+
+    async function autenticarOuRegistrar() {
+        const email = document.getElementById("email").value;
+        const senha = document.getElementById("senha").value;
+        const mensagem = document.getElementById("mensagem");
+
+        // Validação dos campos de e-mail e senha
+        if (!email.includes("@gmail.com") || senha.length < 6) {
+            mensagem.style.display = "block";
+            return;
+        }
+
+        mensagem.style.display = "none";
+
+        try {
+            const response = await fetch("http://localhost:8080/api/usuarios/autenticarOuRegistrar", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ email: email, senha: senha }) // Enviar como JSON
+            });
+
+            if (response.ok) {
+                const usuario = await response.json();
+                window.location.href = "/introducao"; // Atualizando o link para a próxima página
+            } else {
+                alert("Erro ao realizar login ou cadastro. Verifique suas credenciais!");
+            }
+        } catch (error) {
+            console.error("Erro na requisição:", error);
+            alert("Erro ao conectar ao servidor!");
+        }
+    }
+</script>
+</body>
+</html>

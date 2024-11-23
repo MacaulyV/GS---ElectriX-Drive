@@ -1,0 +1,143 @@
+/* Estilos Globais */
+body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: linear-gradient(105.3deg, rgba(30,39,107,1) 21.8%, rgba(77,118,221,1) 100.2%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+/* Estilos do Container */
+.container {
+    background: url("/assets/car2.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 900px;
+    width: 100%;
+    height: 620px;
+    border: solid 4px deepskyblue;
+    border-radius: 100px;
+    box-shadow: 0 30px 100px #007BFF;
+    background-color: #020808;
+    opacity: 0; /* Inicialmente invisível para animação */
+    transform: translateX(-100vw); /* Posição inicial fora da tela para a animação */
+}
+
+/* Título */
+h1 {
+    padding-top: 60%;
+    font-size: 3.0em;
+    font-weight: 600;
+    color: #ffffff;
+    margin-top: 5%;
+}
+
+.marca {
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: linear-gradient( 138deg,  rgba(32,201,255,1) 36.7%, rgba(0,8,187,1) 84.4%, rgba(255,255,255,1) 119.7% );
+}
+
+/* Parágrafo */
+p.lead {
+    font-weight: 400;
+    width: 60%;
+    text-align: center;
+    font-size: 1.5em;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+
+/* Botão Padrão */
+.btn-success {
+    background-image: linear-gradient(to right, #0575E6 0%, #021B79 51%, #0575E6 100%);
+    padding: 12px 30px;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 10px;
+    border: none;
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 25%;
+}
+
+.btn-animated::before {
+    content: '';
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: all 0.75s ease;
+    transform: translate(-50%, -50%) rotate(45deg) scale(0);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.btn-animated:hover::before {
+    transform: translate(-50%, -50%) rotate(45deg) scale(1);
+}
+
+.btn-animated span {
+    position: relative;
+    z-index: 1;
+}
+
+/* Efeito de Botão Pulsante no Hover */
+.btn-animated:hover {
+    color: #fff;
+    background-color: #28a745;
+    box-shadow: 0 0 15px rgba(40, 167, 69, 0.6);
+    transform: scale(1.05);
+}
+
+/* Hover do Botão Padrão (Mantido para compatibilidade) */
+.btn-success:hover {
+    background-image: linear-gradient(to right, #000046 0%, #1CB5E0 51%, #000046 100%);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 123, 255, 0.6);
+}
+
+/* Adicionais para Responsividade e Acessibilidade */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5em;
+        padding-top: 40%;
+    }
+
+    p.lead {
+        font-size: 1.5em;
+        width: 80%;
+    }
+
+    /* Preferência de Redução de Movimento para Acessibilidade */
+    @media (prefers-reduced-motion: reduce) {
+        .container {
+            transform: none !important;
+            transition: none !important;
+        }
+
+        .btn-animated::before {
+            display: none;
+        }
+
+        .btn-animated {
+            transform: none !important;
+        }
+
+        .btn-animated:hover {
+            transform: none !important;
+            box-shadow: none !important;
+        }
+    }
+}

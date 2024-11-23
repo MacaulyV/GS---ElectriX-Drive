@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmação de Veículo - ElectriXDrive</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/recomendacao.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.9.3/tsparticles.bundle.min.js"></script>
+</head>
+<body>
+<!-- Div de fundo para partículas -->
+<div id="particles-js"></div>
+
+<div class="container escolha-container text-center">
+    <h2 class="text-primary anime-title" style="font-size: 2.5em; margin-bottom: 5%;">Confirme a marca e modelo do seu carro para continuar</h2>
+    <div class="selects-container d-flex justify-content-center">
+        <!-- Select para marcas -->
+        <div class="me-3">
+            <label for="marca-select" class="label-branco">
+                <i class="fas fa-car icon-marca me-2"></i> Marca:
+            </label>
+            <select id="marca-select" class="form-select select-preto">
+                <option value="">Selecione uma marca</option>
+            </select>
+        </div>
+        <!-- Select para modelos -->
+        <div>
+            <label for="modelo-select" class="label-branco">
+                <i class="fas fa-car-side icon-modelo me-2"></i> Modelo:
+            </label>
+            <select id="modelo-select" class="form-select">
+                <option value="">Selecione um modelo</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Botão para fazer a sugestão -->
+    <button id="btn-sugerir" class="btn btn-primary btn-lg btn-animated mt-4">
+        <i class="fas fa-robot"></i> Sugerir Carro
+    </button>
+
+    <!-- Título duplicado removido -->
+    <!-- Container para exibir a recomendação -->
+    <div id="recomendacao-container" class="mt-4"></div>
+</div>
+
+<!-- Script para Partículas -->
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@2.9.3/tsparticles.bundle.min.js"></script>
+<script>
+    tsParticles.load("particles-js", {
+        fullScreen: {
+            enable: true,
+            zIndex: -1
+        },
+        particles: {
+            number: {
+                value: 50,
+                density: {
+                    enable: true,
+                    area: 800
+                }
+            },
+            color: {
+                value: "#00ffff"
+            },
+            shape: {
+                type: "polygon",
+                stroke: {
+                    width: 2,
+                    color: "#9100ff"
+                },
+                polygon: {
+                    nb_sides: 5
+                }
+            },
+            opacity: {
+                value: 0.5,
+                random: false,
+                animation: {
+                    enable: false,
+                    speed: 1,
+                    minimumValue: 0.1,
+                    destroy: "none"
+                }
+            },
+            size: {
+                value: 5,
+                random: true,
+                animation: {
+                    enable: false,
+                    speed: 40,
+                    minimumValue: 0.1,
+                    destroy: "none"
+                }
+            },
+            links: {
+                enable: true,
+                distance: 150,
+                color: "#0074ff",
+                opacity: 0.4,
+                width: 1
+            },
+            move: {
+                enable: true,
+                speed: 10,
+                direction: "right",
+                random: false,
+                straight: false,
+                outModes: {
+                    default: "out"
+                },
+                bounce: false,
+                attract: {
+                    enable: false,
+                    rotateX: 600,
+                    rotateY: 1200
+                }
+            }
+        },
+        interactivity: {
+            detectsOn: "canvas",
+            events: {
+                onHover: {
+                    enable: true,
+                    mode: "repulse"
+                },
+                onClick: {
+                    enable: true,
+                    mode: "bubble"
+                },
+                resize: true
+            },
+            modes: {
+                grab: {
+                    distance: 400,
+                    links: {
+                        opacity: 1
+                    }
+                },
+                bubble: {
+                    distance: 400,
+                    size: 40,
+                    duration: 2,
+                    opacity: 8,
+                    speed: 3
+                },
+                repulse: {
+                    distance: 200,
+                    duration: 0.4
+                },
+                push: {
+                    quantity: 4
+                },
+                remove: {
+                    quantity: 2
+                }
+            }
+        },
+        retina_detect: true,
+        fps_limit: 60
+    });
+</script>
+
+<!-- Script para Animações -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+<script>
+    // Efeito de movimento 3D com o mouse
+    const container = document.querySelector('.escolha-container');
+
+    container.addEventListener('mousemove', (e) => {
+        const {width, height, left, top} = container.getBoundingClientRect();
+        const x = e.clientX - left - width / 2;
+        const y = e.clientY - top - height / 2;
+        const rotateX = (y / height) * 10;
+        const rotateY = (x / width) * -25;
+        container.style.transform = `perspective(6000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`;
+    });
+
+    container.addEventListener('mouseleave', () => {
+        container.style.transform = 'perspective(2000px) rotateX(0deg) rotateY(0deg) scale(1)';
+        container.style.transition = 'transform 0.5s ease-out';
+    });
+
+    container.addEventListener('mouseenter', () => {
+        container.style.transition = 'transform 0.2s ease-out';
+    });
+
+    // Animação de entrada com Anime.js
+    // Animação extraordinária para o contêiner principal
+    document.addEventListener('DOMContentLoaded', () => {
+        anime.timeline({ loop: false })
+            .add({
+                targets: '.escolha-container',
+                opacity: [0, 1],
+                scale: [0, 1.2],
+                rotateY: ['720deg', '0deg'], // 2 giros completos no eixo Y
+                translateY: ['-100vh', '0vh'],
+                easing: 'easeOutExpo',
+                duration: 3500,
+            })
+            .add({
+                targets: '.escolha-container',
+                scale: [1.2, 1],
+                easing: 'easeOutElastic(1, .5)',
+                duration: 1000,
+            })
+            .add({
+                targets: '.anime-title',
+                opacity: [0, 1],
+                translateY: [50, 0],
+                easing: 'easeOutExpo',
+                duration: 1000,
+                delay: 300
+            })
+            .add({
+                targets: '.selects-container',
+                opacity: [0, 1],
+                translateY: [50, 0],
+                easing: 'easeOutExpo',
+                duration: 800,
+                delay: 100
+            })
+            .add({
+                targets: '#btn-sugerir',
+                scale: [0.5, 1],
+                opacity: [0, 1],
+                easing: 'easeOutBack',
+                duration: 1000,
+                delay: 300
+            });
+    });
+</script>
+
+<!-- Script para Lógica de Backend e Interações -->
+<script>
+    // Função para carregar as marcas e modelos do backend e preencher os selects
+    async function carregarMarcasModelos() {
+        try {
+            // Fazendo uma requisição ao endpoint do backend que retorna marcas e modelos dos veículos de combustão
+            const response = await fetch('http://localhost:8080/api/veiculos-atuais/marcas-modelos');
+            if (!response.ok) {
+                throw new Error('Erro ao buscar marcas e modelos');
+            }
+            const marcasModelos = await response.json();
+
+            // Preencher o select de marcas e modelos
+            const marcaSelect = document.getElementById('marca-select');
+            const modeloSelect = document.getElementById('modelo-select');
+
+            // Limpar o conteúdo atual do select
+            marcaSelect.innerHTML = '<option value="">Selecione uma marca</option>';
+            modeloSelect.innerHTML = '<option value="">Selecione um modelo</option>';
+
+            // Variável para armazenar as marcas únicas
+            const marcasUnicas = new Set();
+
+            // Adicionar as opções ao select de marca e modelo
+            marcasModelos.forEach(marcaModelo => {
+                const [marca, modelo] = marcaModelo.split(' - ');
+
+                // Adiciona a marca ao select se ainda não estiver presente
+                if (!marcasUnicas.has(marca)) {
+                    marcasUnicas.add(marca);
+                    const optionMarca = document.createElement('option');
+                    optionMarca.value = marca;
+                    optionMarca.textContent = marca;
+                    marcaSelect.appendChild(optionMarca);
+                }
+
+                // Adiciona o modelo ao select de modelos (só aparecerá se a marca for selecionada)
+                const optionModelo = document.createElement('option');
+                optionModelo.value = modelo;
+                optionModelo.textContent = modelo;
+                modeloSelect.appendChild(optionModelo);
+            });
+
+        } catch (error) {
+            console.error('Erro ao carregar marcas e modelos:', error);
+        }
+    }
+
+    // Evento para o botão "Sugerir Veículo Elétrico"
+    document.getElementById('btn-sugerir').addEventListener('click', async () => {
+        const marcaSelecionada = document.getElementById('marca-select').value;
+        if (marcaSelecionada) {
+            try {
+                // Fazendo uma requisição ao endpoint de recomendação de veículo elétrico
+                const response = await fetch(`http://localhost:8080/api/veiculos-eletricos/recomendacao/${marcaSelecionada}`);
+                if (!response.ok) {
+                    throw new Error('Erro ao buscar recomendação');
+                }
+                const recomendacao = await response.json();
+
+                // Exibir recomendação no container apropriado
+                const recomendacaoContainer = document.getElementById('recomendacao-container');
+                recomendacaoContainer.innerHTML = `
+                    <div class="card recomendacao-card">
+                        <div class="card-body">
+                            <h3 class="card-title">Nossa Melhor Recomendação Para Você</h3>
+                            <div class="row align-items-center">
+                                <div class="col-md-6 d-flex align-items-center mb-3">
+                                    <i class="fas fa-car-side icon-azul icon-2x me-2"></i>
+                                    <span><strong>Marca:</strong> ${recomendacao.marca}</span>
+                                </div>
+                                <div class="col-md-6 d-flex align-items-center mb-3">
+                                    <i class="fas fa-car icon-verde icon-2x me-2"></i>
+                                    <span><strong>Modelo:</strong> ${recomendacao.modelo}</span>
+                                </div>
+                                <div class="col-md-6 d-flex align-items-center mb-3">
+                                    <i class="fas fa-bolt icon-amarelo icon-2x me-2"></i>
+                                    <span><strong>Consumo Médio:</strong> ${recomendacao.consumoMedio} kWh/100km</span>
+                                </div>
+                                <div class="col-md-6 d-flex align-items-center mb-3">
+                                    <i class="fas fa-tachometer-alt icon-vermelho icon-2x me-2"></i>
+                                    <span><strong>Autonomia:</strong> ${recomendacao.autonomia} km</span>
+                                </div>
+                                <div class="col-md-6 d-flex align-items-center mb-3">
+                                    <i class="fas fa-money-bill-wave icon-ciano icon-2x me-2"></i>
+                                    <span><strong>Custo de Recarga:</strong> R$ ${recomendacao.custoRecargaBateria}</span>
+                                </div>
+                                <div class="col-md-6 d-flex align-items-center mb-3">
+                                    <i class="fas fa-cloud icon-cinza icon-2x me-2"></i>
+                                    <span><strong>Emissões de CO₂:</strong> ${recomendacao.emissaoCO2} g/km</span>
+                                </div>
+                            </div>
+                            <div class="gap">
+                                <button id="btn-comparar-carros" class="btn btn-warning btn-lg btn-animated mt-4">
+                                    <i class="fas fa-exchange-alt btn-icon"></i> Comparar Carros
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+
+                // Exibir o container de recomendação
+                recomendacaoContainer.style.display = 'block';
+
+                // Animação para a recomendação
+                anime({
+                    targets: '.recomendacao-card',
+                    opacity: [0, 1],
+                    translateY: [50, 0],
+                    easing: 'easeOutExpo',
+                    duration: 1000
+                });
+
+                // Evento do botão "Comparar Carros"
+                document.getElementById('btn-comparar-carros').addEventListener('click', async () => {
+                    try {
+                        // Salvar o veículo elétrico recomendado no banco de dados
+                        const salvarResponse = await fetch('http://localhost:8080/api/veiculos-eletricos', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                            },
+                            body: JSON.stringify(recomendacao)
+                        });
+
+                        if (!salvarResponse.ok) {
+                            throw new Error('Erro ao salvar o veículo elétrico no banco de dados');
+                        }
+
+                        // Redirecionar para a página de comparação com o modelo selecionado
+                        window.location.href = '/comparacao'; // Redirecionar para o endpoint mapeado pelo Spring Controller (sem .html)
+                    } catch (error) {
+                        console.error('Erro ao salvar veículo elétrico e redirecionar para comparação:', error);
+                    }
+                });
+
+            } catch (error) {
+                console.error('Erro ao sugerir veículo elétrico:', error);
+            }
+        } else {
+            alert('Por favor, selecione uma marca antes de continuar.');
+        }
+    });
+
+    // Carregar as marcas e modelos quando a página for carregada
+    document.addEventListener('DOMContentLoaded', carregarMarcasModelos);
+</script>
+
+</body>
+</html>

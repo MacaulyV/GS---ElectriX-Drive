@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escolha - ElectriXDrive</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/escolha.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.9.3/tsparticles.bundle.min.js"></script>
+</head>
+<body>
+<!-- Div de fundo para particulas -->
+<div id="particles-js"></div>
+
+<div class="container escolha-container text-center">
+    <h2 class="text-primary mb-4 anime-title">Escolha sua Proxima Etapa</h2>
+    <p class="text-white anime-form mb-3">
+        Voce deseja receber uma recomendacao personalizada de um veiculo eletrico semelhante ao seu atual?
+        <br><br>Ou prefere selecionar manualmente um veiculo eletrico da nossa base de dados?
+    </p>
+    <div class="d-flex justify-content-center mt-4">
+        <!-- Botao para receber recomendacao -->
+        <button id="btnRecomendacao" class="btn btn-primary btn-lg mx-3 btn-animated">
+            <i class="fas fa-robot"></i> Receber Recomendacao
+        </button>
+        <!-- Botao para selecionar manualmente -->
+        <button id="btnSelecionar" class="btn btn-success btn-lg mx-3 btn-animated">
+            <i class="fas fa-hand-pointer"></i> Selecionar Veiculo
+        </button>
+    </div>
+</div>
+
+<script>
+    tsParticles.load("particles-js", {
+        fullScreen: {
+            enable: true,
+            zIndex: -1
+        },
+        particles: {
+            number: {
+                value: 50,
+                density: {
+                    enable: true,
+                    area: 800
+                }
+            },
+            color: {
+                value: "#00ffff"
+            },
+            shape: {
+                type: "polygon",
+                stroke: {
+                    width: 2,
+                    color: "#9100ff"
+                },
+                polygon: {
+                    nb_sides: 5
+                }
+            },
+            opacity: {
+                value: 0.5,
+                random: false,
+                animation: {
+                    enable: false,
+                    speed: 1,
+                    minimumValue: 0.1,
+                    destroy: "none"
+                }
+            },
+            size: {
+                value: 5, // Aumentado para partículas maiores
+                random: true,
+                animation: {
+                    enable: false,
+                    speed: 40,
+                    minimumValue: 0.1,
+                    destroy: "none"
+                }
+            },
+            links: {
+                enable: true,
+                distance: 150,
+                color: "#0074ff", // Cor azul das linhas
+                opacity: 0.4,
+                width: 1
+            },
+            move: {
+                enable: true,
+                speed: 10, // Velocidade aumentada
+                direction: "right", // Movimento para a direita
+                random: false,
+                straight: false,
+                outModes: {
+                    default: "out"
+                },
+                bounce: false,
+                attract: {
+                    enable: false,
+                    rotateX: 600,
+                    rotateY: 1200
+                }
+            }
+        },
+        interactivity: {
+            detectsOn: "canvas",
+            events: {
+                onHover: {
+                    enable: true,
+                    mode: "repulse" // Interação ao passar o mouse
+                },
+                onClick: {
+                    enable: true,
+                    mode: "bubble" // Efeito de bolha ao clicar
+                },
+                resize: true
+            },
+            modes: {
+                grab: {
+                    distance: 400,
+                    links: {
+                        opacity: 1
+                    }
+                },
+                bubble: {
+                    distance: 400,
+                    size: 40,
+                    duration: 2,
+                    opacity: 8,
+                    speed: 3
+                },
+                repulse: {
+                    distance: 200,
+                    duration: 0.4
+                },
+                push: {
+                    quantity: 4
+                },
+                remove: {
+                    quantity: 2
+                }
+            }
+        },
+        retina_detect: true,
+        fps_limit: 60
+    });
+</script>
+
+<script>
+    // Efeito de movimento 3D com o mouse
+    const container = document.querySelector('.escolha-container');
+
+    container.addEventListener('mousemove', (e) => {
+        const {width, height, left, top} = container.getBoundingClientRect();
+        const x = e.clientX - left - width / 2;
+        const y = e.clientY - top - height / 2;
+        const rotateX = (y / height) * 25;
+        const rotateY = (x / width) * -25;
+        container.style.transform = `perspective(6000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.10)`;
+    });
+
+    container.addEventListener('mouseleave', () => {
+        container.style.transform = 'perspective(2000px) rotateX(0deg) rotateY(0deg) scale(1)';
+        container.style.transition = 'transform 0.5s ease-out';
+    });
+
+    container.addEventListener('mouseenter', () => {
+        container.style.transition = 'transform 0.2s ease-out';
+    });
+
+    // Animação de entrada com Anime.js
+    document.addEventListener("DOMContentLoaded", () => {
+        anime.timeline({ loop: false })
+            .add({
+                targets: '.escolha-container',
+                opacity: [0, 1],
+                translateY: ['-200vh', '0'],
+                easing: 'easeOutQuad',
+                duration: 2500,
+            })
+            .add({
+                targets: '.anime-title',
+                opacity: [0, 1],
+                translateY: [20, 0],
+                easing: 'easeOutExpo',
+                duration: 1000,
+                delay: 500
+            })
+            .add({
+                targets: '.anime-form',
+                opacity: [0, 1],
+                translateY: [20, 0],
+                easing: 'easeOutExpo',
+                duration: 800,
+            })
+            .add({
+                targets: '.btn-animated',
+                scale: [0.8, 1],
+                opacity: [0, 1],
+                easing: 'easeOutExpo',
+                duration: 1000,
+                delay: 500
+            });
+    });
+
+    // Script para redirecionar os botoes
+    document.getElementById('btnRecomendacao').addEventListener('click', function () {
+        // Certifique-se de que a URL corresponde ao mapeamento do controlador
+        window.location.href = '/recomendacao';
+    });
+
+    document.getElementById('btnSelecionar').addEventListener('click', function () {
+        // Redireciona para a página de seleção manual
+        window.location.href = '/selecaoVeiculoEletrico';
+    });
+</script>
+
+</body>
+</html>

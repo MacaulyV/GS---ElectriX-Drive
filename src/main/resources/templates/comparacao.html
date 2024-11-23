@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparação de Veículos - ElectriXDrive</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/comparacao.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.9.3/tsparticles.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+<!-- Div de fundo para partículas -->
+<div id="particles-js"></div>
+
+<!-- Container Inicial para Seleção de Modelos -->
+<div class="container escolha-container text-center">
+    <h2 class="text-primary anime-title">Comparação de Veículos</h2>
+    <p class="lead text-white">Veja como o seu carro atual se compara ao veículo elétrico recomendado, considerando diversos aspectos importantes.</p>
+    <div class="selects-container d-flex justify-content-center align-items-center">
+        <!-- Select para modelos de combustão -->
+        <select id="combustao-select" class="form-select select-preto">
+            <option value="" disabled selected>Selecione um Modelo</option>
+        </select>
+        <!-- Select para modelos elétricos -->
+        <select id="eletrico-select" class="form-select select-preto">
+            <option value="" disabled selected>Selecione um Modelo</option>
+        </select>
+    </div>
+    <button id="btn-comparar-veiculos" class="btn btn-primary btn-lg btn-animated mt-4">
+        <i class="fas fa-exchange-alt"></i> Comparar Veículos
+    </button>
+</div>
+
+<!-- Container para exibir os resultados de comparação (inicialmente oculto) -->
+<div id="resultado-comparacao-container" class="container comparacao-container text-center mt-5" style="display: none;">
+    <h2 class="text-primary anime-title">Resultado da Comparação</h2>
+    <div id="resultado-comparacao" class="mt-4"></div>
+
+    <!-- Gráficos Comparativos -->
+    <div class="row mb-5">
+        <div class="col-md-6">
+            <canvas id="graficoConsumo"></canvas>
+        </div>
+        <div class="col-md-6">
+            <canvas id="graficoCustoMensal"></canvas>
+        </div>
+    </div>
+</div>
+
+<!-- Script para Partículas -->
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@2.9.3/tsparticles.bundle.min.js"></script>
+<script>
+    tsParticles.load("particles-js", {
+        fullScreen: {
+            enable: true,
+            zIndex: -1
+        },
+        particles: {
+            number: {
+                value: 50,
+                density: {
+                    enable: true,
+                    area: 800
+                }
+            },
+            color: {
+                value: "#00ffff"
+            },
+            shape: {
+                type: "polygon",
+                stroke: {
+                    width: 2,
+                    color: "#9100ff"
+                },
+                polygon: {
+                    nb_sides: 5
+                }
+            },
+            opacity: {
+                value: 0.5,
+                random: false,
+                animation: {
+                    enable: false,
+                    speed: 1,
+                    minimumValue: 0.1,
+                    destroy: "none"
+                }
+            },
+            size: {
+                value: 5,
+                random: true,
+                animation: {
+                    enable: false,
+                    speed: 40,
+                    minimumValue: 0.1,
+                    destroy: "none"
+                }
+            },
+            links: {
+                enable: true,
+                distance: 150,
+                color: "#0074ff",
+                opacity: 0.4,
+                width: 1
+            },
+            move: {
+                enable: true,
+                speed: 10,
+                direction: "right",
+                random: false,
+                straight: false,
+                outModes: {
+                    default: "out"
+                },
+                bounce: false,
+                attract: {
+                    enable: false,
+                    rotateX: 600,
+                    rotateY: 1200
+                }
+            }
+        },
+        interactivity: {
+            detectsOn: "canvas",
+            events: {
+                onHover: {
+                    enable: true,
+                    mode: "repulse"
+                },
+                onClick: {
+                    enable: true,
+                    mode: "bubble"
+                },
+                resize: true
+            },
+            modes: {
+                grab: {
+                    distance: 400,
+                    links: {
+                        opacity: 1
+                    }
+                },
+                bubble: {
+                    distance: 400,
+                    size: 40,
+                    duration: 2,
+                    opacity: 8,
+                    speed: 3
+                },
+                repulse: {
+                    distance: 200,
+                    duration: 0.4
+                },
+                push: {
+                    quantity: 4
+                },
+                remove: {
+                    quantity: 2
+                }
+            }
+        },
+        retina_detect: true,
+        fps_limit: 60
+    });
+</script>
+
+<!-- Script para Animações -->
+<script>
+    // Função para carregar as marcas e modelos do backend e preencher os selects
+    async function carregarMarcasModelos() {
+        try {
+            // Requisição para buscar modelos dos veículos de combustão
+            const responseCombustao = await fetch('http://localhost:8080/api/veiculos-atuais/marcas-modelos');
+            if (!responseCombustao.ok) {
+                throw new Error('Erro ao buscar modelos de veículos de combustão');
+            }
+            const modelosCombustao = await responseCombustao.json();
+
+            // Requisição para buscar modelos dos veículos elétricos
+            const responseEletrico = await fetch('http://localhost:8080/api/veiculos-eletricos/marcas-modelos');
+            if (!responseEletrico.ok) {
+                throw new Error('Erro ao buscar modelos de veículos elétricos');
+            }
+            const modelosEletricos = await responseEletrico.json();
+
+            // Preencher o select de modelos de combustão
+            const combustaoSelect = document.getElementById('combustao-select');
+            combustaoSelect.innerHTML = '<option value="" disabled selected>Selecione um modelo de veículo de combustão</option>';
+            modelosCombustao.forEach(modeloCompleto => {
+                const [marca, modelo] = modeloCompleto.split(' - ');
+                const optionCombustao = document.createElement('option');
+                optionCombustao.value = modelo; // Usar apenas o nome do modelo como valor
+                optionCombustao.textContent = modeloCompleto; // Exibir "Marca - Modelo" no texto
+                combustaoSelect.appendChild(optionCombustao);
+            });
+
+            // Preencher o select de modelos de elétricos
+            const eletricoSelect = document.getElementById('eletrico-select');
+            eletricoSelect.innerHTML = '<option value="" disabled selected>Selecione um modelo de veículo elétrico</option>';
+            modelosEletricos.forEach(modeloCompleto => {
+                const [marca, modelo] = modeloCompleto.split(' - ');
+                const optionEletrico = document.createElement('option');
+                optionEletrico.value = modelo; // Usar apenas o nome do modelo como valor
+                optionEletrico.textContent = modeloCompleto; // Exibir "Marca - Modelo" no texto
+                eletricoSelect.appendChild(optionEletrico);
+            });
+
+        } catch (error) {
+            console.error('Erro ao carregar modelos de veículos:', error);
+            alert('Ocorreu um erro ao carregar os modelos de veículos. Por favor, tente novamente mais tarde.');
+        }
+    }
+
+    // Carregar as marcas e modelos quando a página for carregada
+    document.addEventListener('DOMContentLoaded', carregarMarcasModelos);
+
+    // Animação de entrada com Anime.js para o container inicial
+    document.addEventListener('DOMContentLoaded', () => {
+        // Timeline principal para a animação do contêiner inicial
+        const timelineInicial = anime.timeline({
+            easing: 'easeOutExpo',
+            duration: 2000,
+            autoplay: false
+        });
+
+        // Adiciona os diferentes estágios da animação
+        timelineInicial
+            // Entrada com Rotação 3D e Escala
+            .add({
+                targets: '.escolha-container',
+                opacity: [0, 1],
+                scale: [0.5, 1],
+                rotateX: ['-90deg', '0deg'],
+                rotateY: ['-180deg', '0deg'],
+                translateY: ['-100vh', '0vh'],
+                duration: 3500,
+                delay: 500,
+                elasticity: 500,
+            })
+            // Efeito de Brilho Dinâmico
+            .add({
+                targets: '.escolha-container',
+                boxShadow: [
+                    { value: '0px 0px 30px 10px rgba(0, 123, 255, 0.7)', duration: 1500 },
+                    { value: '0px 0px 10px 2px rgba(0, 123, 255, 0)', duration: 1500 }
+                ],
+                duration: 4000,
+                easing: 'easeInOutQuad',
+            }, '-=2000') // Inicia antes de terminar a animação anterior
+
+            // Animação do Título (.anime-title)
+            .add({
+                targets: '.anime-title',
+                opacity: [0, 1],
+                translateY: [-50, 0],
+                rotateZ: ['-20deg', '0deg'],
+                scale: [0.8, 1],
+                duration: 2000,
+                easing: 'easeOutElastic(1, .8)',
+            }, '-=2500') // Sincroniza com a animação anterior
+
+            // Animação dos Selects (.selects-container)
+            .add({
+                targets: '.selects-container',
+                translateX: ['-300px', '0px'],
+                opacity: [0, 1],
+                duration: 1500,
+                delay: anime.stagger(300),
+                easing: 'easeOutBack',
+            }, '-=1500')
+
+            // Animação do Botão de Comparação (#btn-comparar-veiculos)
+            .add({
+                targets: '#btn-comparar-veiculos',
+                scale: [0.5, 1.2, 1],
+                opacity: [0, 1],
+                translateY: [50, 0],
+                duration: 1500,
+                easing: 'easeOutElastic(1, .6)',
+            }, '-=1000');
+
+        // Inicia a timeline
+        timelineInicial.play();
+    });
+
+    // Função para Animação do Contêiner de Resultados
+    function animarResultadoComparacao() {
+        // Timeline para a animação do contêiner de resultados
+        const timelineResultado = anime.timeline({
+            easing: 'easeOutExpo',
+            duration: 2000,
+            autoplay: false
+        });
+
+        timelineResultado
+            // Aparição estonteante com Rotação e Escala
+            .add({
+                targets: '#resultado-comparacao-container',
+                opacity: [0, 1],
+                scale: [0.8, 1],
+                translateY: [50, 0],
+                rotateX: ['20deg', '0deg'],
+                rotateY: ['-20deg', '0deg'],
+                duration: 2000,
+                easing: 'easeOutExpo',
+            })
+            // Efeito de Reflexo Dinâmico
+            .add({
+                targets: '#resultado-comparacao-container',
+                boxShadow: [
+                    { value: '0px 0px 30px 10px rgba(0, 255, 255, 0.7)', duration: 2000 },
+                    { value: '0px 0px 10px 2px rgba(0, 255, 255, 0)', duration: 2000 }
+                ],
+                duration: 4000,
+                easing: 'easeInOutQuad',
+            }, '-=1000') // Inicia antes de terminar a animação anterior
+
+            // Animação de Destaque para os Gráficos
+            .add({
+                targets: '#graficoConsumo, #graficoCustoMensal',
+                opacity: [0, 1],
+                translateY: [20, 0],
+                duration: 1000,
+                delay: anime.stagger(200),
+                easing: 'easeOutQuad'
+            }, '-=3000'); // Inicia junto com a animação anterior
+
+        // Inicia a timeline
+        timelineResultado.play();
+
+        // Animação adicional para os gráficos com Anime.js (opcional)
+        anime({
+            targets: '#graficoConsumo, #graficoCustoMensal',
+            opacity: [0, 1],
+            translateY: [50, 0],
+            duration: 1500,
+            easing: 'easeOutExpo',
+            delay: anime.stagger(300)
+        });
+    }
+
+    // Evento para o botão "Comparar Veículos"
+    document.getElementById('btn-comparar-veiculos').addEventListener('click', async () => {
+        const modeloCombustao = document.getElementById('combustao-select').value;
+        const modeloEletrico = document.getElementById('eletrico-select').value;
+
+        if (modeloCombustao && modeloEletrico) {
+            try {
+                // Construir a URL com parâmetros codificados
+                const url = `http://localhost:8080/api/comparacao/comparar?modeloCombustao=${encodeURIComponent(modeloCombustao)}&modeloEletrico=${encodeURIComponent(modeloEletrico)}`;
+
+                console.log('Requisição para comparar veículos:', url); // Log para depuração
+
+                // Fazer a requisição para comparar os veículos
+                const response = await fetch(url);
+
+                if (!response.ok) {
+                    let errorMessage = `Erro ao comparar veículos: ${response.status} - ${response.statusText}`;
+                    try {
+                        const errorData = await response.json();
+                        if (errorData.message) {
+                            errorMessage += `: ${errorData.message}`;
+                        }
+                    } catch (jsonError) {
+                        // Não conseguiu parsear JSON, manter a mensagem padrão
+                    }
+                    throw new Error(errorMessage);
+                }
+
+                const comparacao = await response.json();
+
+                console.log('Resposta da comparação:', comparacao); // Log para verificar os dados recebidos
+
+                // Verificar se os campos necessários existem
+                const consumoCombustivelMensal = comparacao.consumoCombustivelMensal != null ? comparacao.consumoCombustivelMensal.toFixed(2) : 'N/A';
+                const consumoEletricoMensal = comparacao.consumoEletricoMensal != null ? comparacao.consumoEletricoMensal.toFixed(2) : 'N/A';
+                const reabastecimentosNecessarios = comparacao.reabastecimentosNecessarios != null ? comparacao.reabastecimentosNecessarios : 'N/A';
+                const recargasNecessarias = comparacao.recargasNecessarias != null ? comparacao.recargasNecessarias : 'N/A';
+                const emissoesCO2FormatadasVeiculoAtual = comparacao.emissoesCO2FormatadasVeiculoAtual != null ? comparacao.emissoesCO2FormatadasVeiculoAtual : 'N/A';
+                const emissoesCO2FormatadasVeiculoEletrico = comparacao.emissoesCO2FormatadasVeiculoEletrico != null ? comparacao.emissoesCO2FormatadasVeiculoEletrico : 'N/A';
+                const custoCombustivelMensal = comparacao.custoCombustivelMensal != null ? comparacao.custoCombustivelMensal.toFixed(2) : 'N/A';
+                const custoRecargaMensal = comparacao.custoRecargaMensal != null ? comparacao.custoRecargaMensal.toFixed(2) : 'N/A';
+                const economiaMensal = comparacao.economiaMensal != null ? comparacao.economiaMensal.toFixed(2) : 'N/A';
+                const analiseDetalhada = comparacao.analiseDetalhada != null ? comparacao.analiseDetalhada : 'N/A';
+                const conclusao = comparacao.conclusao != null ? comparacao.conclusao : 'N/A';
+
+                // Exibir os dados da comparação de forma organizada
+                const resultadoContainer = document.getElementById('resultado-comparacao');
+                resultadoContainer.innerHTML = `
+                    <div class="card recomendacao-card">
+                        <div class="card-body">
+                            <p><strong>Consumo de Combustível Mensal (Seu Carro Atual):</strong> ${consumoCombustivelMensal} litros</p>
+                            <p><strong>Consumo Elétrico Mensal:</strong> ${consumoEletricoMensal} kWh</p>
+                            <p><strong>Reabastecimentos Necessários (Combustão):</strong> ${reabastecimentosNecessarios}</p>
+                            <p><strong>Recargas Necessárias (Elétrico):</strong> ${recargasNecessarias}</p>
+                            <p><strong>Emissões de CO₂ (Seu Carro Atual):</strong> ${emissoesCO2FormatadasVeiculoAtual}</p>
+                            <p><strong>Emissões de CO₂ (Veículo Elétrico):</strong> ${emissoesCO2FormatadasVeiculoEletrico}</p>
+                            <p><strong>Custo de Combustível Mensal:</strong> R$ ${custoCombustivelMensal}</p>
+                            <p><strong>Custo de Recarga Mensal:</strong> R$ ${custoRecargaMensal}</p>
+                            <p><strong>Economia Mensal:</strong> R$ ${economiaMensal}</p>
+                            <hr>
+                            <h4>Análise Detalhada:</h4>
+                            <p>${analiseDetalhada}</p>
+                            <hr>
+                            <h4>Conclusão:</h4>
+                            <p>${conclusao}</p>
+                        </div>
+                    </div>
+                `;
+
+                // Exibir o container de resultados e ocultar o container inicial
+                document.querySelector('.escolha-container').style.display = 'none';
+                document.getElementById('resultado-comparacao-container').style.display = 'block';
+
+                // Chamar a função de animação para o contêiner de resultados
+                animarResultadoComparacao();
+
+                // Atualizar os gráficos se os dados estiverem disponíveis
+                if (comparacao.dadosGraficoConsumo && comparacao.dadosGraficoCustoMensal) {
+                    atualizarGraficos(comparacao.dadosGraficoConsumo, comparacao.dadosGraficoCustoMensal);
+                }
+
+            } catch (error) {
+                console.error('Erro ao comparar veículos:', error);
+                alert('Erro ao comparar veículos: ' + error.message);
+            }
+        } else {
+            alert('Por favor, selecione ambos os modelos para comparação.');
+        }
+    });
+
+    // Função para atualizar os gráficos com animações
+    function atualizarGraficos(dadosConsumo, dadosCustoMensal) {
+        // Verificar se os gráficos já existem e destruí-los para evitar sobreposição
+        if (window.graficoConsumoInstance) {
+            window.graficoConsumoInstance.destroy();
+        }
+        if (window.graficoCustoMensalInstance) {
+            window.graficoCustoMensalInstance.destroy();
+        }
+
+        // Gráfico de Consumo
+        const ctxConsumo = document.getElementById('graficoConsumo').getContext('2d');
+        window.graficoConsumoInstance = new Chart(ctxConsumo, {
+            type: 'bar',
+            data: {
+                labels: ['Combustão', 'Elétrico'],
+                datasets: [{
+                    label: 'Consumo (km/l ou kWh/100km)',
+                    data: [dadosConsumo.combustao, dadosConsumo.eletrico],
+                    backgroundColor: ['rgba(255, 99, 132, 0.2)', 'rgba(54, 162, 235, 0.2)'],
+                    borderColor: ['rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)'],
+                    borderWidth: 1,
+                    borderRadius: 10,
+                    hoverBorderWidth: 3
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: { display: true, position: 'top' },
+                    title: { display: true, text: 'Comparativo de Consumo' }
+                },
+                scales: {
+                    y: { beginAtZero: true }
+                },
+                animation: {
+                    duration: 2000,
+                    easing: 'easeOutBounce'
+                }
+            }
+        });
+
+        // Gráfico de Custo Mensal
+        const ctxCusto = document.getElementById('graficoCustoMensal').getContext('2d');
+        window.graficoCustoMensalInstance = new Chart(ctxCusto, {
+            type: 'bar',
+            data: {
+                labels: ['Combustão', 'Elétrico'],
+                datasets: [{
+                    label: 'Custo Mensal (R$)',
+                    data: [dadosCustoMensal.combustao, dadosCustoMensal.eletrico],
+                    backgroundColor: ['rgba(255, 206, 86, 0.2)', 'rgba(75, 192, 192, 0.2)'],
+                    borderColor: ['rgba(255, 206, 86, 1)', 'rgba(75, 192, 192, 1)'],
+                    borderWidth: 1,
+                    borderRadius: 10,
+                    hoverBorderWidth: 3
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: { display: true, position: 'top' },
+                    title: { display: true, text: 'Comparativo de Custo Mensal' }
+                },
+                scales: {
+                    y: { beginAtZero: true }
+                },
+                animation: {
+                    duration: 2000,
+                    easing: 'easeOutBounce'
+                }
+            }
+        });
+
+        // Animação de Entrada com Anime.js para os Gráficos
+        anime({
+            targets: '#graficoConsumo, #graficoCustoMensal',
+            opacity: [0, 1],
+            translateY: [50, 0],
+            duration: 1500,
+            easing: 'easeOutExpo',
+            delay: anime.stagger(300)
+        });
+    }
+</script>
+
+
+</body>
+
+</html>

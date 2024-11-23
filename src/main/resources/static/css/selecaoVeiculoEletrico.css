@@ -1,0 +1,182 @@
+/* Estilo global */
+html, body {
+    height: 100%;
+    margin: 0;
+    background-color: #000000; /* Fundo preto */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container principal */
+.selecao-container {
+    background: #000000; /* Fundo preto */
+    padding: 40px;
+    border: solid 3px deepskyblue;
+    border-radius: 50px;
+    box-shadow: 0 10px 100px rgba(0, 123, 255, 0.5);
+    max-width: 800px;
+    width: 100%;
+    color: #ffffff;
+    opacity: 0; /* Inicialmente invisível para animação */
+    transition: transform 2s ease-out;
+    position: relative;
+    z-index: 1;
+}
+
+/* Título da página */
+.anime-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    background: linear-gradient(45deg, #007bff, #ff5733);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Estilo dos labels */
+.form-label {
+    font-size: 1.1em;
+    color: #ffffff;
+    margin-bottom: 10px;
+    display: block;
+    text-align: left;
+    box-shadow: 0 10px 50px rgba(0, 123, 255, 0.5);
+}
+
+/* Estilo dos input groups */
+.input-group {
+    margin-bottom: 20px;
+}
+
+/* Estilo dos ícones nos input groups */
+.icon-background {
+    background-color: #1e1e1e; /* Fundo do ícone */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.icon-background i {
+    background-image: linear-gradient(0.2deg, rgba(51,204,255,1) 4.8%, rgba(51,102,255,1) 85.5%);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 1em;
+}
+
+/* Estilo dos ícones nos botões */
+.btn-icon {
+    color: white;
+    margin-right: 8px; /* Espaçamento entre o ícone e o texto */
+}
+
+/* Botão Visualizar Comparação */
+.btn-recommend {
+    background-image: linear-gradient(to right, #ffa726, #f57c00); /* Laranja para recomendar */
+    color: white;
+}
+
+.btn-recommend:hover {
+    background-image: linear-gradient(to right, #f57c00, #ffa726);
+}
+
+/* Estilo dos selects e inputs */
+.form-select, .form-control {
+    background: #080808; /* Fundo escuro */
+    border: 1px solid deepskyblue;
+    border-radius: 15px;
+    color: #ffffff;
+    padding: 10px 15px;
+    transition: background 0.3s, border 0.3s, box-shadow 0.3s;
+    appearance: none; /* Remover seta padrão do select */
+}
+
+.form-select:focus, .form-control:focus {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: deepskyblue;
+    outline: none;
+    box-shadow: 0 0 10px deepskyblue;
+}
+
+/* Estilizar o elemento select */
+.form-select {
+    background: #121212; /* Fundo cinza escuro */
+    color: #ffffff; /* Texto branco */
+    border: 1px solid deepskyblue;
+    border-radius: 15px;
+    padding: 10px 15px;
+    appearance: none; /* Remover seta padrão */
+    background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23ffffff" class="bi bi-caret-down-fill" viewBox="0 0 16 16"><path d="M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 1em;
+    cursor: pointer;
+}
+
+/* Estilizar as opções do select */
+.form-select option {
+    background: #1e1e1e; /* Fundo quase preto */
+    color: #ffffff; /* Texto branco */
+}
+
+/* Botões */
+.btn-animated {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    background-image: linear-gradient(to right, #00d2ff 0%, #3a7bd5 51%, #00d2ff 100%);
+    transition: all 0.3s ease-in-out;
+    margin-top: 20px;
+}
+
+.btn-animated::before {
+    content: '';
+    position: absolute;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease-in-out;
+    transform: translate(-50%, -50%) rotate(45deg) scale(0);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    z-index: 0;
+}
+
+.btn-animated span {
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    z-index: 1;
+}
+
+.btn-animated:hover::before {
+    transform: translate(-50%, -50%) rotate(45deg) scale(1);
+}
+
+.btn-animated:hover {
+    color: #fff;
+    background-image: linear-gradient(179.2deg, rgba(21,21,212,1) 0.9%, rgba(53,220,243,1) 95.5%);
+    transform: scale(1.05);
+}
+
+/* Botão Salvar */
+.btn-success {
+    transition: all 0.3s ease-in-out;
+    background-image: linear-gradient(to right, #28a745, #34eb83); /* Verde para salvar */
+    color: white;
+}
+
+.btn-success:hover {
+    background-image: linear-gradient(to right, #34eb83, #28a745);
+}
+

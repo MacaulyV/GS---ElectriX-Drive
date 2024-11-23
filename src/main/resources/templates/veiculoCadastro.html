@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro do Veículo Atual - ElectriXDrive</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/veiculoCadastro.css">
+    <!-- tsParticles -->
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.9.3/tsparticles.bundle.min.js"></script>
+
+    <!-- Anime.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <!-- Axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+<!-- Div para as partículas de fundo -->
+<div id="particles-js"></div>
+
+<!-- Container de Cadastro -->
+<div class="container cadastro-container">
+    <h2 class="anime-title">Cadastro do Veículo Atual</h2>
+    <form id="veiculoForm" class="anime-form">
+        <div class="mb-3">
+            <label for="marca" class="form-label">Marca do Veículo:</label>
+            <div class="input-group">
+                <span class="input-group-text icon-background">
+                    <i class="fas fa-car"></i>
+                </span>
+                <select id="marca" class="form-select" required>
+                    <option value="">Selecione uma marca...</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="modelo" class="form-label">Modelo do Veículo:</label>
+            <div class="input-group">
+                <span class="input-group-text icon-background">
+                    <i class="fas fa-car-side"></i>
+                </span>
+                <select id="modelo" class="form-select" required>
+                    <option value="">Selecione um modelo...</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="ano" class="form-label">Ano do Veículo:</label>
+            <div class="input-group">
+                <span class="input-group-text icon-background">
+                    <i class="fas fa-calendar-alt"></i>
+                </span>
+                <select id="ano" class="form-select" required>
+                    <option value="">Selecione o ano...</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="tipoCombustivel" class="form-label">Tipo de Combustível:</label>
+            <div class="input-group">
+                <span class="input-group-text icon-background">
+                    <i class="fas fa-gas-pump"></i>
+                </span>
+                <select id="tipoCombustivel" class="form-select" required>
+                    <option value="">Selecione o tipo de combustível...</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="quilometragem" class="form-label">Quilometragem Mensal (em km):</label>
+            <div class="input-group">
+                <span class="input-group-text icon-background">
+                    <i class="fas fa-tachometer-alt"></i>
+                </span>
+                <input type="number" id="quilometragem" class="form-control" required>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="custoCombustivel" class="form-label">Custo do Combustível por Tanque (R$):</label>
+            <div class="input-group">
+                <span class="input-group-text icon-background">
+                    <i class="fas fa-money-bill-wave"></i>
+                </span>
+                <input type="text" id="custoCombustivel" class="form-control" readonly>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="consumoMedio" class="form-label">Consumo Médio (km/L):</label>
+            <div class="input-group">
+                <span class="input-group-text icon-background">
+                    <i class="fas fa-chart-line"></i>
+                </span>
+                <input type="text" id="consumoMedio" class="form-control" readonly>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="autonomia" class="form-label">Autonomia (km):</label>
+            <div class="input-group">
+                <span class="input-group-text icon-background">
+                    <i class="fas fa-road"></i>
+                </span>
+                <input type="text" id="autonomia" class="form-control" readonly>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="emissaoCO2" class="form-label">Emissões de CO₂ (g/km):</label>
+            <div class="input-group">
+                <span class="input-group-text icon-background">
+                    <i class="fas fa-smog"></i>
+                </span>
+                <input type="text" id="emissaoCO2" class="form-control" readonly>
+            </div>
+        </div>
+        <button type="button" id="salvarVeiculo" class="btn btn-animated btn-success">
+            <i class="fas fa-save icon-style"></i> Salvar Veículo
+        </button>
+        <button type="button" id="voltar" style="margin-left: 22%; width: 145px;" class="btn btn-animated btn-success">
+            <i class="fas fa-arrow-left icon-style"></i> Voltar
+        </button>
+    </form>
+    </form>
+</div>
+
+<script>
+    // Configuração inicial
+    const particleConfig = {
+        fullScreen: {
+            enable: true,
+            zIndex: -1
+        },
+        particles: {
+            color: {
+                value: ["#3b00ff",] // Define várias cores possíveis para as partículas
+            },
+            number: {
+                value: 0, // Inicia com 0 partículas
+                density: {
+                    enable: true,
+                    area: 800
+                }
+            },
+            color: {
+                value: "#00ffff"
+            },
+            shape: {
+                type: "image",
+                image: {
+                    src: "/assets/java.png", // Caminho para seu SVG
+                    width: 50,
+                    height: 50
+                },
+            polygon: {
+                    nb_sides: 5
+                }
+            },
+            opacity: {
+                value: 0.5,
+                random: false,
+                animation: {
+                    enable: false,
+                    speed: 1,
+                    minimumValue: 0.1,
+                    destroy: "none"
+                }
+            },
+            size: {
+                value: 5,
+                random: true,
+                animation: {
+                    enable: false,
+                    speed: 40,
+                    minimumValue: 0.1,
+                    destroy: "none"
+                }
+            },
+            links: {
+                enable: true,
+                distance: 300,
+                color: "#3b00ff",
+                opacity: 1.0,
+                width: 3
+            },
+            move: {
+                enable: true,
+                speed: 10,
+                direction: "right",
+                random: false,
+                straight: false,
+                outModes: {
+                    default: "out"
+                },
+                bounce: false,
+                attract: {
+                    enable: false,
+                    rotateX: 600,
+                    rotateY: 1200
+                }
+            }
+        },
+        interactivity: {
+            detectsOn: "canvas", // Onde detectar a interação: 'canvas' detecta apenas dentro da área de partículas, 'window' detecta em toda a janela.
+            events: {
+                onHover: {
+                    enable: true, // Ativa a interação quando o mouse passa sobre as partículas.
+                    mode: "bubble" // Define o efeito ao passar o mouse (pode ser 'grab', 'repulse' ou 'bubble').
+                },
+                onClick: {
+                    enable: true, // Ativa a interação ao clicar nas partículas.
+                    mode: "bubble" // Define o efeito ao clicar nas partículas (pode ser 'push', 'repulse', 'bubble', etc.).
+                },
+                resize: true // Atualiza a posição e quantidade de partículas ao redimensionar a janela.
+            },
+            modes: {
+                grab: {
+                    distance: 400, // Define a distância máxima em que as partículas se conectam ao cursor com linhas.
+                    links: {
+                        opacity: 1 // Define a opacidade das linhas que conectam as partículas ao cursor no modo 'grab'.
+                    }
+                },
+                bubble: {
+                    distance: 300, // Define até onde o efeito de bolha alcança a partir do cursor.
+                    size: 60, // Define o tamanho máximo das partículas durante o efeito de bolha.
+                    duration: 2, // Define quanto tempo as partículas permanecem "inchadas" durante o efeito de bolha.
+                    opacity: 1, // Define a opacidade das partículas durante o efeito de bolha.
+                    speed: 3 // Define a velocidade com que as partículas crescem e diminuem durante o efeito de bolha.
+                },
+                repulse: {
+                    distance: 200, // Define a distância de repulsão entre o cursor e as partículas.
+                    duration: 0.4 // Define a duração da repulsão após o mouse passar.
+                },
+                push: {
+                    quantity: 4 // Quantidade de partículas adicionadas quando o modo 'push' é acionado.
+                },
+                remove: {
+                    quantity: 2 // Quantidade de partículas removidas quando o modo 'remove' é acionado.
+                }
+            }
+        },
+        retina_detect: true,
+        fps_limit: 60
+    };
+
+    // Carregar as partículas com atraso inicial de 2500ms
+    setTimeout(() => {
+        tsParticles.load("particles-js", particleConfig).then((container) => {
+            // Inicia o aumento gradual das partículas
+            graduallyAddParticles(container, 50, 1000); // 50 partículas alvo, adicionadas a cada 100ms
+        });
+    }, 1500); // 2500 milissegundos = 2.5 segundos
+
+    // Função para adicionar partículas gradualmente
+    function graduallyAddParticles(container, targetCount, delay) {
+        let currentCount = 0;
+        const interval = setInterval(() => {
+            container.particles.push(2); // Adiciona 1 partícula por vez
+            currentCount++;
+            if (currentCount >= targetCount) {
+                clearInterval(interval); // Para quando atingir o valor alvo
+            }
+        }, delay); // Tempo entre cada incremento (100ms)
+    }
+</script>
+
+<script>
+    // Efeito de movimento 3D com o mouse
+    const container = document.querySelector('.cadastro-container');
+
+    container.addEventListener('mousemove', (e) => {
+        const { width, height, left, top } = container.getBoundingClientRect();
+        const x = e.clientX - left - width / 2;
+        const y = e.clientY - top - height / 2;
+        const rotateX = (y / height) * 25;
+        const rotateY = (x / width) * -25;
+        container.style.transform = `perspective(6000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
+    });
+
+    container.addEventListener('mouseleave', () => {
+        container.style.transform = 'perspective(2000px) rotateX(0deg) rotateY(0deg) scale(1)';
+        container.style.transition = 'transform 0.5s ease-out';
+    });
+
+    container.addEventListener('mouseenter', () => {
+        container.style.transition = 'transform 0.2s ease-out';
+    });
+</script>
+
+<script>
+
+    document.addEventListener("DOMContentLoaded", () => {
+        anime.timeline({ loop: false })
+            .add({
+                targets: '.cadastro-container',
+                opacity: [0, 1],
+                translateY: ['250vh', '0'],
+                easing: 'easeOutQuad',
+                duration: 2500,
+            })
+            .add({
+                targets: '.anime-title',
+                opacity: [0, 1],
+                translateY: [20, 0],
+                easing: 'easeOutExpo',
+                duration: 1000,
+                delay: 500
+            })
+            .add({
+                targets: '.anime-form .mb-3',
+                opacity: [0, 1],
+                translateY: [20, 0],
+                easing: 'easeOutExpo',
+                duration: 800,
+                delay: (el, i) => 300 * i
+            })
+            .add({
+                targets: '.btn-animated',
+                scale: [0.8, 1],
+                opacity: [0, 1],
+                easing: 'easeOutExpo',
+                duration: 1000,
+                delay: 500
+            });
+
+        // Função para o botão "Voltar" redirecionar para a página de introdução
+        document.getElementById('voltar').addEventListener('click', function () {
+            window.location.href = '/introducao';  // Substitua o caminho para a página correta de introdução
+        });
+
+        // Carregar o JSON e popular os campos
+        axios.get('/api/data/veiculos')
+            .then(response => {
+                const veiculos = response.data;
+                const marcaSelect = document.getElementById('marca');
+
+                // Popular marcas no campo de seleção
+                const marcas = [...new Set(veiculos.map(veiculo => veiculo.marca))];
+                marcas.forEach(marca => {
+                    const option = document.createElement('option');
+                    option.value = marca;
+                    option.textContent = marca;
+                    marcaSelect.appendChild(option);
+                });
+
+                marcaSelect.addEventListener('change', function () {
+                    const marcaSelecionada = marcaSelect.value;
+                    const modeloSelect = document.getElementById('modelo');
+                    modeloSelect.innerHTML = '<option value="">Selecione um modelo...</option>';
+
+                    veiculos.filter(veiculo => veiculo.marca === marcaSelecionada).forEach(veiculo => {
+                        const option = document.createElement('option');
+                        option.value = veiculo.modelo;
+                        option.textContent = veiculo.modelo;
+                        modeloSelect.appendChild(option);
+                    });
+
+                    // Limpar campos dependentes
+                    document.getElementById('ano').innerHTML = '<option value="">Selecione o ano...</option>';
+                    document.getElementById('tipoCombustivel').innerHTML = '<option value="">Selecione o tipo de combustível...</option>';
+                    limparCamposLeitura();
+                });
+
+                // Atualizar anos e tipos de combustível com base no modelo
+                document.getElementById('modelo').addEventListener('change', function () {
+                    const modeloSelecionado = this.value;
+                    const veiculoSelecionado = veiculos.find(veiculo => veiculo.modelo === modeloSelecionado);
+                    if (veiculoSelecionado) {
+                        const anoSelect = document.getElementById('ano');
+                        anoSelect.innerHTML = '<option value="">Selecione o ano...</option>';
+
+                        veiculoSelecionado.anosDisponiveis.forEach(ano => {
+                            const option = document.createElement('option');
+                            option.value = ano;
+                            option.textContent = ano;
+                            anoSelect.appendChild(option);
+                        });
+
+                        // Preencher tipos de combustível
+                        const tipoCombustivelSelect = document.getElementById('tipoCombustivel');
+                        tipoCombustivelSelect.innerHTML = '<option value="">Selecione o tipo de combustível...</option>';
+                        veiculoSelecionado.tiposCombustivel.forEach(combustivel => {
+                            const option = document.createElement('option');
+                            option.value = combustivel.tipo;
+                            option.textContent = combustivel.tipo;
+                            tipoCombustivelSelect.appendChild(option);
+                        });
+
+                        // Limpar campos dependentes
+                        limparCamposLeitura();
+                    }
+                });
+
+                // Preencher campos automaticamente com base no combustível selecionado
+                document.getElementById('tipoCombustivel').addEventListener('change', function () {
+                    const modeloSelecionado = document.getElementById('modelo').value;
+                    const veiculoSelecionado = veiculos.find(veiculo => veiculo.modelo === modeloSelecionado);
+                    if (veiculoSelecionado) {
+                        const combustivelSelecionado = veiculoSelecionado.tiposCombustivel.find(c => c.tipo === this.value);
+                        if (combustivelSelecionado) {
+                            document.getElementById('custoCombustivel').value = combustivelSelecionado.custoCombustivelPorTanque;
+                            document.getElementById('consumoMedio').value = combustivelSelecionado.consumoMedioKmL;
+                            document.getElementById('autonomia').value = combustivelSelecionado.autonomiaKm;
+                            document.getElementById('emissaoCO2').value = combustivelSelecionado.emissoesCO2gKm;
+                        } else {
+                            limparCamposLeitura();
+                        }
+                    }
+                });
+            })
+            .catch(error => console.error('Erro ao carregar JSON: ', error));
+
+        // Função para limpar campos de leitura
+        function limparCamposLeitura() {
+            document.getElementById('custoCombustivel').value = '';
+            document.getElementById('consumoMedio').value = '';
+            document.getElementById('autonomia').value = '';
+            document.getElementById('emissaoCO2').value = '';
+        }
+
+        document.getElementById('salvarVeiculo').addEventListener('click', function () {
+            const marca = document.getElementById('marca').value;
+            const modelo = document.getElementById('modelo').value;
+            const ano = document.getElementById('ano').value;
+            const tipoCombustivel = document.getElementById('tipoCombustivel').value;
+            const quilometragemMensal = document.getElementById('quilometragem').value;
+
+            if (!marca || !modelo || !ano || !tipoCombustivel || !quilometragemMensal) {
+                alert('Por favor, preencha todos os campos obrigatórios.');
+                return;
+            }
+
+            axios.post('/api/veiculos-atuais', {
+                marca: marca,
+                modelo: modelo,
+                ano: parseInt(ano),
+                tipoCombustivel: tipoCombustivel,
+                quilometragemMensal: parseFloat(quilometragemMensal)
+            })
+                .then(response => {
+                    alert('Veículo salvo com sucesso!');
+                    window.location.href = '/escolha'; // Redireciona para a nova página
+                })
+                .catch(error => {
+                    console.error('Erro ao salvar o veículo: ', error);
+                    alert('Erro ao salvar o veículo. Por favor, tente novamente.');
+
+        // Modificar botões após salvar
+                    document.getElementById('salvarVeiculo').textContent = 'Escolher Veículo';
+                    document.getElementById('voltar').textContent = 'Recomendar';
+
+                    // Resetar o formulário após o sucesso
+                    document.getElementById('veiculoForm').reset();
+                    limparCamposLeitura();
+                })
+                .catch(error => {
+                    console.error('Erro ao salvar o veículo: ', error);
+                    alert('Erro ao salvar o veículo. Por favor, tente novamente.');
+                });
+        });
+    });
+</script>
+</body>
+</html>
