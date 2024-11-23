@@ -131,6 +131,38 @@ Para visualizar a documentação da API, visite: `http://localhost:8080/swagger-
 
 ---
 
+## 📋 **Exemplos de Requisições POST para Testes**
+
+### **Autenticação de Usuário**
+```json
+{
+  "email": "vivi@gmail.com",
+  "senha": "5454123"
+}
+```
+
+### **Cadastro de Veículo Atual**
+```json
+{
+  "marca": "Toyota",
+  "modelo": "Corolla",
+  "ano": 2020,
+  "tipoCombustivel": "Gasolina",
+  "quilometragemMensal": 1500
+}
+```
+
+### **Cadastro de Veículo Elétrico**
+```json
+{
+  "marca": "Tesla",
+  "modelo": "Model 3",
+  "ano": 2023,
+  "interesseSolar": "Sim"
+}
+```
+---
+
 ## 📈 **Considerações Finais**
 
 O projeto **ElectriXDrive Platform** foi desenvolvido para fornecer aos usuários uma visão clara e objetiva dos benefícios da transição para veículos elétricos, tanto do ponto de vista ambiental quanto econômico. Utilizando **Spring Boot** e **Oracle**, o sistema garante um backend robusto enquanto oferece uma interface de usuário amigável com **Thymeleaf**.
