@@ -120,14 +120,14 @@ As configurações para conexão com o banco **Oracle** estão no arquivo `appli
 ### 🛠️ **Passos**
 
 ```sh
-1. **Clone o repositório**: `git clone https://github.com/seu_usuario/ElectriXDrivePlatform.git`
+1. **Clone o repositório**: `git clone -b https://github.com/MacaulyV/GS-ElectriX-Drive.git`
 2. **Navegue até o diretório do projeto**: `cd ElectriXDrivePlatform`
 3. **Compile o projeto com Maven**: `mvn clean install`
 4. **Execute o projeto**: `mvn spring-boot:run`
-5. **Acesse a aplicação no navegador**: `http://localhost:8080`
+5. **Acesse a aplicação no navegador**: `http://localhost:8080/login`
 ```
 
-Para visualizar a documentação da API, visite: `http://localhost:8080/swagger-ui/`
+Para visualizar a documentação da API, visite: `http://localhost:8080/swagger-ui/index.html#/`
 
 ---
 ## 📈 **Considerações Finais**
