@@ -14,7 +14,7 @@
 
 Para acessar o deploy da **EcoDrive Insight AI**, clique no link abaixo:
 
-[🔗 Link do Deploy](https://ecodrive-insight-ai.onrender.com)
+[🌐 Link do Deploy](https://ecodrive-insight-ai.onrender.com)
 
 Este deploy permite que você explore todas as funcionalidades do projeto em um ambiente operacional.
 
@@ -24,7 +24,7 @@ Este deploy permite que você explore todas as funcionalidades do projeto em um 
 
 Para assistir ao vídeo de apresentação do **EcoDrive Insight AI**, clique no link abaixo:
 
-[🔗 Assista ao Vídeo do Projeto](https://youtu.be/cawgKS99ugc)
+[🎬 Assista ao Vídeo do Projeto](https://youtu.be/cawgKS99ugc)
 
 Este vídeo demonstra as funcionalidades & explicando sua usabilidade.
 
@@ -34,7 +34,7 @@ Este vídeo demonstra as funcionalidades & explicando sua usabilidade.
 
 Para acessar o deploy da **ElectriX Drive Platform**, clique no link abaixo:
 
-[🔗 Assista ao Vídeo do Projeto](https://youtu.be/cawgKS99ugc)
+[🚀 Link do Projeto Completo](https://youtu.be/cawgKS99ugc)
 
 Este vídeo demonstra as funcionalidades & explicando sua usabilidade.
 
