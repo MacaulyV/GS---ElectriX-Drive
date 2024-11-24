@@ -6,12 +6,14 @@ import com.electrixdrive.electrixdriveplatform.dto.VeiculoEletricoDTO;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
 import org.springframework.core.io.ClassPathResource;
+import org.springframework.stereotype.Service;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.core.type.TypeReference;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
+import java.io.InputStream;
 import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
@@ -22,8 +24,32 @@ import java.util.stream.Collectors;
 @Service
 public class VeiculoEletricoService {
 
-    @Autowired
-    private VeiculoEletricoRepository veiculoEletricoRepository;
+    private static final Logger logger = LoggerFactory.getLogger(VeiculoEletricoService.class);
+
+    private final VeiculoEletricoRepository veiculoEletricoRepository;
+    private List<VeiculoEletricoDTO> veiculosDisponiveis;
+
+    // Injeção via construtor
+    public VeiculoEletricoService(VeiculoEletricoRepository veiculoEletricoRepository) {
+        this.veiculoEletricoRepository = veiculoEletricoRepository;
+        carregarVeiculosDisponiveis();
+    }
+
+    private void carregarVeiculosDisponiveis() {
+        try {
+            ObjectMapper objectMapper = new ObjectMapper();
+            ClassPathResource resource = new ClassPathResource("data/carrosEletricos.json");
+            InputStream inputStream = resource.getInputStream();
+            this.veiculosDisponiveis = objectMapper.readValue(
+                    inputStream,
+                    new TypeReference<List<VeiculoEletricoDTO>>() {}
+            );
+            logger.info("Veículos disponíveis carregados com sucesso.");
+        } catch (IOException e) {
+            logger.error("Erro ao carregar carrosEletricos.json: {}", e.getMessage());
+            throw new RuntimeException("Não foi possível carregar carrosEletricos.json", e);
+        }
+    }
 
     @Operation(summary = "Obter todos os veículos elétricos",
             description = "Retorna uma lista de todos os veículos elétricos cadastrados.",
@@ -32,7 +58,12 @@ public class VeiculoEletricoService {
                     @ApiResponse(responseCode = "500", description = "Erro ao obter veículos elétricos")
             })
     public List<VeiculoEletrico> getAllVeiculosEletricos() {
-        return veiculoEletricoRepository.findAll();
+        try {
+            return veiculoEletricoRepository.findAll();
+        } catch (Exception e) {
+            logger.error("Erro ao obter todos os veículos elétricos: {}", e.getMessage());
+            throw e;
+        }
     }
 
     @Operation(summary = "Salvar um novo veículo elétrico",
@@ -43,7 +74,12 @@ public class VeiculoEletricoService {
                     @ApiResponse(responseCode = "500", description = "Erro interno ao salvar veículo elétrico")
             })
     public VeiculoEletrico salvarVeiculoEletrico(VeiculoEletrico veiculoEletrico) {
-        return veiculoEletricoRepository.save(veiculoEletrico);
+        try {
+            return veiculoEletricoRepository.save(veiculoEletrico);
+        } catch (Exception e) {
+            logger.error("Erro ao salvar veículo elétrico: {}", e.getMessage());
+            throw e;
+        }
     }
 
     @Operation(summary = "Completar dados do veículo elétrico",
@@ -54,15 +90,11 @@ public class VeiculoEletricoService {
                     @ApiResponse(responseCode = "500", description = "Erro ao ler o arquivo JSON")
             })
     public Optional<VeiculoEletrico> completarDadosVeiculo(String marca, String modelo) {
-        try {
-            ClassPathResource resource = new ClassPathResource("data/carrosEletricos.json");
-            ObjectMapper objectMapper = new ObjectMapper();
-            VeiculoEletricoDTO[] veiculos = objectMapper.readValue(resource.getFile(), VeiculoEletricoDTO[].class);
-
-            for (VeiculoEletricoDTO veiculoDTO : veiculos) {
-                if (veiculoDTO.getMarca().equalsIgnoreCase(marca)) {
-                    for (VeiculoEletricoDTO.Modelo modeloDTO : veiculoDTO.getModelos()) {
-                        if (modeloDTO.getModelo().equalsIgnoreCase(modelo)) {
+        return veiculosDisponiveis.stream()
+                .filter(veiculoDTO -> veiculoDTO.getMarca().equalsIgnoreCase(marca))
+                .flatMap(veiculoDTO -> veiculoDTO.getModelos().stream()
+                        .filter(modeloDTO -> modeloDTO.getModelo().equalsIgnoreCase(modelo))
+                        .map(modeloDTO -> {
                             VeiculoEletrico veiculoEletrico = new VeiculoEletrico();
                             veiculoEletrico.setMarca(veiculoDTO.getMarca());
                             veiculoEletrico.setModelo(modeloDTO.getModelo());
@@ -70,16 +102,15 @@ public class VeiculoEletricoService {
                             veiculoEletrico.setAutonomia(modeloDTO.getAutonomiaBateriaKm());
                             veiculoEletrico.setCustoRecargaBateria(modeloDTO.getCustoRecargaBateria());
                             veiculoEletrico.setEmissaoCO2(modeloDTO.getEmissoesCO2gKm());
-                            return Optional.of(veiculoEletrico);
-                        }
-                    }
-                }
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        return Optional.empty();
+                            return veiculoEletrico;
+                        })
+                )
+                .findFirst()
+                .map(veiculoEletricoRepository::save)
+                .or(() -> {
+                    logger.warn("Veículo não encontrado no JSON para marca: {} e modelo: {}", marca, modelo);
+                    return Optional.empty();
+                });
     }
 
     @Operation(summary = "Obter veículos elétricos por marca",
@@ -90,30 +121,24 @@ public class VeiculoEletricoService {
             })
     public List<VeiculoEletrico> getVeiculosPorMarca(String marca) {
         try {
-            // Lendo o JSON de veículos elétricos
-            ClassPathResource resource = new ClassPathResource("data/carrosEletricos.json");
-            ObjectMapper objectMapper = new ObjectMapper();
-            VeiculoEletricoDTO[] veiculos = objectMapper.readValue(resource.getFile(), VeiculoEletricoDTO[].class);
-
-            // Filtrar veículos que possuem a marca especificada (insensível a maiúsculas e minúsculas)
-            return List.of(veiculos).stream()
+            return veiculosDisponiveis.stream()
                     .filter(veiculoDTO -> veiculoDTO.getMarca().equalsIgnoreCase(marca))
                     .flatMap(veiculoDTO -> veiculoDTO.getModelos().stream()
                             .map(modeloDTO -> {
-                                VeiculoEletrico veiculo = new VeiculoEletrico();
-                                veiculo.setMarca(veiculoDTO.getMarca());
-                                veiculo.setModelo(modeloDTO.getModelo());
-                                veiculo.setConsumoMedio(modeloDTO.getConsumoMedioKwh100km());
-                                veiculo.setAutonomia(modeloDTO.getAutonomiaBateriaKm());
-                                veiculo.setCustoRecargaBateria(modeloDTO.getCustoRecargaBateria());
-                                veiculo.setEmissaoCO2(modeloDTO.getEmissoesCO2gKm());
-                                return veiculo;
+                                VeiculoEletrico veiculoEletrico = new VeiculoEletrico();
+                                veiculoEletrico.setMarca(veiculoDTO.getMarca());
+                                veiculoEletrico.setModelo(modeloDTO.getModelo());
+                                veiculoEletrico.setConsumoMedio(modeloDTO.getConsumoMedioKwh100km());
+                                veiculoEletrico.setAutonomia(modeloDTO.getAutonomiaBateriaKm());
+                                veiculoEletrico.setCustoRecargaBateria(modeloDTO.getCustoRecargaBateria());
+                                veiculoEletrico.setEmissaoCO2(modeloDTO.getEmissoesCO2gKm());
+                                return veiculoEletrico;
                             })
                     )
                     .collect(Collectors.toList());
-        } catch (IOException e) {
-            e.printStackTrace();
-            return List.of();
+        } catch (Exception e) {
+            logger.error("Erro ao obter veículos por marca: {}", e.getMessage());
+            throw new RuntimeException("Erro ao obter veículos por marca", e);
         }
     }
 
@@ -124,9 +149,14 @@ public class VeiculoEletricoService {
                     @ApiResponse(responseCode = "500", description = "Erro ao obter marcas e modelos")
             })
     public Set<String> getMarcasModelosDisponiveis() {
-        return veiculoEletricoRepository.findAll().stream()
-                .map(veiculo -> veiculo.getMarca() + " - " + veiculo.getModelo())
-                .collect(Collectors.toSet());
+        try {
+            return veiculoEletricoRepository.findAll().stream()
+                    .map(veiculo -> veiculo.getMarca() + " - " + veiculo.getModelo())
+                    .collect(Collectors.toSet());
+        } catch (Exception e) {
+            logger.error("Erro ao obter marcas e modelos disponíveis: {}", e.getMessage());
+            throw e;
+        }
     }
 
     @Operation(summary = "Deletar todos os veículos elétricos",
@@ -136,8 +166,13 @@ public class VeiculoEletricoService {
                     @ApiResponse(responseCode = "500", description = "Erro ao deletar veículos elétricos")
             })
     public void deletarTodos() {
-        System.out.println("Tentando deletar todos os veículos elétricos...");
-        veiculoEletricoRepository.deleteAll();
-        System.out.println("Deleção concluída.");
+        try {
+            logger.info("Tentando deletar todos os veículos elétricos...");
+            veiculoEletricoRepository.deleteAll();
+            logger.info("Deleção concluída.");
+        } catch (Exception e) {
+            logger.error("Erro ao tentar deletar os veículos elétricos: {}", e.getMessage());
+            throw e;
+        }
     }
 }
