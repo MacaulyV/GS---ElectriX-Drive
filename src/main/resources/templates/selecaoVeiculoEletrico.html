@@ -328,7 +328,7 @@
             });
 
         // Carregar o JSON e popular os campos de seleção
-        axios.get('/api/data/veiculos-eletricos')
+        axios.get('https://electrix-drive-platform.onrender.com/api/data/veiculos-eletricos')
             .then(response => {
                 const veiculosEletricos = response.data;
                 const marcaSelect = document.getElementById('marcaEletrica');
