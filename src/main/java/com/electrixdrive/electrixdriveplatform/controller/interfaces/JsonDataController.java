@@ -11,9 +11,11 @@ import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
 
+import java.io.BufferedReader;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api/data")
@@ -28,8 +30,10 @@ public class JsonDataController {
     @GetMapping("/veiculos")
     public ResponseEntity<String> obterDadosVeiculos() {
         try {
-            Path caminho = new ClassPathResource("data/veiculos.json").getFile().toPath();
-            String conteudoJson = Files.readString(caminho);
+            InputStream inputStream = new ClassPathResource("data/veiculos.json").getInputStream();
+            String conteudoJson = new BufferedReader(new InputStreamReader(inputStream))
+                    .lines()
+                    .collect(Collectors.joining("\n"));
             return ResponseEntity.ok().body(conteudoJson);
         } catch (IOException e) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Erro ao carregar o JSON: " + e.getMessage());
@@ -44,9 +48,11 @@ public class JsonDataController {
     @GetMapping("/veiculos-eletricos")
     public ResponseEntity<String> getVeiculosEletricos() {
         try {
-            Path jsonPath = new ClassPathResource("data/carrosEletricos.json").getFile().toPath();
-            String jsonContent = Files.readString(jsonPath);
-            return ResponseEntity.ok(jsonContent);
+            InputStream inputStream = new ClassPathResource("data/carrosEletricos.json").getInputStream();
+            String conteudoJson = new BufferedReader(new InputStreamReader(inputStream))
+                    .lines()
+                    .collect(Collectors.joining("\n"));
+            return ResponseEntity.ok().body(conteudoJson);
         } catch (IOException e) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Erro ao ler o arquivo JSON: " + e.getMessage());
         }
