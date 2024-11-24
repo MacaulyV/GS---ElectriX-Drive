@@ -20,7 +20,7 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping("/api/veiculos-eletricos")
+@RequestMapping("https://electrix-drive-platform.onrender.com/api/veiculos-eletricos")
 @Tag(name = "VeiculoEletricoController", description = "Controlador responsável pelas operações relacionadas aos veículos elétricos.")
 public class VeiculoEletricoController {
 
@@ -94,7 +94,7 @@ public class VeiculoEletricoController {
             @ApiResponse(responseCode = "200", description = "Lista de marcas e modelos retornada com sucesso."),
             @ApiResponse(responseCode = "500", description = "Erro interno do servidor.")
     })
-    @GetMapping("/marcas-modelos")
+    @GetMapping("https://electrix-drive-platform.onrender.com/api/veiculos-atuais/marcas-modelos")
     public ResponseEntity<Set<String>> getMarcasModelosDisponiveis() {
         Set<String> marcasModelos = veiculoEletricoService.getMarcasModelosDisponiveis();
         return ResponseEntity.ok(marcasModelos);
@@ -106,7 +106,7 @@ public class VeiculoEletricoController {
             @ApiResponse(responseCode = "400", description = "Nenhum veículo elétrico encontrado para a marca especificada."),
             @ApiResponse(responseCode = "500", description = "Erro interno do servidor.")
     })
-    @GetMapping("/recomendacao/{marca}")
+    @GetMapping("https://electrix-drive-platform.onrender.com/api/veiculos-atuais/recomendacao/{marca}")
     public ResponseEntity<?> recomendarVeiculoEletrico(@PathVariable String marca) {
         List<VeiculoEletrico> veiculosDaMarca = veiculoEletricoService.getVeiculosPorMarca(marca);
 
