@@ -30,13 +30,8 @@ public class VeiculoAtualController {
     })
     @GetMapping
     public ResponseEntity<List<VeiculoAtual>> getAllVeiculosAtuais() {
-        try {
-            List<VeiculoAtual> veiculos = veiculoAtualService.getAllVeiculosAtuais();
-            return ResponseEntity.ok(veiculos);
-        } catch (Exception e) {
-            // Log o erro adequadamente
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null);
-        }
+        List<VeiculoAtual> veiculos = veiculoAtualService.getAllVeiculosAtuais();
+        return ResponseEntity.ok(veiculos);
     }
 
     @Operation(summary = "Remover todos os veículos atuais", description = "Remove todos os veículos atuais cadastrados.")
@@ -46,13 +41,8 @@ public class VeiculoAtualController {
     })
     @DeleteMapping("/all")
     public ResponseEntity<Void> deleteAllVeiculosAtuais() {
-        try {
-            veiculoAtualService.deleteAllVeiculosAtuais();
-            return ResponseEntity.noContent().build();
-        } catch (Exception e) {
-            // Log o erro adequadamente
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
-        }
+        veiculoAtualService.deleteAllVeiculosAtuais();
+        return ResponseEntity.noContent().build();
     }
 
     @Operation(summary = "Salvar um novo veículo atual", description = "Salva um novo veículo atual baseado nas informações fornecidas.")
@@ -68,9 +58,6 @@ public class VeiculoAtualController {
             return ResponseEntity.status(HttpStatus.CREATED).body(novoVeiculo);
         } catch (IllegalArgumentException e) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);
-        } catch (Exception e) {
-            // Log o erro adequadamente
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null);
         }
     }
 
@@ -81,18 +68,13 @@ public class VeiculoAtualController {
     })
     @GetMapping("/marcas-modelos")
     public ResponseEntity<List<String>> getMarcasModelosVeiculosAtuais() {
-        try {
-            List<VeiculoAtual> veiculosAtuais = veiculoAtualService.getAllVeiculosAtuais();
+        List<VeiculoAtual> veiculosAtuais = veiculoAtualService.getAllVeiculosAtuais();
 
-            // Transformar em uma lista de strings no formato "Marca - Modelo"
-            List<String> marcasModelos = veiculosAtuais.stream()
-                    .map(veiculo -> veiculo.getMarca() + " - " + veiculo.getModelo())
-                    .collect(Collectors.toList());
+        // Transformar em uma lista de strings no formato "Marca - Modelo"
+        List<String> marcasModelos = veiculosAtuais.stream()
+                .map(veiculo -> veiculo.getMarca() + " - " + veiculo.getModelo())
+                .collect(Collectors.toList());
 
-            return ResponseEntity.ok(marcasModelos);
-        } catch (Exception e) {
-            // Log o erro adequadamente
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null);
-        }
+        return ResponseEntity.ok(marcasModelos);
     }
 }
