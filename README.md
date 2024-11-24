@@ -28,6 +28,8 @@ Para assistir ao vídeo de apresentação do **ElectriX Drive Platform**, clique
 
 Este vídeo demonstra as funcionalidades & explicando sua usabilidade.
 
+⚠️ **O vídeo tem 11 minutos. Utilizamos os 3 minutos disponíveis para o pitch, mais os 10 minutos disponíveis para apresentar o projeto, tudo em um único vídeo de 11 minutos. Recomendamos fortemente assistir o vídeo na velocidade 1.5x para uma melhor experiência..
+
 ---
 
 ## 🛠️ **Estrutura do Projeto**
