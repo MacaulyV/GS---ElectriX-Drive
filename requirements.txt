@@ -1,7 +1,5 @@
-numpy==1.24.4
-pandas==1.3.3
-streamlit==1.5.0
+setuptools
 joblib
-jsonlib
-requests
-plotly==5.3.1
+plotly
+xgboost
+scikit-learn
