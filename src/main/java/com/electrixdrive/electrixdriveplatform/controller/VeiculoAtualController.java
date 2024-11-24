@@ -66,7 +66,7 @@ public class VeiculoAtualController {
             @ApiResponse(responseCode = "200", description = "Lista de marcas e modelos retornada com sucesso."),
             @ApiResponse(responseCode = "500", description = "Erro interno do servidor.")
     })
-    @GetMapping("/marcas-modelos")
+    @GetMapping("https://electrix-drive-platform.onrender.com/api/veiculos-atuais/marcas-modelos")
     public ResponseEntity<List<String>> getMarcasModelosVeiculosAtuais() {
         List<VeiculoAtual> veiculosAtuais = veiculoAtualService.getAllVeiculosAtuais();
 
