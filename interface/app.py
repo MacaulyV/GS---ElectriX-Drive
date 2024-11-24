@@ -37,20 +37,49 @@ def local_css(file_name):
 # Carregar o arquivo CSS localizado em 'assets/style.css'
 local_css("assets/style.css")
 
-# Carregar modelos e escalonador pré-treinados
-model_cost = joblib.load('../model/model_cost.pkl')
-model_emissions = joblib.load('../model/model_emissions.pkl')
-scaler = joblib.load('../model/scaler.pkl')
+# Função para carregar um modelo pré-treinado a partir de um arquivo
+def load_model(file_name):
+    # Obtém o diretório atual onde o script está localizado
+    current_directory = os.path.dirname(os.path.abspath(__file__))
+    # Constrói o caminho completo para o arquivo do modelo
+    model_path = os.path.join(current_directory, file_name)
+    
+    # Verifica se o arquivo existe antes de tentar carregar
+    if os.path.exists(model_path):
+        return joblib.load(model_path)
+    else:
+        st.error(f"Model file not found: {model_path}")
+        return None
 
-
 # Carregar modelos e escalonador pré-treinados
-model_cost = joblib.load('../model/model_cost.pkl')
-model_emissions = joblib.load('../model/model_emissions.pkl')
-scaler = joblib.load('../model/scaler.pkl')
+model_cost = load_model("../model/model_cost.pkl")
+model_emissions = load_model("../model/model_emissions.pkl")
+scaler = load_model("../model/scaler.pkl")
+
+# Verifica se todos os modelos foram carregados corretamente
+if model_cost is None or model_emissions is None or scaler is None:
+    st.stop()  # Para a execução se os modelos não forem encontrados
 
 # Carregar dados dos veículos elétricos a partir de um arquivo JSON
-with open('../data/vehicle_data.json', 'r', encoding='utf-8') as f:
-    vehicle_data = json.load(f)
+def load_json(file_name):
+    # Obtém o diretório atual onde o script está localizado
+    current_directory = os.path.dirname(os.path.abspath(__file__))
+    # Constrói o caminho completo para o arquivo JSON
+    json_path = os.path.join(current_directory, file_name)
+
+    # Verifica se o arquivo existe antes de tentar abrir
+    if os.path.exists(json_path):
+        with open(json_path, 'r', encoding='utf-8') as f:
+            return json.load(f)
+    else:
+        st.error(f"JSON file not found: {json_path}")
+        return None
+
+vehicle_data = load_json("../data/vehicle_data.json")
+
+# Verifica se os dados foram carregados corretamente
+if vehicle_data is None:
+    st.stop()  # Para a execução se o JSON não for encontrado
 
 # Função para obter dados de um veículo elétrico selecionado pelo usuário
 def get_electric_vehicle_data(marca, modelo, ano):
