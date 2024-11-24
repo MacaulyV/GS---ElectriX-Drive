@@ -240,7 +240,7 @@
     async function carregarMarcasModelos() {
         try {
             // Fazendo uma requisição ao endpoint do backend que retorna marcas e modelos dos veículos de combustão
-            const response = await fetch('http://localhost:8080/api/veiculos-atuais/marcas-modelos');
+            const response = await fetch('https://electrix-drive-platform.onrender.com/api/veiculos-atuais/marcas-modelos');
             if (!response.ok) {
                 throw new Error('Erro ao buscar marcas e modelos');
             }
@@ -288,7 +288,7 @@
         if (marcaSelecionada) {
             try {
                 // Fazendo uma requisição ao endpoint de recomendação de veículo elétrico
-                const response = await fetch(`http://localhost:8080/api/veiculos-eletricos/recomendacao/${marcaSelecionada}`);
+                const response = await fetch(`https://electrix-drive-platform.onrender.com/api/veiculos-eletricos/recomendacao/${marcaSelecionada}`);
                 if (!response.ok) {
                     throw new Error('Erro ao buscar recomendação');
                 }
@@ -351,7 +351,7 @@
                 document.getElementById('btn-comparar-carros').addEventListener('click', async () => {
                     try {
                         // Salvar o veículo elétrico recomendado no banco de dados
-                        const salvarResponse = await fetch('http://localhost:8080/api/veiculos-eletricos', {
+                        const salvarResponse = await fetch('https://electrix-drive-platform.onrender.com/api/veiculos-eletricos', {
                             method: 'POST',
                             headers: {
                                 'Content-Type': 'application/json',
