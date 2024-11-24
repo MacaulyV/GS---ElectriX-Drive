@@ -30,6 +30,16 @@ Este vídeo demonstra as funcionalidades & explicando sua usabilidade.
 
 ---
 
+##  🌟 Link do Deploy do Projeto Real Completo da solução (Opcional)
+
+Para acessar o deploy da **ElectriX Drive Platform**, clique no link abaixo:
+
+[🔗 Assista ao Vídeo do Projeto](https://youtu.be/cawgKS99ugc)
+
+Este vídeo demonstra as funcionalidades & explicando sua usabilidade.
+
+---
+
 ## 🌱 Visão Geral do Projeto
 
 O **EcoDrive Insight AI** é uma plataforma baseada em Inteligência Artificial desenvolvida com o objetivo de auxiliar os usuários na transição de um veículo a combustão para um veículo elétrico, promovendo a energia sustentável e a eficiência energética. A plataforma utiliza Machine Learning para fornecer uma comparação detalhada entre um carro a combustão convencional e um veículo elétrico selecionado pelo usuário, oferecendo análises de custo operacional, emissões de CO₂ e economias projetadas ao longo do tempo. 🚗🏠
