@@ -10,7 +10,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
-import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
 
 import java.util.List;
@@ -28,16 +27,14 @@ public class VeiculoEletricoController {
     private VeiculoEletricoService veiculoEletricoService;
 
     @Operation(summary = "Obter todos os veículos elétricos", description = "Retorna uma lista de todos os veículos elétricos disponíveis.")
-    @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "Lista de veículos elétricos retornada com sucesso."),
-            @ApiResponse(responseCode = "500", description = "Erro interno do servidor.")
-    })
+    @ApiResponse(responseCode = "200", description = "Lista de veículos elétricos retornada com sucesso.")
+    @ApiResponse(responseCode = "500", description = "Erro interno do servidor.")
     @GetMapping
     public ResponseEntity<List<VeiculoEletricoResponseDTO>> getAllVeiculosEletricos() {
         List<VeiculoEletrico> veiculos = veiculoEletricoService.getAllVeiculosEletricos();
 
         List<VeiculoEletricoResponseDTO> responseDTOs = veiculos.stream().map(veiculo -> {
-            VeiculoEletricoResponseDTO dto = new VeiculoEletricoResponseDTO(
+            return new VeiculoEletricoResponseDTO(
                     veiculo.getId(),
                     veiculo.getMarca(),
                     veiculo.getModelo(),
@@ -48,18 +45,15 @@ public class VeiculoEletricoController {
                     veiculo.getEmissaoCO2(),
                     veiculo.getInteresseSolar()
             );
-            return dto;
         }).collect(Collectors.toList());
 
         return ResponseEntity.ok(responseDTOs);
     }
 
     @Operation(summary = "Salvar um novo veículo elétrico", description = "Salva um novo veículo elétrico baseado nas informações fornecidas.")
-    @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "Veículo salvo com sucesso."),
-            @ApiResponse(responseCode = "400", description = "Veículo não encontrado no banco de dados."),
-            @ApiResponse(responseCode = "500", description = "Erro interno do servidor.")
-    })
+    @ApiResponse(responseCode = "200", description = "Veículo salvo com sucesso.")
+    @ApiResponse(responseCode = "400", description = "Veículo não encontrado no banco de dados.")
+    @ApiResponse(responseCode = "500", description = "Erro interno do servidor.")
     @PostMapping
     public ResponseEntity<?> salvarVeiculoEletrico(@RequestBody VeiculoEletricoRequestDTO veiculoRecebido) {
         Optional<VeiculoEletrico> veiculoCompletoOpt = veiculoEletricoService.completarDadosVeiculo(veiculoRecebido.getMarca(), veiculoRecebido.getModelo());
@@ -90,22 +84,18 @@ public class VeiculoEletricoController {
     }
 
     @Operation(summary = "Obter marcas e modelos disponíveis", description = "Retorna uma lista das marcas e modelos disponíveis de veículos elétricos.")
-    @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "Lista de marcas e modelos retornada com sucesso."),
-            @ApiResponse(responseCode = "500", description = "Erro interno do servidor.")
-    })
-    @GetMapping("/api/veiculos-atuais/marcas-modelos")
+    @ApiResponse(responseCode = "200", description = "Lista de marcas e modelos retornada com sucesso.")
+    @ApiResponse(responseCode = "500", description = "Erro interno do servidor.")
+    @GetMapping("/marcas-modelos")
     public ResponseEntity<Set<String>> getMarcasModelosDisponiveis() {
         Set<String> marcasModelos = veiculoEletricoService.getMarcasModelosDisponiveis();
         return ResponseEntity.ok(marcasModelos);
     }
 
     @Operation(summary = "Recomendar veículo elétrico por marca", description = "Recomenda um veículo elétrico baseado na marca fornecida.")
-    @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "Veículo recomendado com sucesso."),
-            @ApiResponse(responseCode = "400", description = "Nenhum veículo elétrico encontrado para a marca especificada."),
-            @ApiResponse(responseCode = "500", description = "Erro interno do servidor.")
-    })
+    @ApiResponse(responseCode = "200", description = "Veículo recomendado com sucesso.")
+    @ApiResponse(responseCode = "400", description = "Nenhum veículo elétrico encontrado para a marca especificada.")
+    @ApiResponse(responseCode = "500", description = "Erro interno do servidor.")
     @GetMapping("/recomendacao/{marca}")
     public ResponseEntity<?> recomendarVeiculoEletrico(@PathVariable String marca) {
         List<VeiculoEletrico> veiculosDaMarca = veiculoEletricoService.getVeiculosPorMarca(marca);
@@ -117,7 +107,6 @@ public class VeiculoEletricoController {
         Random random = new Random();
         VeiculoEletrico veiculoRecomendado = veiculosDaMarca.get(random.nextInt(veiculosDaMarca.size()));
 
-        // Criar o DTO de recomendação apenas com os dados necessários
         VeiculoEletricoRecomendacaoDTO recomendacaoDTO = new VeiculoEletricoRecomendacaoDTO(
                 veiculoRecomendado.getMarca(),
                 veiculoRecomendado.getModelo(),
@@ -131,10 +120,8 @@ public class VeiculoEletricoController {
     }
 
     @Operation(summary = "Remover todos os veículos elétricos", description = "Remove todos os veículos elétricos registrados no sistema.")
-    @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "Todos os veículos elétricos foram deletados com sucesso."),
-            @ApiResponse(responseCode = "500", description = "Erro ao tentar deletar os veículos elétricos.")
-    })
+    @ApiResponse(responseCode = "200", description = "Todos os veículos elétricos foram deletados com sucesso.")
+    @ApiResponse(responseCode = "500", description = "Erro ao tentar deletar os veículos elétricos.")
     @DeleteMapping
     public ResponseEntity<String> deleteAllVeiculosEletricos() {
         try {
