@@ -34,7 +34,7 @@ Este vídeo demonstra as funcionalidades & explicando sua usabilidade.
 
 Para acessar o deploy da **ElectriX Drive Platform**, clique no link abaixo:
 
-[🚀 Link do Projeto Completo](https://youtu.be/cawgKS99ugc)
+[🚀 Link do Projeto Completo](https://electrix-drive-platform.onrender.com/login)
 
 Este vídeo demonstra as funcionalidades & explicando sua usabilidade.
 
