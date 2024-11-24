@@ -30,8 +30,13 @@ public class VeiculoAtualController {
     })
     @GetMapping
     public ResponseEntity<List<VeiculoAtual>> getAllVeiculosAtuais() {
-        List<VeiculoAtual> veiculos = veiculoAtualService.getAllVeiculosAtuais();
-        return ResponseEntity.ok(veiculos);
+        try {
+            List<VeiculoAtual> veiculos = veiculoAtualService.getAllVeiculosAtuais();
+            return ResponseEntity.ok(veiculos);
+        } catch (Exception e) {
+            // Log o erro adequadamente
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null);
+        }
     }
 
     @Operation(summary = "Remover todos os veículos atuais", description = "Remove todos os veículos atuais cadastrados.")
@@ -41,8 +46,13 @@ public class VeiculoAtualController {
     })
     @DeleteMapping("/all")
     public ResponseEntity<Void> deleteAllVeiculosAtuais() {
-        veiculoAtualService.deleteAllVeiculosAtuais();
-        return ResponseEntity.noContent().build();
+        try {
+            veiculoAtualService.deleteAllVeiculosAtuais();
+            return ResponseEntity.noContent().build();
+        } catch (Exception e) {
+            // Log o erro adequadamente
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+        }
     }
 
     @Operation(summary = "Salvar um novo veículo atual", description = "Salva um novo veículo atual baseado nas informações fornecidas.")
@@ -58,6 +68,9 @@ public class VeiculoAtualController {
             return ResponseEntity.status(HttpStatus.CREATED).body(novoVeiculo);
         } catch (IllegalArgumentException e) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);
+        } catch (Exception e) {
+            // Log o erro adequadamente
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null);
         }
     }
 
@@ -66,15 +79,20 @@ public class VeiculoAtualController {
             @ApiResponse(responseCode = "200", description = "Lista de marcas e modelos retornada com sucesso."),
             @ApiResponse(responseCode = "500", description = "Erro interno do servidor.")
     })
-    @GetMapping("/api/veiculos-atuais/marcas-modelos")
+    @GetMapping("/marcas-modelos")
     public ResponseEntity<List<String>> getMarcasModelosVeiculosAtuais() {
-        List<VeiculoAtual> veiculosAtuais = veiculoAtualService.getAllVeiculosAtuais();
+        try {
+            List<VeiculoAtual> veiculosAtuais = veiculoAtualService.getAllVeiculosAtuais();
 
-        // Transformar em uma lista de strings no formato "Marca - Modelo"
-        List<String> marcasModelos = veiculosAtuais.stream()
-                .map(veiculo -> veiculo.getMarca() + " - " + veiculo.getModelo())
-                .collect(Collectors.toList());
+            // Transformar em uma lista de strings no formato "Marca - Modelo"
+            List<String> marcasModelos = veiculosAtuais.stream()
+                    .map(veiculo -> veiculo.getMarca() + " - " + veiculo.getModelo())
+                    .collect(Collectors.toList());
 
-        return ResponseEntity.ok(marcasModelos);
+            return ResponseEntity.ok(marcasModelos);
+        } catch (Exception e) {
+            // Log o erro adequadamente
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null);
+        }
     }
 }
