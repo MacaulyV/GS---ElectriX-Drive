@@ -3,6 +3,5 @@ pandas
 numpy
 joblib
 jsonlib  # json é uma biblioteca padrão, então adicionei jsonlib como um exemplo
-distutils
 requests
 plotly
