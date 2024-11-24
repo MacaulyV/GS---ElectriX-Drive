@@ -175,14 +175,14 @@
     async function carregarMarcasModelos() {
         try {
             // Requisição para buscar modelos dos veículos de combustão
-            const responseCombustao = await fetch('http://localhost:8080/api/veiculos-atuais/marcas-modelos');
+            const responseCombustao = await fetch('https://electrix-drive-platform.onrender.com/api/veiculos-atuais/marcas-modelos');
             if (!responseCombustao.ok) {
                 throw new Error('Erro ao buscar modelos de veículos de combustão');
             }
             const modelosCombustao = await responseCombustao.json();
 
             // Requisição para buscar modelos dos veículos elétricos
-            const responseEletrico = await fetch('http://localhost:8080/api/veiculos-eletricos/marcas-modelos');
+            const responseEletrico = await fetch('https://electrix-drive-platform.onrender.com/api/veiculos-eletricos/marcas-modelos');
             if (!responseEletrico.ok) {
                 throw new Error('Erro ao buscar modelos de veículos elétricos');
             }
