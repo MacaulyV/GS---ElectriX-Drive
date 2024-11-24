@@ -1,4 +1,4 @@
-![Capa](https://github.com/user-attachments/assets/666502bb-975d-4879-bfb0-99f37880b207)
+![Descrição banner](https://github.com/user-attachments/assets/fd23aae5-3758-4cd8-9b38-4abbf9e8b845)
 
 # EcoDrive Insight AI
 
