@@ -9,10 +9,10 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
-import org.springframework.core.io.ClassPathResource;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.io.InputStream;
+import java.io.File;
 import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
@@ -21,28 +21,8 @@ import java.util.Optional;
 @Service
 public class VeiculoAtualService {
 
-    private final VeiculoAtualRepository veiculoAtualRepository;
-    private List<VeiculoJson> veiculosDisponiveis;
-
-    // Construtor com injeção de dependência do repositório
-    public VeiculoAtualService(VeiculoAtualRepository veiculoAtualRepository) {
-        this.veiculoAtualRepository = veiculoAtualRepository;
-
-        try {
-            // Usando ClassPathResource para carregar o arquivo JSON do classpath
-            ObjectMapper objectMapper = new ObjectMapper();
-            ClassPathResource resource = new ClassPathResource("data/veiculos.json");
-            InputStream inputStream = resource.getInputStream();
-            this.veiculosDisponiveis = objectMapper.readValue(
-                    inputStream,
-                    new TypeReference<List<VeiculoJson>>() {}
-            );
-        } catch (IOException e) {
-            // Utilize um mecanismo de logging apropriado em vez de printStackTrace
-            System.err.println("Erro ao carregar veiculos.json: " + e.getMessage());
-            throw new RuntimeException("Não foi possível carregar veiculos.json", e);
-        }
-    }
+    @Autowired
+    private VeiculoAtualRepository veiculoAtualRepository;
 
     @Operation(summary = "Obter todos os veículos atuais",
             description = "Retorna uma lista de todos os veículos atuais cadastrados.",
@@ -84,6 +64,21 @@ public class VeiculoAtualService {
             })
     public VeiculoAtual salvarVeiculoAtual(VeiculoAtual veiculoAtual) {
         return veiculoAtualRepository.save(veiculoAtual);
+    }
+
+    private List<VeiculoJson> veiculosDisponiveis;
+
+    public VeiculoAtualService() {
+        try {
+            ObjectMapper objectMapper = new ObjectMapper();
+            this.veiculosDisponiveis = objectMapper.readValue(
+                    new File("src/main/resources/data/veiculos.json"),
+                    new TypeReference<List<VeiculoJson>>() {
+                    }
+            );
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @Operation(summary = "Salvar veículo atual a partir de um DTO",
