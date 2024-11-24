@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping("https://electrix-drive-platform.onrender.com/api/veiculos-atuais")
+@RequestMapping("/api/veiculos-atuais")
 @Tag(name = "VeiculoAtualController", description = "Controlador responsável pelas operações relacionadas aos veículos atuais.")
 public class VeiculoAtualController {
 
@@ -66,7 +66,7 @@ public class VeiculoAtualController {
             @ApiResponse(responseCode = "200", description = "Lista de marcas e modelos retornada com sucesso."),
             @ApiResponse(responseCode = "500", description = "Erro interno do servidor.")
     })
-    @GetMapping("https://electrix-drive-platform.onrender.com/api/veiculos-atuais/marcas-modelos")
+    @GetMapping("/api/veiculos-atuais/marcas-modelos")
     public ResponseEntity<List<String>> getMarcasModelosVeiculosAtuais() {
         List<VeiculoAtual> veiculosAtuais = veiculoAtualService.getAllVeiculosAtuais();
 
