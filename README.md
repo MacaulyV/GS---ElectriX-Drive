@@ -14,7 +14,8 @@
 
 Clique no link para acessar o deploy da ElectriX Drive Platform, feito no Render.
 
-[🌐 Link do Deploy](https://electrix-drive-platform.onrender.com/login)
+[🌐 Link do Deploy da Interface](https://electrix-drive-platform.onrender.com/login)
+[🧪 Testar Endpoints da API no Swagger](https://electrix-drive-platform.onrender.com/swagger-ui/index.html#/)
 
 ⚠️ **Atenção**:  O carregamento no render é um pouco demorado clique e aguarde um momento para o carregamento completo do projeto.
 
