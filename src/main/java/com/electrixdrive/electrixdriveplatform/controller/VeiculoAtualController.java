@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping("/api/veiculos-atuais")
+@RequestMapping("https://electrix-drive-platform.onrender.com/api/veiculos-atuais")
 @Tag(name = "VeiculoAtualController", description = "Controlador responsável pelas operações relacionadas aos veículos atuais.")
 public class VeiculoAtualController {
 
