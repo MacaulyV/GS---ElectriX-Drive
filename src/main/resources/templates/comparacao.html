@@ -352,7 +352,7 @@
         if (modeloCombustao && modeloEletrico) {
             try {
                 // Construir a URL com parâmetros codificados
-                const url = `http://localhost:8080/api/comparacao/comparar?modeloCombustao=${encodeURIComponent(modeloCombustao)}&modeloEletrico=${encodeURIComponent(modeloEletrico)}`;
+                const url = `https://electrix-drive-platform.onrender.com/api/comparacao/comparar?modeloCombustao=${encodeURIComponent(modeloCombustao)}&modeloEletrico=${encodeURIComponent(modeloEletrico)}`;
 
                 console.log('Requisição para comparar veículos:', url); // Log para depuração
 
