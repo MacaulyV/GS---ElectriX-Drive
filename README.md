@@ -14,7 +14,7 @@
 
 Clique no link para acessar o deploy da ElectriX Drive Platform, feito no Render.
 
-[🔗 Link do Deploy](https://electrix-drive-platform.onrender.com/login)
+[🌐 Link do Deploy](https://electrix-drive-platform.onrender.com/login)
 
 ⚠️ **Atenção**:  O carregamento no render é um pouco demorado clique e aguarde um momento para o carregamento completo do projeto.
 
@@ -24,7 +24,7 @@ Clique no link para acessar o deploy da ElectriX Drive Platform, feito no Render
 
 Para assistir ao vídeo de apresentação do **ElectriX Drive Platform**, clique no link abaixo:
 
-[🔗 Assista ao Vídeo do Projeto]([🎥 Link do Vídeo](https://youtu.be/yfK_DmMpmDk)
+[🎬 Assista ao Vídeo do Projeto](https://youtu.be/yfK_DmMpmDk)
 
 Este vídeo demonstra as funcionalidades & explicando sua usabilidade.
 
