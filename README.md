@@ -14,7 +14,7 @@
 
 Para acessar o deploy da **EcoDrive Insight AI**, clique no link abaixo:
 
-[🔗 Link do Deploy](URL_DO_DEPLOY_AQUI)
+[🔗 Link do Deploy](https://ecodrive-insight-ai.onrender.com)
 
 Este deploy permite que você explore todas as funcionalidades do projeto em um ambiente operacional.
 
