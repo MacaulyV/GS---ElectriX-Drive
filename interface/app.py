@@ -3,8 +3,9 @@ import pandas as pd
 import joblib
 import json
 import plotly.express as px  # Importação para gráficos interativos
+import os  # Importação para lidar com caminhos de arquivos de forma robusta
 
-# Configurando o estilo da página com CSS personalizado
+# Configurando o estilo da página com CSS personalizado embutido
 st.markdown(
     """
     <style>
@@ -19,13 +20,28 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-
 # Função para carregar CSS personalizado a partir de um arquivo
 def local_css(file_name):
-    with open(file_name) as f:
-        st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
+    # Obtém o diretório atual onde o script está localizado
+    current_directory = os.path.dirname(os.path.abspath(__file__))
+    # Constrói o caminho completo para o arquivo CSS
+    css_path = os.path.join(current_directory, file_name)
+    
+    # Verifica se o arquivo existe antes de tentar abrir
+    if os.path.exists(css_path):
+        with open(css_path) as f:
+            st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
+    else:
+        st.warning(f"CSS file not found: {css_path}")
 
+# Carregar o arquivo CSS localizado em 'assets/style.css'
 local_css("assets/style.css")
+
+# Carregar modelos e escalonador pré-treinados
+model_cost = joblib.load('../model/model_cost.pkl')
+model_emissions = joblib.load('../model/model_emissions.pkl')
+scaler = joblib.load('../model/scaler.pkl')
+
 
 # Carregar modelos e escalonador pré-treinados
 model_cost = joblib.load('../model/model_cost.pkl')
